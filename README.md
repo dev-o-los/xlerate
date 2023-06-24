@@ -9,7 +9,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 You may use simple_sizer to give your sized boxes and containers a percentage of your device's width or height to make them responsive on different screens.
 
 <img src="https://imgur.com/JIg5YHg.png" width=200>
-<img src="https://imgur.com/a26uSxF.png",width=200>
+<img src="https://imgur.com/a26uSxF.png",width=100>
 
 ## Install it
 
