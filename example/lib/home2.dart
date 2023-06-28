@@ -10,19 +10,22 @@ class Home2 extends StatelessWidget {
     print(md);
     return Center(
       child: ReactiveRowCol(
-        rowWhen: (md > 501 && md < double.infinity),
-        colWhen: (md > 0 && md <= 500),
+        rowWhen: (screenWidth) =>
+            (screenWidth > 500 && screenWidth < double.infinity),
+        colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
         children: [
           Container(
             height: 200,
             width: 30.w,
             color: Colors.red,
           ),
-          Container(
-            height: 200,
-            width: 30.w,
-            color: Colors.red,
-          ),
+          Builder(builder: (context) {
+            return Container(
+              height: 200,
+              width: 30.w,
+              color: Colors.red,
+            );
+          }),
         ],
       ),
     );

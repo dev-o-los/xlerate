@@ -21,8 +21,8 @@ class ReactiveRowCol extends StatelessWidget {
     this.rowKey,
     this.colKey,
   }) : super(key: key);
-  final bool rowWhen;
-  final bool colWhen;
+  final bool Function(double screenWidth) rowWhen;
+  final bool Function(double screenWidth) colWhen;
   final List<Widget> children;
   final MainAxisAlignment rowMainAxisAlignment;
   final MainAxisAlignment colMainAxisAlignment;
@@ -41,7 +41,8 @@ class ReactiveRowCol extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (rowWhen) {
+    final currentWidth = MediaQuery.of(context).size.width;
+    if (rowWhen.call(currentWidth)) {
       return Row(
         mainAxisAlignment: rowMainAxisAlignment,
         crossAxisAlignment: rowCrossAxisAlignment,
@@ -52,7 +53,7 @@ class ReactiveRowCol extends StatelessWidget {
         key: rowKey,
         children: children,
       );
-    } else if (colWhen) {
+    } else if (colWhen.call(currentWidth)) {
       return Column(
         mainAxisAlignment: colMainAxisAlignment,
         crossAxisAlignment: colCrossAxisAlignment,
