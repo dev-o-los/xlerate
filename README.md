@@ -10,6 +10,7 @@ You may use simple_sizer to give your sized boxes and containers a percentage of
 
 <img src="https://imgur.com/JIg5YHg.png" width=200>
 <img src="https://imgur.com/a26uSxF.png" width=200>
+<img src="https://github.com/dev-o-los/resources/blob/main/simple_sizer/rowcolexample.mp4">
 
 ## Install it
 
