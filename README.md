@@ -107,3 +107,6 @@ Widget build(BuildContext context) {
       ],
    );
 ```
+
+[screen-capture.webm](https://github.com/dev-o-los/simple_sizer/assets/112308397/9db94e57-6c13-48b5-b4a1-7657b511e0e1)
+
