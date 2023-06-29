@@ -72,17 +72,15 @@ Widget build(BuildContext context) {
 
 ```dart
    ReactiveRowCol(
-      ///Define when you want the widgets to be in row form using the `rowWhen` parameter
-      ///
+      //Define when you want the widgets to be in row form using the rowWhen parameter
       rowWhen: (screenWidth) =>
           (screenWidth > 500 && screenWidth < double.infinity),
 
-      ///Define when you want the widgets to be in column form using the `colWhen` parameter
+      //Define when you want the widgets to be in column form using the colWhen parameter
 
       colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
 
-      /// Use the children parameter to add widgets as usual and you can also use `isRow` parameter to define
-      /// specific widgets when the layout is in row form and `isCol` parameter when the layout is in column form.
+      // Use the children parameter to add widgets as usual and you can also use isRow parameter to define specific widgets when the layout is in row form and isCol parameter when the layout is in column form.
 
       children: (isRow, isCol) => [
         // Reactive widgets...
