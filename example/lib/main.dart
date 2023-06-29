@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/simple_sizer.dart';
-import 'package:simple_sizer_example/home2.dart';
+import 'package:simple_sizer_example/reactive_row_col_example.dart';
 
 void main() {
   runApp(const MyApp());
