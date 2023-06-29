@@ -67,3 +67,47 @@ Widget build(BuildContext context) {
       padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 7.w),
    );
 ```
+
+## ReactiveRowCol
+
+```dart
+   ReactiveRowCol(
+      //Define when you want the widgets to be in row form using the rowWhen parameter
+      rowWhen: (screenWidth) =>
+          (screenWidth > 500 && screenWidth < double.infinity),
+
+      //Define when you want the widgets to be in column form using the colWhen parameter
+
+      colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
+
+      // Use the children parameter to add widgets as usual and you can also use
+      //isRow parameter to define specific widgets when the layout is in row form and
+      //isCol parameter when the layout is in column form.
+
+      children: (isRow, isCol) => [
+        // Reactive widgets...
+        Container(
+          height: 200,
+          width: 30.w,
+          color: Colors.red,
+        ),
+        isRow
+            ? Container(
+                height: 200,
+                width: 30.w,
+                color: Colors.green,
+              )
+            : Container(),
+        Container(
+          height: 200,
+          width: 30.w,
+          color: Colors.pink,
+        ),
+        //Reactive widgets...
+      ],
+   );
+```
+[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/test_version/example/lib/reactive_row_col_example.dart)
+
+[result](https://github.com/dev-o-los/simple_sizer/assets/112308397/9db94e57-6c13-48b5-b4a1-7657b511e0e1)
+
