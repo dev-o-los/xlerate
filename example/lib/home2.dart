@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/simple_sizer.dart';
 
-class Home2 extends StatelessWidget {
-  const Home2({Key? key}) : super(key: key);
+class ReactiveRowColExample extends StatelessWidget {
+  const ReactiveRowColExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +10,7 @@ class Home2 extends StatelessWidget {
       child: ReactiveRowCol(
         rowMainAxisAlignment: MainAxisAlignment.center,
         colMainAxisAlignment: MainAxisAlignment.center,
+        colCrossAxisAlignment: CrossAxisAlignment.center,
         rowWhen: (screenWidth) =>
             (screenWidth > 500 && screenWidth < double.infinity),
         colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
