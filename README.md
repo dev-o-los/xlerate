@@ -107,7 +107,7 @@ Widget build(BuildContext context) {
       ],
    );
 ```
-[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/test_version/example/lib/reactive_row_col_example.dart)
+[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_row_col_example.dart)
 
 [result](https://github.com/dev-o-los/simple_sizer/assets/112308397/9db94e57-6c13-48b5-b4a1-7657b511e0e1)
 
