@@ -10,16 +10,6 @@ class Home2 extends StatelessWidget {
       child: ReactiveRowCol(
         rowMainAxisAlignment: MainAxisAlignment.center,
         colMainAxisAlignment: MainAxisAlignment.center,
-        // colCrossAxisAlignment: CrossAxisAlignment.center,
-        // colMainAxisSize: MainAxisSize.max,
-        // colTextDirection: TextDirection.ltr,
-        // colTextbaseline: TextBaseline.alphabetic,
-        // colVerticalDirection: VerticalDirection.down,
-        // rowCrossAxisAlignment: CrossAxisAlignment.baseline,
-        // rowMainAxisSize: MainAxisSize.max,
-        // rowTextDirection: TextDirection.ltr,
-        // rowTextbaseline: TextBaseline.alphabetic,
-        // rowVerticalDirection: VerticalDirection.down,
         rowWhen: (screenWidth) =>
             (screenWidth > 500 && screenWidth < double.infinity),
         colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
