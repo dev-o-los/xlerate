@@ -8,8 +8,8 @@ class Home2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ReactiveRowCol(
-        // rowMainAxisAlignment: MainAxisAlignment.center,
-        // colMainAxisAlignment: MainAxisAlignment.center,
+        rowMainAxisAlignment: MainAxisAlignment.center,
+        colMainAxisAlignment: MainAxisAlignment.center,
         // colCrossAxisAlignment: CrossAxisAlignment.center,
         // colMainAxisSize: MainAxisSize.max,
         // colTextDirection: TextDirection.ltr,
@@ -23,19 +23,24 @@ class Home2 extends StatelessWidget {
         rowWhen: (screenWidth) =>
             (screenWidth > 500 && screenWidth < double.infinity),
         colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
-        children: [
+        children: (isRow, isCol) => [
           Container(
             height: 200,
             width: 30.w,
             color: Colors.red,
           ),
-          Builder(builder: (context) {
-            return Container(
-              height: 200,
-              width: 30.w,
-              color: Colors.red,
-            );
-          }),
+          isRow
+              ? Container(
+                  height: 200,
+                  width: 30.w,
+                  color: Colors.green,
+                )
+              : Container(),
+          Container(
+            height: 200,
+            width: 30.w,
+            color: Colors.pink,
+          ),
         ],
       ),
     );

@@ -37,11 +37,10 @@ class ReactiveRowCol extends StatelessWidget {
   /// and `false` otherwise.
   final bool Function(double screenWidth) colWhen;
 
-  /// The `children` is a parameter of the `ReactiveRowCol` class constructor. It is
-  /// used to specify the list of child widgets that will be arranged either in a row or column based on
-  /// the screen width. The `children` parameter accepts a list of `Widget` objects, which can be any
-  /// valid Flutter widget.
-  final List<Widget> children;
+  /// The `children` is a function parameter that takes two boolean parameters `isRow` and `isCol`.
+  /// It is a callback function that is responsible for building and returning a list of widgets based
+  /// on the values of `isRow` and `isCol`.
+  final List<Widget> Function(bool isRow, bool isCol) children;
 
   /// The `rowMainAxisAlignment` is used to
   /// specify how the children should be aligned along the main axis when arranged in a row. The
@@ -136,13 +135,15 @@ class ReactiveRowCol extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currentWidth = MediaQuery.of(context).size.width;
+    final bool isRow = rowWhen.call(currentWidth);
+    final bool isCol = colWhen.call(currentWidth);
 
     /// The code snippet is checking if the condition specified by the `rowWhen` function is true. If
     /// the condition is true, it returns a `Row` widget with the specified properties. The properties
     /// include the `mainAxisAlignment`, `crossAxisAlignment`, `mainAxisSize`, `textBaseline`,
     /// `textDirection`, `verticalDirection`, `key`, and `children`. These properties determine how the
     /// children widgets will be arranged within the `Row` widget.
-    if (rowWhen.call(currentWidth)) {
+    if (isRow) {
       return Row(
         mainAxisAlignment: rowMainAxisAlignment,
         crossAxisAlignment: rowCrossAxisAlignment,
@@ -151,7 +152,7 @@ class ReactiveRowCol extends StatelessWidget {
         textDirection: rowTextDirection,
         verticalDirection: rowVerticalDirection,
         key: rowKey,
-        children: children,
+        children: children.call(isRow, isCol),
       );
     }
 
@@ -163,7 +164,7 @@ class ReactiveRowCol extends StatelessWidget {
     ///
     /// Returns:
     ///   A Column widget is being returned.
-    else if (colWhen.call(currentWidth)) {
+    else if (isCol) {
       return Column(
         mainAxisAlignment: colMainAxisAlignment,
         crossAxisAlignment: colCrossAxisAlignment,
@@ -172,7 +173,7 @@ class ReactiveRowCol extends StatelessWidget {
         textDirection: colTextDirection,
         verticalDirection: colVerticalDirection,
         key: colKey,
-        children: children,
+        children: children.call(isRow, isCol),
       );
     }
 
