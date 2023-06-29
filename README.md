@@ -80,7 +80,9 @@ Widget build(BuildContext context) {
 
       colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
 
-      // Use the children parameter to add widgets as usual and you can also use isRow parameter to define specific widgets when the layout is in row form and isCol parameter when the layout is in column form.
+      // Use the children parameter to add widgets as usual and you can also use
+      //isRow parameter to define specific widgets when the layout is in row form and
+      //isCol parameter when the layout is in column form.
 
       children: (isRow, isCol) => [
         // Reactive widgets...
