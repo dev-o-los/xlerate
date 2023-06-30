@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:simple_sizer/simple_sizer.dart';
 
 class ReactiveDestination extends StatelessWidget {
   const ReactiveDestination({
     Key? key,
     required this.label,
+    required this.icon,
   }) : super(key: key);
 
   final String label;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
-    return NavigationDestination(icon: const Icon(Icons.abc), label: label);
+    return (context.csw > 500)
+        ? (NavigationRailDestination(
+            icon: Icon(icon),
+            label: Text(label),
+          ) as Widget)
+        : NavigationDestination(
+            icon: Icon(icon),
+            label: label,
+          );
   }
 }
 
