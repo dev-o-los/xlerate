@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/src/reactive_widgets/reactive_destination.dart';
 
-class ReactiveTabletView extends StatefulWidget {
-  const ReactiveTabletView({
+class ReactiveBigScreenView extends StatefulWidget {
+  const ReactiveBigScreenView({
     super.key,
     required this.pages,
     required this.reactiveDestinations,
@@ -52,10 +52,10 @@ class ReactiveTabletView extends StatefulWidget {
   final NavigationRailLabelType? labelType;
 
   @override
-  State<ReactiveTabletView> createState() => _ReactiveTabletViewState();
+  State<ReactiveBigScreenView> createState() => _ReactiveBigScreenViewState();
 }
 
-class _ReactiveTabletViewState extends State<ReactiveTabletView> {
+class _ReactiveBigScreenViewState extends State<ReactiveBigScreenView> {
   int _currentindex = 0;
 
   void _changePage(int index) {
