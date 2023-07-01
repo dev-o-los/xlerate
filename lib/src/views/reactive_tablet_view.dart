@@ -1,35 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:simple_sizer/src/reactive_widgets/reactive_destination.dart';
 
 class ReactiveTabletView extends StatefulWidget {
   const ReactiveTabletView({
     super.key,
     required this.pages,
-    required this.bottomNavBarDestinations,
-    this.bottomNavBarHeight,
-    this.labelBehavior,
-    this.animationDuration,
+    required this.reactiveDestinations,
     this.backgroundColor,
     this.elevation,
     this.indicatorColor,
     this.indicatorShape,
-    this.shadowColor,
+    this.extended = false,
+    this.groupAlignment,
+    this.labelType,
+    this.leading,
+    this.minExtendedWidth,
+    this.minWidth,
+    this.selectedIconTheme,
+    this.selectedLabelTextStyle,
+    this.trailing,
+    this.unselectedIconTheme,
+    this.unselectedLabelTextStyle,
+    this.useIndicator,
   });
 
   final List<Widget> pages;
-  final List<NavigationDestination> bottomNavBarDestinations;
+  final List<ReactiveDestination> reactiveDestinations;
 
-  final double? bottomNavBarHeight;
   final double? elevation;
-
-  final Duration? animationDuration;
+  final double? groupAlignment;
+  final double? minExtendedWidth;
+  final double? minWidth;
 
   final Color? backgroundColor;
   final Color? indicatorColor;
-  final Color? shadowColor;
 
-  final NavigationDestinationLabelBehavior? labelBehavior;
+  final Widget? leading;
+  final Widget? trailing;
+
+  final bool extended;
+  final bool? useIndicator;
+
+  final TextStyle? selectedLabelTextStyle;
+  final TextStyle? unselectedLabelTextStyle;
+
+  final IconThemeData? selectedIconTheme;
+  final IconThemeData? unselectedIconTheme;
 
   final ShapeBorder? indicatorShape;
+
+  final NavigationRailLabelType? labelType;
 
   @override
   State<ReactiveTabletView> createState() => _ReactiveTabletViewState();
@@ -50,46 +70,32 @@ class _ReactiveTabletViewState extends State<ReactiveTabletView> {
       body: Row(
         children: [
           NavigationRail(
-            destinations: const [
-              NavigationRailDestination(
-                icon: Icon(Icons.abc),
-                label: Text('Hello'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.abc),
-                label: Text('Hello'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.abc),
-                label: Text('Hello'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.abc),
-                label: Text('Hello'),
-              ),
-            ],
+            destinations: widget.reactiveDestinations
+                .map((e) => e.navType().rail)
+                .toList(),
             selectedIndex: _currentindex,
+            backgroundColor: widget.backgroundColor,
+            elevation: widget.elevation,
+            indicatorColor: widget.indicatorColor,
+            indicatorShape: widget.indicatorShape,
+            extended: widget.extended,
+            groupAlignment: widget.groupAlignment,
+            labelType: widget.labelType,
+            leading: widget.leading,
+            minExtendedWidth: widget.minExtendedWidth,
+            minWidth: widget.minWidth,
+            selectedIconTheme: widget.selectedIconTheme,
+            selectedLabelTextStyle: widget.selectedLabelTextStyle,
+            trailing: widget.trailing,
+            unselectedIconTheme: widget.unselectedIconTheme,
+            unselectedLabelTextStyle: widget.unselectedLabelTextStyle,
+            useIndicator: widget.useIndicator,
+            key: widget.key,
             onDestinationSelected: (value) => _changePage(value),
           ),
-          widget.pages[_currentindex],
+          Expanded(child: widget.pages[_currentindex]),
         ],
       ),
-
-      // bottomNavigationBar: NavigationBar(
-      //   selectedIndex: _currentindex,
-      //   height: widget.bottomNavBarHeight,
-      //   labelBehavior: widget.labelBehavior,
-      //   animationDuration: widget.animationDuration,
-      //   backgroundColor: widget.backgroundColor,
-      //   elevation: widget.elevation,
-      //   indicatorColor: widget.indicatorColor,
-      //   indicatorShape: widget.indicatorShape,
-      //   shadowColor: widget.shadowColor,
-      //   key: widget.key,
-      //   destinations: widget.bottomNavBarDestinations,
-      //   surfaceTintColor: Colors.transparent,
-      //   onDestinationSelected: (value) => _changePage(value),
-      // ),
     );
   }
 }

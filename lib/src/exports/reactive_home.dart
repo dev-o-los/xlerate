@@ -1,68 +1,130 @@
 import 'package:flutter/material.dart';
+import 'package:simple_sizer/simple_sizer.dart';
+import 'package:simple_sizer/src/views/reactive_mobile_view.dart';
+import 'package:simple_sizer/src/views/reactive_tablet_view.dart';
 
-class ReactiveHome extends StatefulWidget {
+class ReactiveHome extends StatelessWidget {
   const ReactiveHome({
     super.key,
     required this.pages,
-    required this.bottomNavBarDestinations,
-    this.bottomNavBarHeight,
-    this.labelBehavior,
-    this.animationDuration,
+    required this.reactiveDestinations,
+    this.extendedForNavRail = false,
     this.backgroundColor,
     this.elevation,
     this.indicatorColor,
     this.indicatorShape,
-    this.shadowColor,
+    this.groupAlignmentForNavRail,
+    this.minExtendedWidthForNavRail,
+    this.minWidthForNavRail,
+    this.leadingForNavRail,
+    this.trailingForNavRail,
+    this.useIndicatorForNavRail,
+    this.selectedLabelTextStyleForNavRail,
+    this.unselectedLabelTextStyleForNavRail,
+    this.selectedIconThemeForNavRail,
+    this.unselectedIconThemeForNavRail,
+    this.labelTypeForNavRail,
+    this.backgroundColorForNavBar,
+    this.elevationForNavBar,
+    this.indicatorColorForNavBar,
+    this.indicatorShapeForNavBar,
+    this.backgroundColorForNavRail,
+    this.elevationForNavRail,
+    this.indicatorColorForNavRail,
+    this.indicatorShapeForNavRail,
+    this.bottomNavBarHeightForNavBar,
+    this.animationDurationForNavBar,
+    this.shadowColorForNavBar,
+    this.labelBehaviorForNavBar,
   });
 
+  // required parameters for both [NavRail] and [NavBar]
+
   final List<Widget> pages;
-  final List<NavigationDestination> bottomNavBarDestinations;
+  final List<ReactiveDestination> reactiveDestinations;
 
-  final double? bottomNavBarHeight;
-  final double? elevation;
-
-  final Duration? animationDuration;
+  //These parameters will work for both [NavRail] and [NavBar]
 
   final Color? backgroundColor;
+  final double? elevation;
   final Color? indicatorColor;
-  final Color? shadowColor;
-
-  final NavigationDestinationLabelBehavior? labelBehavior;
-
   final ShapeBorder? indicatorShape;
 
-  @override
-  State<ReactiveHome> createState() => _ReactiveHomeState();
-}
+  //Specific params for [NavBar]
+  final Color? backgroundColorForNavBar;
+  final Color? shadowColorForNavBar;
+  final Color? indicatorColorForNavBar;
 
-class _ReactiveHomeState extends State<ReactiveHome> {
-  int _currentindex = 0;
+  final double? elevationForNavBar;
+  final double? bottomNavBarHeightForNavBar;
 
-  void _changePage(int index) {
-    setState(() {
-      _currentindex = index;
-    });
-  }
+  final ShapeBorder? indicatorShapeForNavBar;
+
+  final Duration? animationDurationForNavBar;
+
+  final NavigationDestinationLabelBehavior? labelBehaviorForNavBar;
+
+  //Specific params for [NavRail]
+  final Color? backgroundColorForNavRail;
+  final Color? indicatorColorForNavRail;
+
+  final double? elevationForNavRail;
+  final double? groupAlignmentForNavRail;
+  final double? minExtendedWidthForNavRail;
+  final double? minWidthForNavRail;
+
+  final Widget? leadingForNavRail;
+  final Widget? trailingForNavRail;
+
+  final bool extendedForNavRail;
+  final bool? useIndicatorForNavRail;
+
+  final TextStyle? selectedLabelTextStyleForNavRail;
+  final TextStyle? unselectedLabelTextStyleForNavRail;
+
+  final IconThemeData? selectedIconThemeForNavRail;
+  final IconThemeData? unselectedIconThemeForNavRail;
+
+  final NavigationRailLabelType? labelTypeForNavRail;
+
+  final ShapeBorder? indicatorShapeForNavRail;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: widget.pages[_currentindex],
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _currentindex,
-        height: widget.bottomNavBarHeight,
-        labelBehavior: widget.labelBehavior,
-        animationDuration: widget.animationDuration,
-        backgroundColor: widget.backgroundColor,
-        elevation: widget.elevation,
-        indicatorColor: widget.indicatorColor,
-        indicatorShape: widget.indicatorShape,
-        shadowColor: widget.shadowColor,
-        key: widget.key,
-        destinations: widget.bottomNavBarDestinations,
-        surfaceTintColor: Colors.transparent,
-        onDestinationSelected: (value) => _changePage(value),
-      ),
-    );
+    return (context.csw > 500)
+        ? ReactiveTabletView(
+            backgroundColor: backgroundColorForNavRail ?? backgroundColor,
+            elevation: elevationForNavRail ?? elevation,
+            indicatorColor: indicatorColorForNavRail ?? indicatorColor,
+            indicatorShape: indicatorShapeForNavRail ?? indicatorShape,
+            pages: pages,
+            reactiveDestinations: reactiveDestinations,
+            extended: extendedForNavRail,
+            groupAlignment: groupAlignmentForNavRail,
+            labelType: labelTypeForNavRail,
+            leading: leadingForNavRail,
+            minExtendedWidth: minExtendedWidthForNavRail,
+            minWidth: minWidthForNavRail,
+            selectedIconTheme: selectedIconThemeForNavRail,
+            selectedLabelTextStyle: selectedLabelTextStyleForNavRail,
+            trailing: trailingForNavRail,
+            unselectedIconTheme: unselectedIconThemeForNavRail,
+            unselectedLabelTextStyle: unselectedLabelTextStyleForNavRail,
+            useIndicator: useIndicatorForNavRail,
+            key: key,
+          )
+        : ReactiveMobileView(
+            backgroundColor: backgroundColorForNavBar ?? backgroundColor,
+            elevation: elevationForNavBar ?? elevation,
+            indicatorColor: indicatorColorForNavBar ?? indicatorColor,
+            indicatorShape: indicatorShapeForNavBar ?? indicatorShape,
+            pages: pages,
+            reactiveDestinations: reactiveDestinations,
+            animationDuration: animationDurationForNavBar,
+            bottomNavBarHeight: bottomNavBarHeightForNavBar,
+            labelBehavior: labelBehaviorForNavBar,
+            shadowColor: shadowColorForNavBar,
+            key: key,
+          );
   }
 }

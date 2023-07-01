@@ -1,36 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/simple_sizer.dart';
 
-class ReactiveDestination extends StatelessWidget {
+class ReactiveDestination {
   const ReactiveDestination({
     Key? key,
     required this.label,
     required this.icon,
-  }) : super(key: key);
+    this.selectedIcon,
+    this.indicatorColorForNavRail,
+    this.indicatorShapeForNavRail,
+    this.paddingForNavRail,
+    this.tooltipForNavBar,
+  });
 
   final String label;
   final IconData icon;
+  final Widget? selectedIcon;
+  final Color? indicatorColorForNavRail;
+  final ShapeBorder? indicatorShapeForNavRail;
+  final EdgeInsetsGeometry? paddingForNavRail;
+  final String? tooltipForNavBar;
 
-  @override
-  Widget build(BuildContext context) {
-    return (context.csw > 500)
-        ? (NavigationRailDestination(
-            icon: Icon(icon),
-            label: Text(label),
-          ) as Widget)
-        : NavigationDestination(
-            icon: Icon(icon),
-            label: label,
-          );
+  ({NavigationRailDestination rail, NavigationDestination bar}) navType() {
+    return (
+      rail: NavigationRailDestination(
+        icon: Icon(icon),
+        label: Text(label),
+        indicatorColor: indicatorColorForNavRail,
+        indicatorShape: indicatorShapeForNavRail,
+        padding: paddingForNavRail,
+        selectedIcon: selectedIcon,
+      ),
+      bar: NavigationDestination(
+        icon: Icon(icon),
+        label: label,
+        selectedIcon: selectedIcon,
+        tooltip: tooltipForNavBar,
+      )
+    );
   }
 }
-
-// class ReactiveDestination2 extends StatelessWidget {
-//   const ReactiveDestination2({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return NavigationRailDestination(
-//         icon: Icon(Icons.abc_outlined), label: Text('dddd'));
-//   }
-// }
