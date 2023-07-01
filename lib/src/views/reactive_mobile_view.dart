@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/src/reactive_widgets/reactive_destination.dart';
 
+import '../reactive_widgets/reactive_helper.dart';
+
 class ReactiveMobileView extends StatefulWidget {
   const ReactiveMobileView({
     super.key,
@@ -60,8 +62,9 @@ class _ReactiveMobileViewState extends State<ReactiveMobileView> {
         indicatorShape: widget.indicatorShape,
         shadowColor: widget.shadowColor,
         key: widget.key,
-        destinations:
-            widget.reactiveDestinations.map((e) => e.navType().bar).toList(),
+        destinations: widget.reactiveDestinations
+            .map((e) => ReactiveHelper.navType(e).bar)
+            .toList(),
         surfaceTintColor: Colors.transparent,
         onDestinationSelected: (value) => _changePage(value),
       ),

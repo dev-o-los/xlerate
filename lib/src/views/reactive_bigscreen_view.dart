@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/src/reactive_widgets/reactive_destination.dart';
+import 'package:simple_sizer/src/reactive_widgets/reactive_helper.dart';
 
 class ReactiveBigScreenView extends StatefulWidget {
   const ReactiveBigScreenView({
@@ -71,7 +72,7 @@ class _ReactiveBigScreenViewState extends State<ReactiveBigScreenView> {
         children: [
           NavigationRail(
             destinations: widget.reactiveDestinations
-                .map((e) => e.navType().rail)
+                .map((e) => ReactiveHelper.navType(e).rail)
                 .toList(),
             selectedIndex: _currentindex,
             backgroundColor: widget.backgroundColor,
