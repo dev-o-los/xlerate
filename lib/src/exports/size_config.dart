@@ -34,7 +34,9 @@ class SizeConfig {
 
 ///Adding extension over the double data type for easy access.
 ///
-extension SizeConfigForDouble on double {
+extension SizeConfigForDouble on num {
+  Size _mq(BuildContext ctx) => MediaQuery.of(ctx).size;
+
   ///The height parameter `h` is used to access the percent height of the current device.
   /// ```
   /// SizedBox(height: 45.h), //45.h = 45 % of height
@@ -42,23 +44,12 @@ extension SizeConfigForDouble on double {
   /// This means flutter will create a sized box with 45 % of height.
   double get h => this * SizeConfig._height;
 
-  ///The width parameter `w` is used to access the percent width of the current device.
-  /// ```
-  /// SizedBox(height: 45.w), //45.w = 45 % of width
-  /// ```
-  /// This means flutter will create a sized box with 45 % of width.
-  double get w => this * SizeConfig._width;
-}
-
-///Adding extension over the double data type for easy access.
-///
-extension SizeConfigForInt on int {
-  ///The height parameter `h` is used to access the percent height of the current device.
-  /// ```
-  /// SizedBox(height: 45.h), //45.h = 45 % of height
-  /// ```
-  /// This means flutter will create a sized box with 45 % of height.
-  double get h => this * SizeConfig._height;
+  ///ch stands for current height
+  ///The only difference `num.ch()` and `num.h` is that [num.ch()] rebuilds
+  ///everytime when context changes while the latter returns a fixed height
+  ///even if screen height changes.
+  ///ch is helpful in flutter web as windows are adjustable.
+  double ch(BuildContext ctx) => this * (_mq(ctx).height / 100);
 
   ///The width parameter `w` is used to access the percent width of the current device.
   /// ```
@@ -66,4 +57,11 @@ extension SizeConfigForInt on int {
   /// ```
   /// This means flutter will create a sized box with 45 % of width.
   double get w => this * SizeConfig._width;
+
+  ///cw stands for current width
+  ///The only difference `num.cw()` and `num.w` is that [num.cw()] rebuilds
+  ///everytime when context changes while the latter returns a fixed width
+  ///even if screen width changes.
+  ///cw is helpful in flutter web as windows are adjustable.
+  double cw(BuildContext ctx) => this * (_mq(ctx).width / 100);
 }
