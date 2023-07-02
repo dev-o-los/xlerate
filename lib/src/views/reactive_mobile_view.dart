@@ -63,7 +63,7 @@ class _ReactiveMobileViewState extends State<ReactiveMobileView> {
         shadowColor: widget.shadowColor,
         key: widget.key,
         destinations: widget.reactiveDestinations
-            .map((e) => ReactiveHelper.navType(e).bar)
+            .map((e) => ReactiveHelper.bar(e))
             .toList(),
         surfaceTintColor: Colors.transparent,
         onDestinationSelected: (value) => _changePage(value),

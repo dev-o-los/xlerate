@@ -72,7 +72,7 @@ class _ReactiveBigScreenViewState extends State<ReactiveBigScreenView> {
         children: [
           NavigationRail(
             destinations: widget.reactiveDestinations
-                .map((e) => ReactiveHelper.navType(e).rail)
+                .map((e) => ReactiveHelper.rail(e))
                 .toList(),
             selectedIndex: _currentindex,
             backgroundColor: widget.backgroundColor,
