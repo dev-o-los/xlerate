@@ -13,7 +13,7 @@ extension Buildctx on BuildContext {
   /// logical pixels.
   double get csw => _mq.size.width;
 
-  // The `csh` is an extension method defined on the `BuildContext`
+  /// The `csh` is an extension method defined on the `BuildContext`
   /// class in Dart. It is used to get the height of the current device screen
   /// using the `MediaQuery` class. It returns the height of the screen in
   /// logical pixels.
