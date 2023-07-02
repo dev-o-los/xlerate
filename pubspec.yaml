@@ -1,6 +1,6 @@
 name: simple_sizer
-description: A simple package that allows you to create responsive UI based on the current device's height and width, as well as employ useful extensions over your context to make your UI more responsive, and much more...
-version: 0.2.0
+description: This package allows you to construct responsive UI using reactive widgets.
+version: 0.2.1
 homepage: https://github.com/dev-o-los/simple_sizer
 
 environment:
