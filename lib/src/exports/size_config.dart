@@ -40,7 +40,7 @@ extension SizeConfigForDouble on double {
   /// SizedBox(height: 45.h), //45.h = 45 % of height
   /// ```
   /// This means flutter will create a sized box with 45 % of height.
-  double get h => SizeConfig._height;
+  double get h => this * SizeConfig._height;
 
   ///The width parameter `w` is used to access the percent width of the current device.
   /// ```
