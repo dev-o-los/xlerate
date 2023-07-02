@@ -68,6 +68,13 @@ Widget build(BuildContext context) {
    );
 ```
 
+## Context Extensions
+
+Here are some extensions for your favourite context that will assist you in developing
+responsive user interfaces.
+
+<img src="https://imgur.com/w8mIWLr.png">
+
 ## ReactiveRowCol
 
 [Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_row_col_example.dart)
