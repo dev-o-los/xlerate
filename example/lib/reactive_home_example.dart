@@ -15,7 +15,7 @@ class ReactiveHomeExample extends StatelessWidget {
       reactiveDestinations: [
         ReactiveDestination(label: 'MyWidet1', icon: Icons.home),
         ReactiveDestination(label: 'MyWidet2', icon: Icons.home_filled),
-        ReactiveDestination(label: 'MyWidet3', icon: Icons.home_max_rounded),
+        ReactiveDestination(label: 'MyWidet3', icon: Icons.home_outlined),
       ],
     );
   }

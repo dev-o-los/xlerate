@@ -12,8 +12,9 @@ class ReactiveHome extends StatelessWidget {
     super.key,
     required this.pages,
     required this.reactiveDestinations,
-    this.extendedForNavRail = false,
+    this.extendedForNavRail = true,
     this.mobileWhenWidthIs = 500,
+    this.labelTypeForNavRail = NavigationRailLabelType.all,
     this.backgroundColor,
     this.elevation,
     this.indicatorColor,
@@ -28,7 +29,6 @@ class ReactiveHome extends StatelessWidget {
     this.unselectedLabelTextStyleForNavRail,
     this.selectedIconThemeForNavRail,
     this.unselectedIconThemeForNavRail,
-    this.labelTypeForNavRail,
     this.backgroundColorForNavBar,
     this.elevationForNavBar,
     this.indicatorColorForNavBar,
@@ -300,7 +300,7 @@ class ReactiveHome extends StatelessWidget {
   /// The default value is [NavigationRailThemeData.labelType]. If
   /// [NavigationRailThemeData.labelType] is null, then the default value is
   /// [NavigationRailLabelType.none].
-  final NavigationRailLabelType? labelTypeForNavRail;
+  final NavigationRailLabelType labelTypeForNavRail;
 
   /// Overrides the default value of [NavigationRail]'s selection indicator shape,
   /// when [useIndicator] is true.
@@ -325,9 +325,7 @@ class ReactiveHome extends StatelessWidget {
             indicatorShape: indicatorShapeForNavRail ?? indicatorShape,
             pages: pages,
             reactiveDestinations: reactiveDestinations,
-            extended: extendedForNavRail,
             groupAlignment: groupAlignmentForNavRail,
-            labelType: labelTypeForNavRail,
             leading: leadingForNavRail,
             minExtendedWidth: minExtendedWidthForNavRail,
             minWidth: minWidthForNavRail,
@@ -338,6 +336,27 @@ class ReactiveHome extends StatelessWidget {
             unselectedLabelTextStyle: unselectedLabelTextStyleForNavRail,
             useIndicator: useIndicatorForNavRail,
             key: key,
+
+            /// The below code is checking if the value of `context.csw` is greater than or equal to 1250
+            /// and if the value of `extendedForNavRail` is true. If both conditions are true, then it
+            /// sets the value of `extended` to true. Otherwise, it sets the value of `extended` to
+            /// false.
+            extended: (context.csw >= 1250 && extendedForNavRail == true)
+                ? true
+                : false,
+
+            /// The below code is checking the value of `context.csw` and `labelTypeForNavRail` to
+            /// determine the value of `labelType`. If `context.csw` is greater than or equal to 1250
+            /// and `labelTypeForNavRail` is either `NavigationRailLabelType.all` or
+            /// `NavigationRailLabelType.selected`, then `labelType` is set to
+            /// `NavigationRailLabelType.none`. Otherwise, `labelType` is set to the value of
+            /// `labelTypeForNavRail`.
+            labelType: (context.csw >= 1250 &&
+                    (labelTypeForNavRail == NavigationRailLabelType.all ||
+                        labelTypeForNavRail ==
+                            NavigationRailLabelType.selected))
+                ? NavigationRailLabelType.none
+                : labelTypeForNavRail,
           )
         : ReactiveMobileView(
             backgroundColor: backgroundColorForNavBar ?? backgroundColor,
