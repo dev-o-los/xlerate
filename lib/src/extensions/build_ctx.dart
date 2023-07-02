@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -128,42 +127,80 @@ extension Buildctx on BuildContext {
 
   ThemeData get _th => Theme.of(this);
 
+  /// The `cs` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the colorScheme using the `Themedata` class.
   ColorScheme get cs => _th.colorScheme;
 
+  /// The `canvascol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the canvasColor using the `Themedata` class.
   Color get canvascol => _th.canvasColor;
 
+  /// The `cardcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the cardColor using the `Themedata` class.
   Color get cardcol => _th.cardColor;
 
+  /// The `dbcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the dialogBackgroundColor using the `Themedata` class.
   Color get dbcol => _th.dialogBackgroundColor;
 
+  /// The `discol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the disabledColor using the `Themedata` class.
   Color get discol => _th.disabledColor;
 
+  /// The `divcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the dividerColor using the `Themedata` class.
   Color get divcol => _th.dividerColor;
 
+  /// The `focuscol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the focusColor using the `Themedata` class.
   Color get focuscol => _th.focusColor;
 
+  /// The `hlcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the highlightColor using the `Themedata` class.
   Color get hlcol => _th.highlightColor;
 
+  /// The `hintcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the hintColor using the `Themedata` class.
   Color get hintcol => _th.hintColor;
 
+  /// The `hovcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the hoverColor using the `Themedata` class.
   Color get hovcol => _th.hoverColor;
 
+  /// The `indcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the indicatorColor using the `Themedata` class.
   Color get indcol => _th.indicatorColor;
 
+  /// The `prmcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the primaryColor using the `Themedata` class.
   Color get prmcol => _th.primaryColor;
 
+  /// The `prmdkcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the primaryColorDark using the `Themedata` class.
   Color get prmdkcol => _th.primaryColorDark;
 
+  /// The `prmlgcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the primaryColorLight using the `Themedata` class.
   Color get prmlgcol => _th.primaryColorLight;
 
+  /// The `scfbgcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the scaffoldBackgroundColor using the `Themedata` class.
   Color get scfbgcol => _th.scaffoldBackgroundColor;
 
+  /// The `sechdcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the secondaryHeaderColor using the `Themedata` class.
   Color get sechdcol => _th.secondaryHeaderColor;
 
+  /// The `shadowcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the shadowColor using the `Themedata` class.
   Color get shadowcol => _th.shadowColor;
 
+  /// The `splcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the splashColor using the `Themedata` class.
   Color get splcol => _th.splashColor;
 
+  /// The `unselcol` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the unselectedWidgetColor using the `Themedata` class.
   Color get unselcol => _th.unselectedWidgetColor;
 
   //*[End ThemeData]
