@@ -1,6 +1,6 @@
 # simple_sizer
 
-A simple pkg that helps you to make responsive ui based on current device's height and width.
+A simple package that allows you to create responsive UI based on the current device's height and width, as well as employ useful extensions over your context to make your UI more responsive, and much more...
 
 Supports Android, iOS, Web, Mac, Linux and Windows.
 
@@ -116,15 +116,22 @@ Widget build(BuildContext context) {
 
 [Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_home_example.dart)
 
-[Click Here For Result]()
+[Click Here For Result](https://github.com/dev-o-los/simple_sizer/assets/112308397/09d144c2-6c74-4209-9b98-be60b96ebce7)
 
 ```dart
   ReactiveHome(
+      // The `pages` parameter in the `ReactiveHome` widget is used to define the list of pages that
+      // will be displayed in the reactive home screen. Each page is represented by a widget, such as
+      // pages that the user can navigate between using the reactive navigation bar.
       pages: [
         MyWidget1(),
         MyWidget2(),
         MyWidget3(),
       ],
+      // The `reactiveDestinations` parameter in the `ReactiveHome` widget is used to define the list
+      // of destinations that will be displayed in the reactive navigation bar or rail. Each destination is
+      // represented by a `ReactiveDestination` object, which consists of a label and an icon. These
+      // destinations are used to navigate between different pages in the `ReactiveHome` widget.
       reactiveDestinations: [
         ReactiveDestination(label: 'MyWidet1', icon: Icons.home),
         ReactiveDestination(label: 'MyWidet2', icon: Icons.home_filled),
