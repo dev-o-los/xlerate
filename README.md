@@ -70,6 +70,10 @@ Widget build(BuildContext context) {
 
 ## ReactiveRowCol
 
+[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_row_col_example.dart)
+
+[Click Here For Result](https://github.com/dev-o-los/simple_sizer/assets/112308397/8f6d2ddf-6681-4324-b307-c144078e7e32)
+
 ```dart
    ReactiveRowCol(
       //Define when you want the widgets to be in row form using the rowWhen parameter
@@ -107,7 +111,24 @@ Widget build(BuildContext context) {
       ],
    );
 ```
-[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_row_col_example.dart)
 
-[result](https://github.com/dev-o-los/simple_sizer/assets/112308397/9db94e57-6c13-48b5-b4a1-7657b511e0e1)
+## ReactiveHome
 
+[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_home_example.dart)
+
+[Click Here For Result](https://github.com/dev-o-los/simple_sizer/assets/112308397/09d144c2-6c74-4209-9b98-be60b96ebce7)
+
+```dart
+  ReactiveHome(
+      pages: [
+        MyWidget1(),
+        MyWidget2(),
+        MyWidget3(),
+      ],
+      reactiveDestinations: [
+        ReactiveDestination(label: 'MyWidet1', icon: Icons.home),
+        ReactiveDestination(label: 'MyWidet2', icon: Icons.home_filled),
+        ReactiveDestination(label: 'MyWidet3', icon: Icons.home_outlined),
+      ],
+  );
+```
