@@ -13,6 +13,7 @@ class ReactiveHome extends StatelessWidget {
     required this.pages,
     required this.reactiveDestinations,
     this.extendedForNavRail = false,
+    this.mobileWhenWidthIs = 500,
     this.backgroundColor,
     this.elevation,
     this.indicatorColor,
@@ -308,9 +309,15 @@ class ReactiveHome extends StatelessWidget {
   /// that is null, defaults to [StadiumBorder].
   final ShapeBorder? indicatorShapeForNavRail;
 
+  ///Specfiy at what screen width you want the mobile view (bottomNavBar)
+  final double mobileWhenWidthIs;
+
   @override
   Widget build(BuildContext context) {
-    return (context.csw > 500)
+    /// The below code is a Dart function that returns a boolean value. It checks if the value of
+    /// `context.csw` is greater than 500. If it is, the function returns `true`, otherwise it returns
+    /// `false`.
+    return (context.csw > mobileWhenWidthIs)
         ? ReactiveBigScreenView(
             backgroundColor: backgroundColorForNavRail ?? backgroundColor,
             elevation: elevationForNavRail ?? elevation,
