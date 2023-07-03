@@ -43,10 +43,12 @@ Widget build(BuildContext context) {
   }
 ```
 
-## Parameters
+## Num Extensions
 
 - `{num}.h` - Returns a calculated height based on the current device
 - `{num}.w` - Returns a calculated width based on the current device
+- `{num}.ch()` - Returns a calculated width based on the current context
+- `{num}.cw()` - Returns a calculated width based on the current context
 
 ## Sized Box
 

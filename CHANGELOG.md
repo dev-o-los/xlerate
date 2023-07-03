@@ -15,3 +15,9 @@
 
 - Readme.md updated
 - Package description updated
+
+## 0.3.2
+
+- new .ch() parameter added
+- new .cw() parameter added
+- Bug fixed for .h on double values
