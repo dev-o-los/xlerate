@@ -16,7 +16,7 @@
 - Readme.md updated
 - Package description updated
 
-## 0.3.2
+## 0.3.0
 
 - new .ch() parameter added
 - new .cw() parameter added
