@@ -21,3 +21,13 @@
 - new .ch() parameter added
 - new .cw() parameter added
 - Bug fixed for .h on double values
+
+## 0.4.0
+
+- Helpful extension over Widget for alignment added
+- Helpful extension over Widget for expanded added
+- Helpful extension over Widget for flexible added
+- Helpful extension over Widget for alignment added
+- Helpful extension over Widget for Padding added
+- Helpful extension over Widget for AspectRatio added
+- Helpful extension over Widget for FractionallySizedBox added
