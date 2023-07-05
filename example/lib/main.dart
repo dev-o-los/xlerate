@@ -114,4 +114,48 @@ class MyText extends StatelessWidget {
       ),
     );
   }
+
+  void widgetExtExample() {
+    //No Need to wrap widgets for minor ui changes
+    //You can use extensions provided by this pkg to
+    //achieve those changes.
+    Container(
+      color: Colors.blue,
+      height: 27,
+      width: 27,
+      //Using .cntr() you can center any widget easily
+    ).cntr();
+
+    Container(
+      color: Colors.blue,
+      height: 27,
+      width: 27,
+      //Using .algn() you can algn any widget easily
+      //Use Al enum to access any alignment ; No more long syntax
+      //required for alignment.
+      //Here cl = center left
+    ).algn(al: Al.cl);
+    //----------------Other Alignments----------------
+
+    // c(Alignment.center),
+    // cl(Alignment.centerLeft),
+    // cr(Alignment.centerRight),
+    // bl(Alignment.bottomLeft),
+    // br(Alignment.bottomRight),
+    // bc(Alignment.bottomCenter),
+    // tl(Alignment.topLeft),
+    // tr(Alignment.topRight),
+    // tc(Alignment.topCenter);
+
+    //------------------------------------------------
+
+    Container(
+      color: Colors.blue,
+      height: 27,
+      width: 27,
+      //Using .algn() you can algn any widget easily
+      //Use Al enum to access any alignment ; No more long syntax
+      //required for alignment.
+    );
+  }
 }
