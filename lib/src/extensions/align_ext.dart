@@ -23,4 +23,7 @@ extension AlignExt on Widget {
         widthFactor: wf,
         child: this,
       );
+
+  Center cntr({double? hf, double? wf}) =>
+      Center(heightFactor: hf, widthFactor: wf, child: this);
 }
