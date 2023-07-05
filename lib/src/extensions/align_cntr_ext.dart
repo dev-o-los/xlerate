@@ -1,14 +1,44 @@
 import 'package:flutter/widgets.dart';
 
+/// The code defines an enum called `Al` which represents different alignment options for widgets in
+/// Flutter. Each alignment option is associated with a specific `AlignmentGeometry` value from the
+/// `flutter/widgets.dart` package.
 enum Al {
+  /// In the given code, `c` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.center`.
   c(Alignment.center),
+
+  /// In the given code, `cl` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.centerLeft`.
   cl(Alignment.centerLeft),
+
+  /// In the given code, `cr` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.centerRight`.
   cr(Alignment.centerRight),
+
+  /// In the given code, `bl` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.bottomLeft`.
   bl(Alignment.bottomLeft),
+
+  /// In the given code, `br` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.bottomRight`. It is associated with the `Alignment.bottomRight` value from the
+  /// `flutter/widgets.dart` package.
   br(Alignment.bottomRight),
+
+  /// In the given code, `bc` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.bottomCenter`.
   bc(Alignment.bottomCenter),
+
+  /// In the given code, `tl` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.topLeft`.
   tl(Alignment.topLeft),
+
+  /// In the given code, `tr` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.topRight`.
   tr(Alignment.topRight),
+
+  /// In the given code, `tc` is a member of the `Al` enum and represents the alignment option
+  /// `Alignment.topCenter`.
   tc(Alignment.topCenter);
 
   final AlignmentGeometry value;
@@ -17,6 +47,16 @@ enum Al {
 }
 
 extension AlignCntrExt on Widget {
+  /// The function `algn` returns an `Align` widget with specified alignment, height factor, width
+  /// factor, and child.
+  ///
+  /// Args:
+  ///   hf (double): The `hf` parameter is of type `double?` and represents the height factor for the
+  /// alignment. It determines how the child widget should be vertically aligned within its parent. A
+  /// value of 1.0 means the child should be aligned at the top, 0.5 means it should be
+  ///   wf (double): The `wf` parameter is a `double?` type, which means it can accept a `double` value
+  /// or `null`. It represents the width factor for the alignment.
+  ///   al (Al): The "al" parameter is of type "Al" and has a default value of "Al.c". Defaults to Al
   Align algn({double? hf, double? wf, Al al = Al.c}) => Align(
         alignment: al.value,
         heightFactor: hf,
@@ -24,6 +64,18 @@ extension AlignCntrExt on Widget {
         child: this,
       );
 
-  Center cntr({double? hf, double? wf}) =>
-      Center(heightFactor: hf, widthFactor: wf, child: this);
+  /// The function `cntr` returns a `Center` widget with optional height and width factors.
+  ///
+  /// Args:
+  ///   hf (double): The `hf` parameter is of type `double?`, which means it can either be a `double`
+  /// value or `null`. It represents the height factor of the `Center` widget. The height factor
+  /// determines the height of the `Center` widget relative to its parent widget. If `hf
+  ///   wf (double): The `wf` parameter is a `double` value that represents the width factor of the
+  /// `Center` widget. It determines the width of the `Center` widget relative to its parent widget. A
+  /// value of 1.0 means the `Center` widget will take up the full width of its
+  Center cntr({double? hf, double? wf}) => Center(
+        heightFactor: hf,
+        widthFactor: wf,
+        child: this,
+      );
 }
