@@ -7,7 +7,7 @@ export 'src/exports/reactive_home.dart';
 
 //From Folder extensions
 export 'src/extensions/build_ctx.dart';
-export 'src/extensions/align_ext.dart';
+export 'src/extensions/align_cntr_ext.dart';
 export 'src/extensions/expanded_and_flexible_ext.dart';
 export 'src/extensions/fractionally_box.dart';
 export 'src/extensions/padding_ext.dart';
