@@ -64,4 +64,15 @@ extension SizeConfigForDouble on num {
   ///even if screen width changes.
   ///cw is helpful in flutter web as windows are adjustable.
   double cw(BuildContext context) => this * (_mq(context).width / 100);
+
+  /// The `Scale independent pixels (sp)` parameter is a getter method that calculates the
+  /// scaled pixel value based on the current device's width.
+  double get sp => this * (SizeConfig._width / 3) / 100;
+
+  ///csp stands for current Scale independent pixels
+  ///The only difference `num.csp()` and `num.sp` is that [num.csp()] rebuilds
+  ///everytime when context changes while the latter returns a fixed width
+  ///even if screen width changes.
+  ///csp is helpful in flutter web as windows are adjustable.
+  double csp(BuildContext context) => this * (_mq(context).width / 3) / 100;
 }
