@@ -18,6 +18,14 @@
 
 ## 0.3.0
 
-- new .ch() parameter added
-- new .cw() parameter added
+- new .ch() extension method added
+- new .cw() extension method added
 - Bug fixed for .h on double values
+
+## 0.4.0
+
+- Helpful extension over Widget for Alignment,Expanded,
+  Flexible,Alignment,Padding,AspectRatio,FractionallySizedBox,
+  Center added
+- new .sp parameter added
+- new .csp() extension method added
