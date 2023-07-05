@@ -64,15 +64,17 @@ extension AlignCntrExt on Widget {
         child: this,
       );
 
-  /// The function `cntr` returns a `Center` widget with optional height and width factors.
+  /// The function `cntr` takes in optional parameters `hf` and `wf` and returns a `Center` widget with
+  /// the specified height and width factors, and the child widget.
   ///
   /// Args:
   ///   hf (double): The `hf` parameter is of type `double?`, which means it can either be a `double`
   /// value or `null`. It represents the height factor of the `Center` widget. The height factor
-  /// determines the height of the `Center` widget relative to its parent widget. If `hf
-  ///   wf (double): The `wf` parameter is a `double` value that represents the width factor of the
-  /// `Center` widget. It determines the width of the `Center` widget relative to its parent widget. A
-  /// value of 1.0 means the `Center` widget will take up the full width of its
+  /// determines the height of the `Center` widget relative to its parent widget.
+  ///   wf (double): The parameter `wf` stands for "widthFactor". It is a double value that determines
+  /// the width factor of the child widget within the Center widget. It specifies the ratio of the
+  /// child's width to the available width in the Center widget. A value of 1.0 means the child will
+  /// take
   Center cntr({double? hf, double? wf}) => Center(
         heightFactor: hf,
         widthFactor: wf,
