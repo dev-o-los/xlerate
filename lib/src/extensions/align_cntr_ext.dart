@@ -16,7 +16,7 @@ enum Al {
   const Al(this.value);
 }
 
-extension AlignExt on Widget {
+extension AlignCntrExt on Widget {
   Align algn({double? hf, double? wf, Al al = Al.c}) => Align(
         alignment: al.value,
         heightFactor: hf,
