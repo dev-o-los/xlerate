@@ -45,15 +45,18 @@ Widget build(BuildContext context) {
 
 ## Num Extensions
 
-- `{num}.hbox` | Creates a sizedbox of height {num}.
-- `{num}.wbox` | Creates a sizedbox of width {num}.
-- `{num}.h` | Returns a calculated height based on the current device
-- `{num}.w` | Returns a calculated width based on the current device
-- `{num}.ch()` | Returns a calculated width based on the current context
-- `{num}.cw()` | Returns a calculated width based on the current context
-- `{num}.sp` | Returns scale independent pixels (sp) for font sizing
-- `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on
-  current context
+| Extension       | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| - `{num}.hbox`  | Creates a sizedbox of height {num}.                      |
+| - `{num}.wbox`  | Creates a sizedbox of width {num}.                       |
+| - `{num}.h`     | Returns a calculated height based on the current device  |
+| - `{num}.w`     | Returns a calculated width based on the current device   |
+| - `{num}.ch()`  | Returns a calculated width based on the current context  |
+| - `{num}.cw()`  | Returns a calculated width based on the current context  |
+| - `{num}.sp`    | Returns scale independent pixels (sp) for font sizing    |
+| - `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on |
+
+current context
 
 ## Sized Box
 
