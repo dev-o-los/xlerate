@@ -25,7 +25,11 @@
 ## 0.4.0
 
 - Helpful extension over Widget for Alignment,Expanded,
-  Flexible,Alignment,Padding,AspectRatio,FractionallySizedBox,
+  Flexible,Padding,AspectRatio,FractionallySizedBox,
   Center added
 - new .sp parameter added
 - new .csp() extension method added
+
+## 0.5.0
+
+- new .hbox and .wbox extension methods added
