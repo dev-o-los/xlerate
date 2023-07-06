@@ -49,6 +49,9 @@ Widget build(BuildContext context) {
 - `{num}.w` - Returns a calculated width based on the current device
 - `{num}.ch()` - Returns a calculated width based on the current context
 - `{num}.cw()` - Returns a calculated width based on the current context
+- `{num}.sp` - Returns scale independent pixels (sp) for font sizing
+- `{num}.csp()` - Returns scale independent pixels (sp) for font sizing on
+  current context
 
 ## Sized Box
 
@@ -70,6 +73,17 @@ Widget build(BuildContext context) {
    );
 ```
 
+or you can use
+
+```dart
+   Container(
+      height: 27,
+      width: 27,
+      color: Colors.amber,
+   //.p12() will give a padding of 12 pixels in all directions
+   ).p12();
+```
+
 ## Context Extensions
 
 Here are some extensions for your favourite context that will assist you in developing responsive user interfaces.
@@ -81,7 +95,11 @@ Here are some extensions for your favourite context that will assist you in deve
 Here are some extensions for Widget that will assist you in developing
 responsive user interfaces.
 
-<img src="https://imgur.com/NdrTbeW.png">
+Extension | What can it do
+
+widget.cntr() | Used to center widgets
+
+<!-- <img src="https://imgur.com/NdrTbeW.png"> -->
 
 ## ReactiveRowCol
 
@@ -91,17 +109,17 @@ responsive user interfaces.
 
 ```dart
    ReactiveRowCol(
-      //Define when you want the widgets to be in row form using the rowWhen parameter
+      // Define when you want the widgets to be in row form using the rowWhen parameter
       rowWhen: (screenWidth) =>
           (screenWidth > 500 && screenWidth < double.infinity),
 
-      //Define when you want the widgets to be in column form using the colWhen parameter
+      // Define when you want the widgets to be in column form using the colWhen parameter
 
       colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
 
       // Use the children parameter to add widgets as usual and you can also use
-      //isRow parameter to define specific widgets when the layout is in row form and
-      //isCol parameter when the layout is in column form.
+      // isRow parameter to define specific widgets when the layout is in row form and
+      // isCol parameter when the layout is in column form.
 
       children: (isRow, isCol) => [
         // Reactive widgets...
@@ -122,7 +140,7 @@ responsive user interfaces.
           width: 30.w,
           color: Colors.pink,
         ),
-        //Reactive widgets...
+        // Reactive widgets...
       ],
    );
 ```
