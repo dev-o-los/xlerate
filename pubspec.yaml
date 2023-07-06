@@ -1,6 +1,6 @@
 name: simple_sizer
 description: This package allows you to construct responsive UI using reactive widgets.
-version: 0.5.0
+version: 0.5.1
 homepage: https://github.com/dev-o-los/simple_sizer
 
 environment:

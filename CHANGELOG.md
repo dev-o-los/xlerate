@@ -33,3 +33,7 @@
 ## 0.5.0
 
 - new .hbox and .wbox extension methods added
+
+## 0.5.1
+
+- readme.md updated
