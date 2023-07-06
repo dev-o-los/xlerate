@@ -45,12 +45,12 @@ Widget build(BuildContext context) {
 
 ## Num Extensions
 
-- `{num}.h` - Returns a calculated height based on the current device
-- `{num}.w` - Returns a calculated width based on the current device
-- `{num}.ch()` - Returns a calculated width based on the current context
-- `{num}.cw()` - Returns a calculated width based on the current context
-- `{num}.sp` - Returns scale independent pixels (sp) for font sizing
-- `{num}.csp()` - Returns scale independent pixels (sp) for font sizing on
+- `{num}.h` | Returns a calculated height based on the current device
+- `{num}.w` | Returns a calculated width based on the current device
+- `{num}.ch()` | Returns a calculated width based on the current context
+- `{num}.cw()` | Returns a calculated width based on the current context
+- `{num}.sp` | Returns scale independent pixels (sp) for font sizing
+- `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on
   current context
 
 ## Sized Box
@@ -95,11 +95,7 @@ Here are some extensions for your favourite context that will assist you in deve
 Here are some extensions for Widget that will assist you in developing
 responsive user interfaces.
 
-Extension | What can it do
-
-widget.cntr() | Used to center widgets
-
-<!-- <img src="https://imgur.com/NdrTbeW.png"> -->
+<img src="https://imgur.com/mh1wXB3.png">
 
 ## ReactiveRowCol
 
