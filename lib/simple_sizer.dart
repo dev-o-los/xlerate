@@ -13,6 +13,9 @@ export 'src/extensions/fractionally_box.dart';
 export 'src/extensions/padding_ext.dart';
 export 'src/extensions/aspectratio_ext.dart';
 export 'src/extensions/sizedbox_ext.dart';
+export 'src/extensions/fitted_box_ext.dart';
+export 'src/extensions/limitedbox_ext.dart';
+export 'src/extensions/stba_ext.dart';
 
 //From Folder reactive_widgets
 export 'src/reactive_widgets/reactive_destination.dart';
