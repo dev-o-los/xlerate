@@ -70,6 +70,15 @@ current context
   );
 ```
 
+or you can use
+
+```dart
+   //Return a SizedBox with height 30px
+   30.hbox;
+   //Return a SizedBox with width 30px
+   30.wbox;
+```
+
 ## Padding
 
 ```dart
@@ -100,7 +109,7 @@ Here are some extensions for your favourite context that will assist you in deve
 Here are some extensions for Widget that will assist you in developing
 responsive user interfaces.
 
-<img src="https://imgur.com/mh1wXB3.png">
+<img src="https://imgur.com/ZOymIDT.png">
 
 ## ReactiveRowCol
 

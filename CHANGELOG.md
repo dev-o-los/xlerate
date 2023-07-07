@@ -37,3 +37,8 @@
 ## 0.5.1
 
 - readme.md updated
+
+## 0.6.0
+
+- Helpful extension over Widget for FittedBox,LimitedBox and SliverToBoxAdapter added
+- bug fixed where hbox and wbox were not accessible
