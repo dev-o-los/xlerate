@@ -4,7 +4,7 @@ library simple_sizer;
 export 'src/exports/size_config.dart';
 export 'src/exports/reactive_row_col.dart';
 export 'src/exports/reactive_home.dart';
-export 'src/exports/reactive_border_rad.dart';
+export 'src/exports/reactive_shape.dart';
 
 //From Folder extensions
 export 'src/exports/extensions/build_ctx.dart';
