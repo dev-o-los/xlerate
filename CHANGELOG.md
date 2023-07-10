@@ -1,3 +1,8 @@
+## 0.7.0
+
+- Helpful extension over Text added for easy ui & ux development
+- reactive shapes added so that you easily use RoundedRectBorder with less boiler code
+
 ## 0.6.0
 
 - Helpful extension over Widget for FittedBox,LimitedBox and SliverToBoxAdapter added

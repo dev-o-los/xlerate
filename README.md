@@ -55,48 +55,7 @@ Widget build(BuildContext context) {
 | `{num}.cw()`  | Returns a calculated width based on the current context  |
 | `{num}.sp`    | Returns scale independent pixels (sp) for font sizing    |
 | `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on |
-
-current context
-
-## Sized Box
-
-```dart
-  SizedBox(
-    // Here we are giving 30 % of screen height
-    height: 30.h,
-    // Here we are giving 30 % of screen width
-    width: 31.w,
-    ),
-  );
-```
-
-or you can use
-
-```dart
-   //Return a SizedBox with height 30px
-   30.hbox;
-   //Return a SizedBox with width 30px
-   30.wbox;
-```
-
-## Padding
-
-```dart
-   Padding(
-      padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 7.w),
-   );
-```
-
-or you can use
-
-```dart
-   Container(
-      height: 27,
-      width: 27,
-      color: Colors.amber,
-   //.p12() will give a padding of 12 pixels in all directions
-   ).p12();
-```
+|               | current context                                          |
 
 ## Context Extensions
 
@@ -106,10 +65,19 @@ Here are some extensions for your favourite context that will assist you in deve
 
 ## Widget Extensions
 
-Here are some extensions for Widget that will assist you in developing
-responsive user interfaces.
+Here are some extensions for Widget that will assist you in developing responsive user interfaces.
 
 <img src="https://imgur.com/ZOymIDT.png">
+
+## Text Extensions
+
+These Text extensions will let you use Text widgets more efficiently and with fewer boilerplate code.
+
+<img src="https://imgur.com/9r2eyc1.png">
+
+# Reactive Widgets
+
+Reactive Widgets are special members of `simple_sizer` pkg that help in UI Development
 
 ## ReactiveRowCol
 
@@ -181,4 +149,46 @@ responsive user interfaces.
         ReactiveDestination(label: 'MyWidet3', icon: Icons.home_outlined),
       ],
   );
+```
+
+# Usage
+
+## Sized Box
+
+```dart
+  SizedBox(
+    // Here we are giving 30 % of screen height
+    height: 30.h,
+    // Here we are giving 30 % of screen width
+    width: 31.w,
+    ),
+  );
+```
+
+or you can use
+
+```dart
+   //Return a SizedBox with height 30px
+   30.hbox;
+   //Return a SizedBox with width 30px
+   30.wbox;
+```
+
+## Padding
+
+```dart
+   Padding(
+      padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 7.w),
+   );
+```
+
+or you can use
+
+```dart
+   Container(
+      height: 27,
+      width: 27,
+      color: Colors.amber,
+   //.p12() will give a padding of 12 pixels in all directions
+   ).p12();
 ```
