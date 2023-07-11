@@ -4,7 +4,7 @@ A simple package that allows you to create responsive UI based on the current de
 
 Supports Android, iOS, Web, Mac, Linux and Windows.
 
-<a href="https://www.buymeacoffee.com/k.utkarsh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="k.utkarsh" data-color="#FFDD00" data-emoji="🍕"  data-font="Cookie" data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
 
 ## Features
 
