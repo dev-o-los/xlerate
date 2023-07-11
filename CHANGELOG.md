@@ -1,3 +1,8 @@
+## 0.7.1
+
+- Readme.md updated
+- Bug fixes
+
 ## 0.7.0
 
 - Helpful extension over Text added for easy ui & ux development

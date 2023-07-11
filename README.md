@@ -45,17 +45,16 @@ Widget build(BuildContext context) {
 
 ## Num Extensions
 
-| Extension     | Description                                              |
-| ------------- | -------------------------------------------------------- |
-| `{num}.hbox`  | Creates a sizedbox of height {num}.                      |
-| `{num}.wbox`  | Creates a sizedbox of width {num}.                       |
-| `{num}.h`     | Returns a calculated height based on the current device  |
-| `{num}.w`     | Returns a calculated width based on the current device   |
-| `{num}.ch()`  | Returns a calculated width based on the current context  |
-| `{num}.cw()`  | Returns a calculated width based on the current context  |
-| `{num}.sp`    | Returns scale independent pixels (sp) for font sizing    |
-| `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on |
-|               | current context                                          |
+| Extension     | Description                                                              |
+| ------------- | ------------------------------------------------------------------------ |
+| `{num}.hbox`  | Creates a sizedbox of height {num}.                                      |
+| `{num}.wbox`  | Creates a sizedbox of width {num}.                                       |
+| `{num}.h`     | Returns a calculated height based on the current device                  |
+| `{num}.w`     | Returns a calculated width based on the current device                   |
+| `{num}.ch()`  | Returns a calculated width based on the current context                  |
+| `{num}.cw()`  | Returns a calculated width based on the current context                  |
+| `{num}.sp`    | Returns scale independent pixels (sp) for font sizing                    |
+| `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on current context |
 
 ## Context Extensions
 
@@ -150,6 +149,18 @@ Reactive Widgets are special members of `simple_sizer` pkg that help in UI Devel
       ],
   );
 ```
+
+# Helper Methods
+
+Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
+customization of widgets containing `shape` parameter.
+
+| Method Name           | Description                                           |
+| --------------------- | ----------------------------------------------------- |
+| allRoundedRectBrdr()  | Rounds all the corners with a default radius of 25    |
+| onlyRoundedRectBrdr() | Rounds specific corners with a default radius of 25   |
+| verRoundedRectBrdr()  | Rounds vertical corners with a default radius of 25   |
+| horzRoundedRectBrdr() | Rounds horizontal corners with a default radius of 25 |
 
 # Usage
 
