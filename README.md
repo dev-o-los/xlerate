@@ -203,3 +203,13 @@ or you can use
    //.p12() will give a padding of 12 pixels in all directions
    ).p12();
 ```
+
+## Card
+
+```dart
+   Card(
+    shape: allRoundedRectBrdr(),
+    color: Colors.yellow,
+    child: const Text('Like This Pkg 👍'),
+   );
+```
