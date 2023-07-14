@@ -4,7 +4,11 @@ A simple package that allows you to create responsive UI based on the current de
 
 Supports Android, iOS, Web, Mac, Linux and Windows.
 
+<p align="center">
+  <br />
+  <br />
 <a href="https://www.buymeacoffee.com/k.utkarsh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</p>
 
 ## Features
 
