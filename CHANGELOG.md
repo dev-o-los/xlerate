@@ -1,3 +1,7 @@
+## 0.7.3
+
+- Text extensions bug fixed
+
 ## 0.7.2
 
 - Readme.md updated
