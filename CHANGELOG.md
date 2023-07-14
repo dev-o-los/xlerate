@@ -1,3 +1,7 @@
+## 0.7.2
+
+- Readme.md updated
+
 ## 0.7.1
 
 - Readme.md updated
