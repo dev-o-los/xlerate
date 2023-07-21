@@ -11,3 +11,8 @@ extension SizedBoxExt on num {
   /// `wbox` extension to create a `SizedBox` widget with that width.
   SizedBox get wbox => SizedBox(width: toDouble());
 }
+
+extension SizedBoxExtWidget on Widget {
+  SizedBox szdbox(double h, double w) =>
+      SizedBox(height: h, width: w, child: this);
+}
