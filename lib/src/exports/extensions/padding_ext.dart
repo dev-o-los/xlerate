@@ -81,4 +81,14 @@ extension PaddingExt on Widget {
         padding: EdgeInsets.symmetric(horizontal: h, vertical: v),
         child: this,
       );
+
+  Padding pLRB({double p = 12.0, double? l, double? r, double? b}) => Padding(
+        padding: EdgeInsets.only(left: l ?? p, right: r ?? p, bottom: b ?? p),
+        child: this,
+      );
+
+  Padding pLRT({double p = 12.0, double? l, double? r, double? t}) => Padding(
+        padding: EdgeInsets.only(left: l ?? p, right: r ?? p, top: t ?? p),
+        child: this,
+      );
 }
