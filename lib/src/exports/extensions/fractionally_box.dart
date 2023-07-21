@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'align_cntr_ext.dart';
+import '../enums/align_cntr_enum.dart';
 
 extension FracSzdBox on Widget {
   /// The `fracSzdBox` function returns a `FractionallySizedBox` widget with optional height and width

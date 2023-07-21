@@ -21,3 +21,7 @@ export 'src/exports/extensions/text_ext.dart';
 
 //From Folder reactive_widgets
 export 'src/reactive_widgets/reactive_destination.dart';
+
+//From Folder enums
+export 'src/exports/enums/text_align_enum.dart';
+export 'src/exports/enums/align_cntr_enum.dart';

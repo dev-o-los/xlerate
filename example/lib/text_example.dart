@@ -9,7 +9,14 @@ class TextExample extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const Text('Welcome Programmers').bold().fntsize(90).mxlnes(1),
+          const Text('Hello World')
+              .bold()
+              .bgcol(Colors.black)
+              .fntsize(100)
+              .col(Colors.red)
+              .txtalgn(TxtAl.end)
+              .ellipsis()
+              .mxlnes(1),
         ],
       ),
     );

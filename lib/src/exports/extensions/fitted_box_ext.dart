@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'align_cntr_ext.dart';
+import '../enums/align_cntr_enum.dart';
 
 extension FittedBoxExt on Widget {
   /// The function `fitdbx` returns a `FittedBox` widget with specified alignment, clip behavior, fit,
