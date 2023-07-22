@@ -19,6 +19,6 @@ extension SizedBoxExtWidget on Widget {
   ///   h (double): The height of the SizedBox.
   ///   w (double): The parameter "w" in the above code represents the desired width of the SizedBox
   /// widget.
-  SizedBox szdbox(double h, double w) =>
+  SizedBox szdbox({double? h, double? w}) =>
       SizedBox(height: h, width: w, child: this);
 }
