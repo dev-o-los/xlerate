@@ -13,6 +13,12 @@ extension SizedBoxExt on num {
 }
 
 extension SizedBoxExtWidget on Widget {
+  /// The `szdbox` function returns a `SizedBox` widget with the specified height, width, and child.
+  ///
+  /// Args:
+  ///   h (double): The height of the SizedBox.
+  ///   w (double): The parameter "w" in the above code represents the desired width of the SizedBox
+  /// widget.
   SizedBox szdbox(double h, double w) =>
       SizedBox(height: h, width: w, child: this);
 }

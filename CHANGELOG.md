@@ -6,6 +6,15 @@
   [1] `clampDimensionWithCurrentWidth()`
   [2] `clampDimensionWithCurrentHeight()`
 
+- New `Padding` extensions added -
+
+  [1] `pLRB()`
+  [2] `pLRT()`
+
+- New extension added for `SizedBox`
+
+  [1] `szdbox()`
+
 - Text extensions bug fixes
 
 ## 0.7.3

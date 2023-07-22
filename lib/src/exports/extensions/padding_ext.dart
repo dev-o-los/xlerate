@@ -82,11 +82,40 @@ extension PaddingExt on Widget {
         child: this,
       );
 
+  /// The function `pLRB` returns a `Padding` widget with customizable padding values for left, right,
+  /// and bottom, or a default value if not provided.
+  ///
+  /// Args:
+  ///   p (double): The default padding value for left, right, and bottom. If no specific padding values
+  /// are provided for these parameters, the default value of 12.0 will be used. Defaults to 12.0
+  ///   l (double): The parameter "l" is an optional double value that represents the left padding. If a
+  /// value is provided, it will be used as the left padding. If no value is provided, the default value
+  /// "p" will be used as the left padding.
+  ///   r (double): The parameter "r" is an optional double value that represents the right padding. If
+  /// a value is provided for "r", it will be used as the right padding. Otherwise, the default value
+  /// "p" (which is 12.0) will be used as the right padding.
+  ///   b (double): The parameter "b" represents the value for the bottom padding.
+  ///
+  /// Useful in cases where you want to dislay a list of widgets with only left , right and bottom padding
+  /// so that the widget does not look too far away from every list item.
   Padding pLRB({double p = 12.0, double? l, double? r, double? b}) => Padding(
         padding: EdgeInsets.only(left: l ?? p, right: r ?? p, bottom: b ?? p),
         child: this,
       );
 
+  /// The function `pLRT` returns a `Padding` widget with customizable padding values for left, right,
+  /// and top, or a default value if not provided.
+  ///
+  /// Args:
+  ///   p (double): The default padding value for left, right, and top. If no specific padding values
+  /// are provided for left, right, or top, the default value will be used. Defaults to 12.0
+  ///   l (double): The parameter "l" represents the left padding value. It is an optional parameter and
+  /// can be set to a specific value or left unspecified.
+  ///   r (double): The parameter "r" represents the value for the right padding.
+  ///   t (double): The parameter "t" represents the top padding value.
+  ///
+  /// Useful in cases where you want to dislay a list of widgets with only left , right and bottom padding
+  /// so that the widget does not look too far away from every list item.
   Padding pLRT({double p = 12.0, double? l, double? r, double? t}) => Padding(
         padding: EdgeInsets.only(left: l ?? p, right: r ?? p, top: t ?? p),
         child: this,
