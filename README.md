@@ -72,13 +72,13 @@ Here are some extensions for your favourite context that will assist you in deve
 
 Here are some extensions for Widget that will assist you in developing responsive user interfaces.
 
-<img src="https://imgur.com/ZOymIDT.png">
+<img src="https://imgur.com/4169Uvh.png">
 
 ## Text Extensions
 
 These Text extensions will let you use Text widgets more efficiently and with fewer boilerplate code.
 
-<img src="https://imgur.com/9r2eyc1.png">
+<img src="https://imgur.com/10oiwHU.png">
 
 # Reactive Widgets
 
@@ -167,6 +167,13 @@ customization of widgets containing `shape` parameter.
 | onlyRoundedRectBrdr() | Rounds specific corners with a default radius of 25   |
 | verRoundedRectBrdr()  | Rounds vertical corners with a default radius of 25   |
 | horzRoundedRectBrdr() | Rounds horizontal corners with a default radius of 25 |
+
+Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
+
+| Method Name                                           | Description                                            |
+| ----------------------------------------------------- | ------------------------------------------------------ |
+| clampDimensionWithCurrentWidth(minInpercent,maxInpx)  | clamps the width after it has reached specific width   |
+| clampDimensionWithCurrentHeight(minInpercent,maxInpx) | clamps the height after it has reached specific height |
 
 # Usage
 

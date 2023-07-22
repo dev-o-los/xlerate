@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/src/reactive_widgets/reactive_destination.dart';
+import 'package:simple_sizer/src/exports/reactive_widgets/reactive_destination.dart';
 
-import '../reactive_widgets/reactive_helper.dart';
+import '../reactive_helper.dart';
 
 class ReactiveMobileView extends StatefulWidget {
   const ReactiveMobileView({

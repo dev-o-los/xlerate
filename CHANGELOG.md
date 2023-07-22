@@ -1,3 +1,22 @@
+## 0.8.0
+
+- New enum added for `TextAlign`
+- New helper methods added for responive width and height -
+
+  [1] `clampDimensionWithCurrentWidth()`
+  [2] `clampDimensionWithCurrentHeight()`
+
+- New `Padding` extensions added -
+
+  [1] `pLRB()`
+  [2] `pLRT()`
+
+- New extension added for `SizedBox`
+
+  [1] `szdbox()`
+
+- Text extensions bug fixes
+
 ## 0.7.3
 
 - Text extensions bug fixed
