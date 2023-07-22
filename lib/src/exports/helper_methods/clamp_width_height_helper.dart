@@ -13,8 +13,10 @@ import 'package:simple_sizer/simple_sizer.dart';
 ///
 /// ```dart
 /// Container(
-///      color: Colors.red,
-///     width: clampDimensionWithCurrentWidth(50, 500, context),//Gives a width of 50% of current-width and stops after it has reached a width of 500 px
+///     color: Colors.red,
+///     width: clampDimensionWithCurrentWidth(50, 500, context),
+///   //Gives a width of 50% of current-width and
+///   //stops after it has reached a width of 500 px
 /// );
 /// ```
 double clampDimensionWithCurrentWidth(
@@ -33,8 +35,10 @@ double clampDimensionWithCurrentWidth(
 ///
 /// ```dart
 /// Container(
-///      color: Colors.red,
-///     height: clampDimensionWithCurrentHeight(50, 500, context), //Gives a height of 50% of current-height and stops after it has reached a height of 500 px
+///     color: Colors.red,
+///     height: clampDimensionWithCurrentHeight(50, 500, context),
+/// //Gives a height of 50% of current-height and
+/// //stops after it has reached a height of 500 px
 /// );
 /// ```
 double clampDimensionWithCurrentHeight(
