@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const NewWidget(),
+      home: const HomePage(),
     );
   }
 }
@@ -112,23 +112,6 @@ class MyText extends StatelessWidget {
       style: const TextStyle(
         fontFamily: 'outfit',
       ),
-    );
-  }
-}
-
-class NewWidget extends StatelessWidget {
-  const NewWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    print('csw ${context.csw}');
-    print('50 per ${50.cw(context)}');
-    return Scaffold(
-      body: Container(
-        color: Colors.red,
-        width: (50.cw(context) >= 500) ? 600 : 50.cw(context),
-        height: 50.ch(context),
-      ).cntr(),
     );
   }
 }
