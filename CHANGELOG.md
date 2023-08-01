@@ -1,3 +1,11 @@
+## 0.9.0
+
+- New helper methods added for responive width and height -
+
+  [1] `curveTopRightLeftCornerByRad()`
+
+- New extension added on `BoxDecoration`
+
 ## 0.8.0
 
 - New enum added for `TextAlign`
