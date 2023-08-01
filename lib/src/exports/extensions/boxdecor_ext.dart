@@ -13,11 +13,11 @@ extension BoxDecorExt on BoxDecoration {
   }) {
     return BoxDecoration(
       backgroundBlendMode: this.backgroundBlendMode ?? backgroundBlendMode,
-      border: border,
-      borderRadius: borderRadius,
-      boxShadow: boxShadow,
-      color: color,
-      gradient: gradient,
+      border: this.border ?? border,
+      borderRadius: this.borderRadius ?? borderRadius,
+      boxShadow: this.boxShadow ?? boxShadow,
+      color: this.color ?? color,
+      gradient: this.gradient ?? gradient,
       image: image,
       shape: shape,
     );
