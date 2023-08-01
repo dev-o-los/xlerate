@@ -1,4 +1,3 @@
-import 'dart:js_interop';
 import 'dart:ui';
 
 import 'package:flutter/widgets.dart';
@@ -131,7 +130,7 @@ extension TextExt on Text {
       textHeightBehavior: textHeightBehavior,
       textScaleFactor: textScaleFactor,
       textWidthBasis: textWidthBasis,
-      style: style.isNull
+      style: (style == null)
           ? TextStyle(
               background: background,
               backgroundColor: backgroundColor,
