@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:simple_sizer/src/exports/helper_methods/bottom_sheet_border_rad.dart';
 
 extension BoxDecorExt on BoxDecoration {
-  BoxDecoration boxdecor({
+  BoxDecoration _boxdecor({
     BorderRadius? borderRadius,
     BlendMode? backgroundBlendMode,
     BoxBorder? border,
@@ -23,31 +22,31 @@ extension BoxDecorExt on BoxDecoration {
     );
   }
 
-  BoxDecoration curveTheRadBy({double rad = 20}) => boxdecor(
+  BoxDecoration curveAllCornersByRad({double rad = 20}) => _boxdecor(
         borderRadius: BorderRadius.circular(rad),
       );
 
-  BoxDecoration curveOnlyTopCorners({double rad = 20}) => boxdecor(
-        borderRadius: curveTopRightLeftCornerByRad(rad: rad),
+  BoxDecoration curveOnlyTopCorners({double rad = 20}) => _boxdecor(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(rad)),
       );
 
-  BoxDecoration curveOnlyBottomCorners({double rad = 20}) => boxdecor(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(rad),
-          bottomRight: Radius.circular(rad),
-        ),
+  BoxDecoration curveOnlyBottomCorners({double rad = 20}) => _boxdecor(
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(rad)),
       );
 
-  BoxDecoration bgBlndMode(BlendMode blndmod) => boxdecor(
+  BoxDecoration bgBlndMode(BlendMode blndmod) => _boxdecor(
         backgroundBlendMode: blndmod,
       );
 
   BoxDecoration shadows(List<BoxShadow>? boxShadow) =>
-      boxdecor(boxShadow: boxShadow);
+      _boxdecor(boxShadow: boxShadow);
 
-  BoxDecoration col(Color color) => boxdecor(color: color);
+  BoxDecoration outlineTheBorder(Color color) =>
+      _boxdecor(border: Border.all(color: color));
 
-  BoxDecoration grdnt(Gradient gradient) => boxdecor(gradient: gradient);
+  BoxDecoration col(Color color) => _boxdecor(color: color);
 
-  BoxDecoration shape(BoxShape shape) => boxdecor(shape: shape);
+  BoxDecoration grdnt(Gradient gradient) => _boxdecor(gradient: gradient);
+
+  BoxDecoration shape(BoxShape shape) => _boxdecor(shape: shape);
 }
