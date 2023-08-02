@@ -222,7 +222,9 @@ Result
 `simple_sizer` provides three types of dialog boxes -
 
 [1] `simpleDialogBox()`
+
 [2] `yesNoDialogBox()`
+
 [3] `yesNoCupertinoDialogBox()`
 
 Simply calling them in the onPressed function will cause the dialogue boxes to appear.
@@ -239,7 +241,7 @@ customization of widgets containing `shape` parameter.
 | verRoundedRectBrdr()  | Rounds vertical corners with a default radius of 25   |
 | horzRoundedRectBrdr() | Rounds horizontal corners with a default radius of 25 |
 
-BorderRadius Helper Methods helps in curving the borders of a container
+### BorderRadius Helper Methods helps in curving the borders of a container
 
 | Method Name              | Description                                        |
 | ------------------------ | -------------------------------------------------- |
@@ -247,7 +249,7 @@ BorderRadius Helper Methods helps in curving the borders of a container
 | curveOnlyTopCorners()    | Rounds top corners with a default radius of 20     |
 | curveOnlyBottomCorners() | Rounds bottom corners with a default radius of 20  |
 
-Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
+### Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
 
 | Method Name                       | Description                                            |
 | --------------------------------- | ------------------------------------------------------ |
