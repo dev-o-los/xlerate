@@ -73,21 +73,92 @@ Future simpleBottomSheet(
   /// parameter that allows you to specify the color of the scroll handle (the small handle used to
   /// scroll the bottom sheet).
   Color? scrollHandleCol,
+
+  /// The `Color? backgroundColor` parameter in the `simpleBottomSheet` function is an optional
+  /// parameter that allows you to specify the background color of the bottom sheet. By providing a
+  /// value for this parameter, you can customize the appearance of the bottom sheet by setting a
+  /// specific background color. If no value is provided, the default background color will be used.
   Color? backgroundColor,
+
+  /// The `Color? barrierColor` parameter in the `simpleBottomSheet` function is an optional parameter
+  /// that allows you to specify the color of the barrier that appears behind the bottom sheet. The
+  /// barrier is a semi-transparent overlay that prevents interaction with the rest of the screen while
+  /// the bottom sheet is displayed.
   Color? barrierColor,
+
+  /// The `double? scrollHandleRad` parameter in the `simpleBottomSheet` function is an optional
+  /// parameter that allows you to specify the radius of the scroll handle (the small handle used to
+  /// scroll the bottom sheet). By providing a value for this parameter, you can customize the
+  /// appearance of the scroll handle by setting a specific radius. If no value is provided, the default
+  /// radius will be used.
   double? scrollHandleRad,
+
+  /// The `double? cornerRad` parameter in the `simpleBottomSheet` function is an optional parameter
+  /// that allows you to specify the radius of the corners of the bottom sheet. By providing a value for
+  /// this parameter, you can customize the appearance of the bottom sheet by setting a specific corner
+  /// radius. If no value is provided, the default corner radius of 25 will be used.
   double? cornerRad,
+
+  /// The `double? bottomSheetHeight` parameter in the `simpleBottomSheet` function is an optional
+  /// parameter that allows you to specify the height of the bottom sheet. By providing a value for this
+  /// parameter, you can customize the height of the bottom sheet. If no value is provided, the height
+  /// of the bottom sheet will be determined based on its content.
   double? bottomSheetHeight,
+
+  /// The `double? elevation` parameter in the `simpleBottomSheet` function is an optional parameter
+  /// that allows you to specify the elevation (shadow) of the bottom sheet. By providing a value for
+  /// this parameter, you can customize the appearance of the bottom sheet by setting a specific
+  /// elevation. If no value is provided, the default elevation will be used.
   double? elevation,
+
+  /// The `Icon? closeIcon` parameter in the `simpleBottomSheet` function is an optional parameter that
+  /// allows you to specify the icon to be used for the close button in the bottom sheet. By providing a
+  /// value for this parameter, you can customize the appearance of the close button by setting a
+  /// specific icon. If no value is provided, the default close icon (a cross symbol) will be used.
   Icon? closeIcon,
+
+  /// The `Icon? checkIcon` parameter in the `simpleBottomSheet` function is an optional parameter that
+  /// allows you to specify the icon to be used for the check button in the bottom sheet. By providing a
+  /// value for this parameter, you can customize the appearance of the check button by setting a
+  /// specific icon. If no value is provided, the default check icon (a checkmark symbol) will be used.
   Icon? checkIcon,
+
+  /// The `VoidCallback? onClosePressed` parameter in the `simpleBottomSheet` function is an optional
+  /// parameter that allows you to specify a callback function to be called when the close button in the
+  /// bottom sheet is pressed.
   VoidCallback? onClosePressed,
+
+  /// The `VoidCallback? onCheckPressed` parameter in the `simpleBottomSheet` function is an optional
+  /// parameter that allows you to specify a callback function to be called when the check button in the
+  /// bottom sheet is pressed.
   VoidCallback? onCheckPressed,
+
+  /// The `Clip? clipBehavior` parameter in the `simpleBottomSheet` function is an optional parameter
+  /// that allows you to specify the clipping behavior of the bottom sheet.
   Clip? clipBehavior,
+
+  /// The `ShapeBorder? shape` parameter in the `simpleBottomSheet` function is an optional parameter
+  /// that allows you to specify the shape of the bottom sheet. By providing a value for this parameter,
+  /// you can customize the appearance of the bottom sheet by setting a specific shape.
   ShapeBorder? shape,
+
+  /// The `BoxConstraints? constraints` parameter in the `simpleBottomSheet` function is an optional
+  /// parameter that allows you to specify the constraints for the bottom sheet's size. By providing a
+  /// value for this parameter, you can customize the size of the bottom sheet within the specified
+  /// constraints. If no value is provided, the default constraints will be used.
   BoxConstraints? constraints,
+
+  /// The `RouteSettings? routeSettings` parameter in the `simpleBottomSheet` function is an optional
+  /// parameter that allows you to specify additional settings for the route of the bottom sheet.
   RouteSettings? routeSettings,
+
+  /// The `AnimationController? transitionAnimationController` parameter in the `simpleBottomSheet`
+  /// function is an optional parameter that allows you to specify an animation controller for the
+  /// transition animation of the bottom sheet.
   AnimationController? transitionAnimationController,
+
+  /// The `Offset? anchorPoint` parameter in the `simpleBottomSheet` function is an optional parameter
+  /// that allows you to specify the anchor point for the bottom sheet.
   Offset? anchorPoint,
 }) {
   return showModalBottomSheet(
@@ -113,6 +184,12 @@ Future simpleBottomSheet(
         child: Column(
           mainAxisSize: takeMinHeight ? MainAxisSize.min : MainAxisSize.max,
           children: [
+            /// The below code is creating a Container widget with a height of 7 and width of 45. It has
+            /// a decoration that sets the color to either the value of `scrollHandleCol` or
+            /// `Colors.grey.shade600` if `scrollHandleCol` is null. The container also has rounded
+            /// corners with a radius of either the value of `scrollHandleRad` or 10 if `scrollHandleRad`
+            /// is null. Finally, the container is positioned at the top with a margin of 15 pixels from
+            /// the top.
             if (!removescrollHandle)
               Container(
                 height: 7,
@@ -121,6 +198,14 @@ Future simpleBottomSheet(
                     .col(scrollHandleCol ?? Colors.grey.shade600)
                     .curveAllCornersByRad(rad: scrollHandleRad ?? 10),
               ).pOnly(t: 15),
+
+            /// The below code is creating a row with three elements: an IconButton on the left side, a
+            /// Text element in the center, and another IconButton on the right side. The row is wrapped
+            /// in an if statement that checks if the removeHeader variable is false. If removeHeader is
+            /// false, the row will be displayed. The IconButton on the left side is assigned an
+            /// onPressed function called onClosePressed, and the icon is set to either the closeIcon
+            /// variable or the default close icon from the Icons class. The Text element displays the
+            /// title and has various chained methods applied to it for styling. The IconButton on the
             if (!removeHeader) ...[
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -142,6 +227,10 @@ Future simpleBottomSheet(
                 ],
               ).pLRT(),
             ],
+
+            /// The above code is adding a Divider widget with padding on the left, right, and top of 5
+            /// pixels if the variable `removeDivider` is false. It then adds the rest of the widgets in
+            /// the `widgets` list.
             if (!removeDivider) const Divider().pLRT(t: 5),
             ...widgets,
           ],
