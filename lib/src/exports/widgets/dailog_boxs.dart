@@ -116,7 +116,7 @@ Future simpleDialogBox(
   );
 }
 
-Future theYesNoDialogBox(
+Future yesNoDialogBox(
   BuildContext context, {
   /// The `VoidCallback? onNoPressed` parameter is used to specify the callback function that will be
   /// executed when the "No" button is pressed in the dialog box. It is an optional parameter that
@@ -232,7 +232,7 @@ Future theYesNoDialogBox(
   );
 }
 
-Future theYesNoCupertinoDialogBox(
+Future yesNoCupertinoDialogBox(
   BuildContext context, {
   /// The `required VoidCallback onYesPressed` parameter is used to specify the callback function that
   /// will be executed when the "Yes" button is pressed in the dialog box. The `VoidCallback` is a

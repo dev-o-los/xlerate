@@ -156,6 +156,49 @@ These Text extensions will let you use Text widgets more efficiently and with fe
 
 <img src="https://imgur.com/10oiwHU.png">
 
+# App Components
+
+## BottomSheet
+
+```dart
+ElevatedButton(
+  //call simplebottomsheet to trigger the bottom sheet
+    onPressed: () => simpleBottomSheet(context, widgets: [
+      Container(
+        //decorate the listTile using extensions
+        decoration: const BoxDecoration()
+            .col(Colors.blueGrey)
+            .curveAllCornersByRad(rad: 25),
+        child: ListTile(
+          title: const Text('Title 1').semibold(),
+        ),
+      ).p12(),
+      ListTile(
+        tileColor: Colors.blueGrey,
+        // or you can use shape helper methods
+        shape: allRoundedRectBrdr(),
+        title: const Text('Title 2').semibold(),
+        //giving padding all around the listTile
+      ).p12(),
+    ]),
+    child: const Text('Press'),
+).cntr(),
+```
+
+Result
+
+<img src="https://imgur.com/QrDGXi0.png" width=200>
+
+## Dialog Box
+
+`simple_sizer` provides three types of dialog boxes -
+
+[1] `simpleDialogBox()`
+[2] `yesNoDialogBox()`
+[3] `yesNoCupertinoDialogBox()`
+
+Simply calling them in the onPressed function will cause the dialogue boxes to appear.
+
 # Helper Methods
 
 Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
@@ -170,18 +213,18 @@ customization of widgets containing `shape` parameter.
 
 BorderRadius Helper Methods helps in curving the borders of a container
 
-| Method Name            | Description                                        |
-| ---------------------- | -------------------------------------------------- |
-| curveCorners()         | Rounds all the corners with a default radius of 20 |
-| curveOnlyTopCorners()  | Rounds top corners with a default radius of 20     |
-| curveOnlyBottomCorners | Rounds bottom corners with a default radius of 20  |
+| Method Name              | Description                                        |
+| ------------------------ | -------------------------------------------------- |
+| curveCorners()           | Rounds all the corners with a default radius of 20 |
+| curveOnlyTopCorners()    | Rounds top corners with a default radius of 20     |
+| curveOnlyBottomCorners() | Rounds bottom corners with a default radius of 20  |
 
 Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
 
-| Method Name                                           | Description                                            |
-| ----------------------------------------------------- | ------------------------------------------------------ |
-| clampDimensionWithCurrentWidth(minInpercent,maxInpx)  | clamps the width after it has reached specific width   |
-| clampDimensionWithCurrentHeight(minInpercent,maxInpx) | clamps the height after it has reached specific height |
+| Method Name                       | Description                                            |
+| --------------------------------- | ------------------------------------------------------ |
+| clampDimensionWithCurrentWidth()  | clamps the width after it has reached specific width   |
+| clampDimensionWithCurrentHeight() | clamps the height after it has reached specific height |
 
 # Usage
 
@@ -204,25 +247,4 @@ or you can use
    30.hbox;
    //Return a SizedBox with width 30px
    30.wbox;
-```
-
-## Padding
-
-```dart
-   Container(
-      height: 27,
-      width: 27,
-      color: Colors.amber,
-   //.p12() will give a padding of 12 pixels in all directions
-   ).p12();
-```
-
-## Card
-
-```dart
-   Card(
-    shape: allRoundedRectBrdr(),
-    color: Colors.yellow,
-    child: const Text('Like This Pkg 👍'),
-   );
 ```
