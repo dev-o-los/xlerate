@@ -84,7 +84,7 @@ extension TextExt on Text {
   ///
   /// Returns:
   ///   a Text widget.
-  Text text({
+  Text _text({
     Color? color,
     Color? backgroundColor,
     String? fontFamily,
@@ -192,18 +192,18 @@ extension TextExt on Text {
 
   /// The `bold` is an extension method on the `Text` widget in Flutter. It allows you to
   /// easily create a new `Text` widget with a bold font weight.
-  Text bold() => text(fontWeight: FontWeight.bold);
+  Text bold() => _text(fontWeight: FontWeight.bold);
 
   /// The `semibold` is an extension method on the `Text` widget in Flutter. It allows you to
   /// easily create a new `Text` widget with a semi-bold font weight.
-  Text semibold() => text(fontWeight: FontWeight.w600);
+  Text semibold() => _text(fontWeight: FontWeight.w600);
 
   /// The function `col` returns a `Text` widget with a specified color.
   ///
   /// Args:
   ///   color (Color): The "color" parameter is of type "Color". It represents the desired color for the
   /// text.
-  Text col(Color color) => text(color: color);
+  Text col(Color color) => _text(color: color);
 
   /// The function `bgcol` takes a `Color` parameter and returns a `Text` widget with the specified
   /// background color.
@@ -212,50 +212,50 @@ extension TextExt on Text {
   ///   color (Color): The color parameter is of type Color, which represents a color in Flutter. It can
   /// be any valid color value, such as a named color from the Colors class or a custom color defined
   /// using the Color constructor.
-  Text bgcol(Color color) => text(backgroundColor: color);
+  Text bgcol(Color color) => _text(backgroundColor: color);
 
   /// The function `fontfm` returns a `Text` widget with a specified font family.
   ///
   /// Args:
   ///   fm (String): The parameter "fm" is a string that represents the font family name.
-  Text fontfm(String fm) => text(fontFamily: fm);
+  Text fontfm(String fm) => _text(fontFamily: fm);
 
   /// The function `fntsize` returns a `Text` widget with a specified font size.
   ///
   /// Args:
   ///   size (double): The size parameter is a double value that represents the desired font size for
   /// the text.
-  Text fntsize(double size) => text(fontSize: size);
+  Text fntsize(double size) => _text(fontSize: size);
 
   /// The `itlc` is an extension method on the `Text` widget in Flutter. It allows you
   /// to easily create a new `Text` widget with an italic font style.
-  Text itlc() => text(fontStyle: FontStyle.italic);
+  Text itlc() => _text(fontStyle: FontStyle.italic);
 
   /// The `clip` is an extension method on the `Text` widget in Flutter. It allows you
   /// to easily create a new `Text` widget with the `TextOverflow.clip` property
   /// set as the overflow behavior.
-  Text clip() => text(overflow: TextOverflow.clip);
+  Text clip() => _text(overflow: TextOverflow.clip);
 
   /// The `ellipsis` is an extension method on the `Text` widget in Flutter. It allows you to
   /// easily create a new `Text` widget with the `TextOverflow.ellipsis` property set as the overflow
   /// behavior.
-  Text ellipsis() => text(overflow: TextOverflow.ellipsis);
+  Text ellipsis() => _text(overflow: TextOverflow.ellipsis);
 
   /// The `fade` is an extension method on the `Text` widget in Flutter. It allows you
   /// to easily create a new `Text` widget with the `TextOverflow.fade` property
   /// set as the overflow behavior.
-  Text fade() => text(overflow: TextOverflow.fade);
+  Text fade() => _text(overflow: TextOverflow.fade);
 
   /// The `visible` is an extension method on the `Text` widget in Flutter. It allows you to
   /// easily create a new `Text` widget with the `TextOverflow.visible` property
   /// set as the overflow behavior.
-  Text visible() => text(overflow: TextOverflow.visible);
+  Text visible() => _text(overflow: TextOverflow.visible);
 
   /// The function `shadows` applies a list of shadows to a text.
   ///
   /// Args:
   ///   sh (List<Shadow>): A list of `Shadow` objects.
-  Text shadows(List<Shadow> sh) => text(shadows: sh);
+  Text shadows(List<Shadow> sh) => _text(shadows: sh);
 
   /// The function returns a Text widget with a specified maximum number of lines.
   ///
@@ -263,12 +263,12 @@ extension TextExt on Text {
   ///   maxLines (int): The `maxLines` parameter specifies the maximum number of lines that the `Text`
   /// widget should occupy. If the text exceeds the specified number of lines, it will be truncated and
   /// an ellipsis (...) will be displayed to indicate that there is more text.
-  Text mxlnes(int maxLines) => text(maxLines: maxLines);
+  Text mxlnes(int maxLines) => _text(maxLines: maxLines);
 
   /// The function `txtalgn` returns a `Text` widget with the specified text alignment.
   ///
   /// Args:
   ///   al (TxtAl): The parameter "al" is of type "TxtAl", which is an enum that represents different
   /// text alignments.
-  Text txtalgn(TxtAl al) => text(textAlign: al.value);
+  Text txtalgn(TxtAl al) => _text(textAlign: al.value);
 }
