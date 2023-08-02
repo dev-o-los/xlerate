@@ -41,13 +41,18 @@ Add the `SizeConfig.initDevSize(context)` function in the first build widget.
 Widget build(BuildContext context) {
     //Add the initdevsize method only here and use it through out the app
     SizeConfig.initDevSize(context);
-    //
+    //If your app just uses [num.ch()] and [num.cw()], do not initialise this function.
+    //For more info read the below [Note]
     return MaterialApp(
       title: 'Simple Sizer Example',
       home: const HomePage(),
     );
   }
 ```
+
+[Note]
+
+If you are working on flutter web, utilise the `num.ch()` and `num.cw()` extension methods since they are more responsive and useful in adjusting to changing window sizes.
 
 # Usage
 
