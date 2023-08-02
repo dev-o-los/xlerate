@@ -41,7 +41,8 @@ Add the `SizeConfig.initDevSize(context)` function in the first build widget.
 Widget build(BuildContext context) {
     //Add the initdevsize method only here and use it through out the app
     SizeConfig.initDevSize(context);
-    //
+    //If your app just uses [num.ch()] and [num.cw()], do not initialise this function.
+    //For more info read the below [Note]
     return MaterialApp(
       title: 'Simple Sizer Example',
       home: const HomePage(),
@@ -49,36 +50,32 @@ Widget build(BuildContext context) {
   }
 ```
 
-## Num Extensions
+[Note]
 
-| Extension     | Description                                                              |
-| ------------- | ------------------------------------------------------------------------ |
-| `{num}.hbox`  | Creates a sizedbox of height {num}.                                      |
-| `{num}.wbox`  | Creates a sizedbox of width {num}.                                       |
-| `{num}.h`     | Returns a calculated height based on the current device                  |
-| `{num}.w`     | Returns a calculated width based on the current device                   |
-| `{num}.ch()`  | Returns a calculated width based on the current context                  |
-| `{num}.cw()`  | Returns a calculated width based on the current context                  |
-| `{num}.sp`    | Returns scale independent pixels (sp) for font sizing                    |
-| `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on current context |
+If you are working on flutter web, utilise the `num.ch()` and `num.cw()` extension methods since they are more responsive and useful in adjusting to changing window sizes.
 
-## Context Extensions
+# Usage
 
-Here are some extensions for your favourite context that will assist you in developing responsive user interfaces.
+## Sized Box
 
-<img src="https://imgur.com/w8mIWLr.png">
+```dart
+  SizedBox(
+    // Here we are giving 30 % of screen height
+    height: 30.h,
+    // Here we are giving 30 % of screen width
+    width: 31.w,
+    ),
+  );
+```
 
-## Widget Extensions
+or you can use
 
-Here are some extensions for Widget that will assist you in developing responsive user interfaces.
-
-<img src="https://imgur.com/4169Uvh.png">
-
-## Text Extensions
-
-These Text extensions will let you use Text widgets more efficiently and with fewer boilerplate code.
-
-<img src="https://imgur.com/10oiwHU.png">
+```dart
+   //Return a SizedBox with height 30px
+   30.hbox;
+   //Return a SizedBox with width 30px
+   30.wbox;
+```
 
 # Reactive Widgets
 
@@ -156,6 +153,80 @@ Reactive Widgets are special members of `simple_sizer` pkg that help in UI Devel
   );
 ```
 
+## Num Extensions
+
+| Extension     | Description                                                              |
+| ------------- | ------------------------------------------------------------------------ |
+| `{num}.hbox`  | Creates a sizedbox of height {num}.                                      |
+| `{num}.wbox`  | Creates a sizedbox of width {num}.                                       |
+| `{num}.h`     | Returns a calculated height based on the current device                  |
+| `{num}.w`     | Returns a calculated width based on the current device                   |
+| `{num}.ch()`  | Returns a calculated width based on the current context                  |
+| `{num}.cw()`  | Returns a calculated width based on the current context                  |
+| `{num}.sp`    | Returns scale independent pixels (sp) for font sizing                    |
+| `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on current context |
+
+## Context Extensions
+
+Here are some extensions for your favourite context that will assist you in developing responsive user interfaces.
+
+<img src="https://imgur.com/w8mIWLr.png">
+
+## Widget Extensions
+
+Here are some extensions for Widget that will assist you in developing responsive user interfaces.
+
+<img src="https://imgur.com/4169Uvh.png">
+
+## Text Extensions
+
+These Text extensions will let you use Text widgets more efficiently and with fewer boilerplate code.
+
+<img src="https://imgur.com/10oiwHU.png">
+
+# App Components
+
+## BottomSheet
+
+```dart
+ElevatedButton(
+  //call simplebottomsheet to trigger the bottom sheet
+    onPressed: () => simpleBottomSheet(context, widgets: [
+      Container(
+        //decorate the listTile using extensions
+        decoration: const BoxDecoration()
+            .col(Colors.blueGrey)
+            .curveAllCornersByRad(rad: 25),
+        child: ListTile(
+          title: const Text('Title 1').semibold(),
+        ),
+      ).p12(),
+      ListTile(
+        tileColor: Colors.blueGrey,
+        // or you can use shape helper methods
+        shape: allRoundedRectBrdr(),
+        title: const Text('Title 2').semibold(),
+        //giving padding all around the listTile
+      ).p12(),
+    ]),
+    child: const Text('Press'),
+).cntr(),
+```
+
+Result
+
+<img src="https://imgur.com/QrDGXi0.png" width=200>
+
+## Dialog Box
+
+`simple_sizer` provides three types of dialog boxes -
+
+[1] `simpleDialogBox()`
+[2] `yesNoDialogBox()`
+[3] `yesNoCupertinoDialogBox()`
+
+Simply calling them in the onPressed function will cause the dialogue boxes to appear.
+
 # Helper Methods
 
 Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
@@ -168,61 +239,17 @@ customization of widgets containing `shape` parameter.
 | verRoundedRectBrdr()  | Rounds vertical corners with a default radius of 25   |
 | horzRoundedRectBrdr() | Rounds horizontal corners with a default radius of 25 |
 
+BorderRadius Helper Methods helps in curving the borders of a container
+
+| Method Name              | Description                                        |
+| ------------------------ | -------------------------------------------------- |
+| curveCorners()           | Rounds all the corners with a default radius of 20 |
+| curveOnlyTopCorners()    | Rounds top corners with a default radius of 20     |
+| curveOnlyBottomCorners() | Rounds bottom corners with a default radius of 20  |
+
 Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
 
-| Method Name                                           | Description                                            |
-| ----------------------------------------------------- | ------------------------------------------------------ |
-| clampDimensionWithCurrentWidth(minInpercent,maxInpx)  | clamps the width after it has reached specific width   |
-| clampDimensionWithCurrentHeight(minInpercent,maxInpx) | clamps the height after it has reached specific height |
-
-# Usage
-
-## Sized Box
-
-```dart
-  SizedBox(
-    // Here we are giving 30 % of screen height
-    height: 30.h,
-    // Here we are giving 30 % of screen width
-    width: 31.w,
-    ),
-  );
-```
-
-or you can use
-
-```dart
-   //Return a SizedBox with height 30px
-   30.hbox;
-   //Return a SizedBox with width 30px
-   30.wbox;
-```
-
-## Padding
-
-```dart
-   Padding(
-      padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 7.w),
-   );
-```
-
-or you can use
-
-```dart
-   Container(
-      height: 27,
-      width: 27,
-      color: Colors.amber,
-   //.p12() will give a padding of 12 pixels in all directions
-   ).p12();
-```
-
-## Card
-
-```dart
-   Card(
-    shape: allRoundedRectBrdr(),
-    color: Colors.yellow,
-    child: const Text('Like This Pkg 👍'),
-   );
-```
+| Method Name                       | Description                                            |
+| --------------------------------- | ------------------------------------------------------ |
+| clampDimensionWithCurrentWidth()  | clamps the width after it has reached specific width   |
+| clampDimensionWithCurrentHeight() | clamps the height after it has reached specific height |
