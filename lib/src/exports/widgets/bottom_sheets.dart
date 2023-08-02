@@ -24,8 +24,8 @@ Future simpleBottomSheet(
   /// be displayed.
   bool removeHeader = false,
 
-  /// The `bool removescrollNob = false` parameter in the `simpleBottomSheet` function is a boolean
-  /// value that determines whether to remove the scroll nob (the small handle used to scroll the bottom
+  /// The `bool removescrollHandle = false` parameter in the `simpleBottomSheet` function is a boolean
+  /// value that determines whether to remove the scroll handle (the small handle used to scroll the bottom
   /// sheet).
   bool removescrollHandle = false,
 
