@@ -49,6 +49,29 @@ Widget build(BuildContext context) {
   }
 ```
 
+# Usage
+
+## Sized Box
+
+```dart
+  SizedBox(
+    // Here we are giving 30 % of screen height
+    height: 30.h,
+    // Here we are giving 30 % of screen width
+    width: 31.w,
+    ),
+  );
+```
+
+or you can use
+
+```dart
+   //Return a SizedBox with height 30px
+   30.hbox;
+   //Return a SizedBox with width 30px
+   30.wbox;
+```
+
 # Reactive Widgets
 
 Reactive Widgets are special members of `simple_sizer` pkg that help in UI Development
@@ -225,26 +248,3 @@ Have you ever found yourself in a situation where you wish to scale a widget's h
 | --------------------------------- | ------------------------------------------------------ |
 | clampDimensionWithCurrentWidth()  | clamps the width after it has reached specific width   |
 | clampDimensionWithCurrentHeight() | clamps the height after it has reached specific height |
-
-# Usage
-
-## Sized Box
-
-```dart
-  SizedBox(
-    // Here we are giving 30 % of screen height
-    height: 30.h,
-    // Here we are giving 30 % of screen width
-    width: 31.w,
-    ),
-  );
-```
-
-or you can use
-
-```dart
-   //Return a SizedBox with height 30px
-   30.hbox;
-   //Return a SizedBox with width 30px
-   30.wbox;
-```
