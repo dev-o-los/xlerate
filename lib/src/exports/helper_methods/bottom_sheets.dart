@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/simple_sizer.dart';
-import 'package:simple_sizer/src/exports/extensions/boxdecor_ext.dart';
 
 Future simpleBottomSheet(
   BuildContext context, {
