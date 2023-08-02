@@ -1,10 +1,21 @@
 ## 0.9.0
 
-- New helper methods added for responive width and height -
+- New helper methods added for BoxDecorations in Containers -
 
-  [1] `curveTopRightLeftCornerByRad()`
+  [1] `curveCorners()`
+  [2] `curveOnlyTopCorners()`
+  [3] `curveOnlyBottomCorners()`
 
 - New extension added on `BoxDecoration`
+
+- New methods added for easy UI building
+
+  [1] `simpleBottomSheet()` added for easy implementaion of bottomsheets in android
+  [2] `simpleDialogBox()` added for easy implementaion of dialogboxes in android
+  [3] `theYesNoDialogBox()` added for easy implementaion of (Y/N) dialogbox in android
+  [4] `theYesNoCupertinoDialogBox()` added for easy implementaion of (Y/N) dialogbox in ios
+
+- Text extensions bug fixes
 
 ## 0.8.0
 

@@ -49,37 +49,6 @@ Widget build(BuildContext context) {
   }
 ```
 
-## Num Extensions
-
-| Extension     | Description                                                              |
-| ------------- | ------------------------------------------------------------------------ |
-| `{num}.hbox`  | Creates a sizedbox of height {num}.                                      |
-| `{num}.wbox`  | Creates a sizedbox of width {num}.                                       |
-| `{num}.h`     | Returns a calculated height based on the current device                  |
-| `{num}.w`     | Returns a calculated width based on the current device                   |
-| `{num}.ch()`  | Returns a calculated width based on the current context                  |
-| `{num}.cw()`  | Returns a calculated width based on the current context                  |
-| `{num}.sp`    | Returns scale independent pixels (sp) for font sizing                    |
-| `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on current context |
-
-## Context Extensions
-
-Here are some extensions for your favourite context that will assist you in developing responsive user interfaces.
-
-<img src="https://imgur.com/w8mIWLr.png">
-
-## Widget Extensions
-
-Here are some extensions for Widget that will assist you in developing responsive user interfaces.
-
-<img src="https://imgur.com/4169Uvh.png">
-
-## Text Extensions
-
-These Text extensions will let you use Text widgets more efficiently and with fewer boilerplate code.
-
-<img src="https://imgur.com/10oiwHU.png">
-
 # Reactive Widgets
 
 Reactive Widgets are special members of `simple_sizer` pkg that help in UI Development
@@ -156,6 +125,37 @@ Reactive Widgets are special members of `simple_sizer` pkg that help in UI Devel
   );
 ```
 
+## Num Extensions
+
+| Extension     | Description                                                              |
+| ------------- | ------------------------------------------------------------------------ |
+| `{num}.hbox`  | Creates a sizedbox of height {num}.                                      |
+| `{num}.wbox`  | Creates a sizedbox of width {num}.                                       |
+| `{num}.h`     | Returns a calculated height based on the current device                  |
+| `{num}.w`     | Returns a calculated width based on the current device                   |
+| `{num}.ch()`  | Returns a calculated width based on the current context                  |
+| `{num}.cw()`  | Returns a calculated width based on the current context                  |
+| `{num}.sp`    | Returns scale independent pixels (sp) for font sizing                    |
+| `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on current context |
+
+## Context Extensions
+
+Here are some extensions for your favourite context that will assist you in developing responsive user interfaces.
+
+<img src="https://imgur.com/w8mIWLr.png">
+
+## Widget Extensions
+
+Here are some extensions for Widget that will assist you in developing responsive user interfaces.
+
+<img src="https://imgur.com/4169Uvh.png">
+
+## Text Extensions
+
+These Text extensions will let you use Text widgets more efficiently and with fewer boilerplate code.
+
+<img src="https://imgur.com/10oiwHU.png">
+
 # Helper Methods
 
 Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
@@ -167,6 +167,14 @@ customization of widgets containing `shape` parameter.
 | onlyRoundedRectBrdr() | Rounds specific corners with a default radius of 25   |
 | verRoundedRectBrdr()  | Rounds vertical corners with a default radius of 25   |
 | horzRoundedRectBrdr() | Rounds horizontal corners with a default radius of 25 |
+
+BorderRadius Helper Methods helps in curving the borders of a container
+
+| Method Name            | Description                                        |
+| ---------------------- | -------------------------------------------------- |
+| curveCorners()         | Rounds all the corners with a default radius of 20 |
+| curveOnlyTopCorners()  | Rounds top corners with a default radius of 20     |
+| curveOnlyBottomCorners | Rounds bottom corners with a default radius of 20  |
 
 Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
 
@@ -199,14 +207,6 @@ or you can use
 ```
 
 ## Padding
-
-```dart
-   Padding(
-      padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 7.w),
-   );
-```
-
-or you can use
 
 ```dart
    Container(
