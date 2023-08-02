@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/simple_sizer.dart';
-import 'package:simple_sizer_example/bttomsheetexample.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const Bttomsheetexample(),
+      home: const HomePage(),
     );
   }
 }
@@ -51,7 +50,7 @@ class HomePage extends StatelessWidget {
                     // Here we are giving [widget 1] 30 % of screen height
                     height: 30.h,
                     // Here we are giving [widget 1] 42 % of screen width
-                    width: 31.w,
+                    width: 42.w,
                     child: const Center(
                       child: MyText(
                         text: 'Widget 1',
@@ -62,7 +61,7 @@ class HomePage extends StatelessWidget {
                 Card(
                   child: SizedBox(
                     height: 30.h,
-                    width: 31.w,
+                    width: 42.w,
                     child: const Center(
                       child: MyText(
                         text: 'Widget 2',
