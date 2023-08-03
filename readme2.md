@@ -30,6 +30,14 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 
 [4] Reactive Widgets for responsive design.
 
+## Table of contents
+
+- [Responsiveness](#responsiveness)
+- [Reactive Widgets](#reactive-widgets)
+- [Extensions](#extensions)
+- [App Components](#app-components)
+- [Helper Methods](#helper-methods)
+
 ## Inspiration
 
 This package was heavily influenced by some of the top pub.dev packages, including [sizer](https://pub.dev/packages/sizer) and [velocity_x](https://pub.dev/packages/velocity_x). The goal of `simple_sizer` is to merge several valuable elements from other packages, enhance them further, and bring them all together under one roof for easy and rapid UI creation by importing only one package.
@@ -156,6 +164,8 @@ Here c stands for `current`
 
 # Reactive Widgets
 
+The second most useful feature of `simple_sizer`
+
 Reactive Widgets are special members of `simple_sizer` pkg that help in UI Development
 
 ## ReactiveRowCol
@@ -234,7 +244,7 @@ Reactive Widgets are special members of `simple_sizer` pkg that help in UI Devel
 
 # Extensions
 
-The second most useful feature of `simple_sizer`
+The third most useful feature of `simple_sizer`
 
 ## Context Extensions
 
@@ -252,7 +262,7 @@ The second most useful feature of `simple_sizer`
 
 # App Components
 
-The third most useful feature of `simple_sizer`
+The fourth most useful feature of `simple_sizer`
 
 ## BottomSheet
 
@@ -297,7 +307,7 @@ Simply calling them in the onPressed function will cause the dialogue boxes to a
 
 # Helper Methods
 
-The fourth most useful feature of `simple_sizer`
+The fifth most useful feature of `simple_sizer`
 
 Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
 customization of widgets containing `shape` parameter.
