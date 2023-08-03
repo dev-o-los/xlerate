@@ -38,3 +38,5 @@ export 'src/exports/widgets/dailog_boxs.dart';
 
 //From Folder exports
 export 'src/exports/size_config.dart';
+
+export 'src/exports/text_creator.dart';

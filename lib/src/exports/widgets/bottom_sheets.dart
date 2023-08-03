@@ -214,12 +214,14 @@ Future simpleBottomSheet(
                     onPressed: onClosePressed,
                     icon: closeIcon ?? const Icon(Icons.close),
                   ),
-                  Text(title)
-                      .semibold()
-                      .fntsize(20)
-                      .ellipsis()
-                      .cntr()
-                      .szdbox(w: 240),
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ).cntr().szdbox(w: 240),
                   IconButton.filledTonal(
                     onPressed: onCheckPressed,
                     icon: checkIcon ?? const Icon(Icons.check),

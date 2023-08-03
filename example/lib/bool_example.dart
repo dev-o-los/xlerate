@@ -9,9 +9,9 @@ class BoolExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ('hello'.isEquals('hello'))
-          ? const Text('True').semibold().fntsize(30)
-          : const Text('False').semibold().fntsize(30),
+      body: Center(
+        child: const Text('Hello').txt.col(Colors.green).semibold.create(),
+      ),
     );
   }
 }
