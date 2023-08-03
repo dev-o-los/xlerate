@@ -154,6 +154,84 @@ Here c stands for `current`
 
 ---
 
+# Reactive Widgets
+
+Reactive Widgets are special members of `simple_sizer` pkg that help in UI Development
+
+## ReactiveRowCol
+
+[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_row_col_example.dart)
+
+[Click Here For Result](https://github.com/dev-o-los/simple_sizer/assets/112308397/8f6d2ddf-6681-4324-b307-c144078e7e32)
+
+```dart
+   ReactiveRowCol(
+      // Define when you want the widgets to be in row form using the rowWhen parameter
+      rowWhen: (screenWidth) =>
+          (screenWidth > 500 && screenWidth < double.infinity),
+
+      // Define when you want the widgets to be in column form using the colWhen parameter
+
+      colWhen: (screenWidth) => (screenWidth > 0 && screenWidth <= 500),
+
+      // Use the children parameter to add widgets as usual and you can also use
+      // isRow parameter to define specific widgets when the layout is in row form and
+      // isCol parameter when the layout is in column form.
+
+      children: (isRow, isCol) => [
+        // Reactive widgets...
+        Container(
+          height: 200,
+          width: 30.w,
+          color: Colors.red,
+        ),
+        isRow
+            ? Container(
+                height: 200,
+                width: 30.w,
+                color: Colors.green,
+              )
+            : Container(),
+        Container(
+          height: 200,
+          width: 30.w,
+          color: Colors.pink,
+        ),
+        // Reactive widgets...
+      ],
+   );
+```
+
+## ReactiveHome
+
+[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_home_example.dart)
+
+[Click Here For Result](https://github.com/dev-o-los/simple_sizer/assets/112308397/09d144c2-6c74-4209-9b98-be60b96ebce7)
+
+```dart
+  ReactiveHome(
+      // The `pages` parameter in the `ReactiveHome` widget is used to define the list of pages that
+      // will be displayed in the reactive home screen. Each page is represented by a widget, such as
+      // pages that the user can navigate between using the reactive navigation bar.
+      pages: [
+        MyWidget1(),
+        MyWidget2(),
+        MyWidget3(),
+      ],
+      // The `reactiveDestinations` parameter in the `ReactiveHome` widget is used to define the list
+      // of destinations that will be displayed in the reactive navigation bar or rail. Each destination is
+      // represented by a `ReactiveDestination` object, which consists of a label and an icon. These
+      // destinations are used to navigate between different pages in the `ReactiveHome` widget.
+      reactiveDestinations: [
+        ReactiveDestination(label: 'MyWidet1', icon: Icons.home),
+        ReactiveDestination(label: 'MyWidet2', icon: Icons.home_filled),
+        ReactiveDestination(label: 'MyWidet3', icon: Icons.home_outlined),
+      ],
+  );
+```
+
+---
+
 # Extensions
 
 The second most useful feature of `simple_sizer`
