@@ -95,15 +95,13 @@ Widget build(BuildContext context) {
     width: 31.w,
     ),
   );
-```
 
-or you can use
+  //or you can use
 
-```dart
-   //Return a SizedBox with height 30px
-   30.hbox;
-   //Return a SizedBox with width 30px
-   30.wbox;
+  //Return a SizedBox with height 30px
+  30.hbox;
+  //Return a SizedBox with width 30px
+  30.wbox;
 ```
 
 ```dart
@@ -115,6 +113,8 @@ or you can use
     child: your-child, // :)
    );
 ```
+
+You can do much more with these parameters this was just a little example.
 
 ---
 
@@ -151,3 +151,93 @@ Here c stands for `current`
     child: your-child, // :)
    );
 ```
+
+---
+
+# Extensions
+
+The second most useful feature of `simple_sizer`
+
+## Context Extensions
+
+<img src="https://imgur.com/w8mIWLr.png">
+
+## Widget Extensions
+
+<img src="https://imgur.com/4169Uvh.png">
+
+## Text Extensions
+
+<img src="https://imgur.com/10oiwHU.png">
+
+---
+
+# App Components
+
+## BottomSheet
+
+```dart
+ElevatedButton(
+  //call simplebottomsheet to trigger the bottom sheet
+    onPressed: () => simpleBottomSheet(context, widgets: [
+      Container(
+        //decorate the listTile using extensions
+        decoration: const BoxDecoration()
+            .col(Colors.blueGrey)
+            .curveAllCornersByRad(rad: 25),
+        child: ListTile(
+          title: const Text('Title 1').semibold(),
+        ),
+      ).p12(),
+      ListTile(
+        tileColor: Colors.blueGrey,
+        // or you can use shape helper methods
+        shape: allRoundedRectBrdr(),
+        title: const Text('Title 2').semibold(),
+        //giving padding all around the listTile
+      ).p12(),
+    ]),
+    child: const Text('Press'),
+).cntr(),
+```
+
+## Dialog Box
+
+`simple_sizer` provides three types of dialog boxes -
+
+[1] `simpleDialogBox()`
+
+[2] `yesNoDialogBox()`
+
+[3] `yesNoCupertinoDialogBox()`
+
+Simply calling them in the onPressed function will cause the dialogue boxes to appear.
+
+---
+
+# Helper Methods
+
+Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
+customization of widgets containing `shape` parameter.
+
+| Method Name           | Description                                           |
+| --------------------- | ----------------------------------------------------- |
+| allRoundedRectBrdr()  | Rounds all the corners with a default radius of 25    |
+| onlyRoundedRectBrdr() | Rounds specific corners with a default radius of 25   |
+| verRoundedRectBrdr()  | Rounds vertical corners with a default radius of 25   |
+| horzRoundedRectBrdr() | Rounds horizontal corners with a default radius of 25 |
+
+### BorderRadius Helper Methods helps in curving the borders of a container
+
+| Method Name              | Description                                        |
+| ------------------------ | -------------------------------------------------- |
+| curveCorners()           | Rounds all the corners with a default radius of 20 |
+| curveOnlyTopCorners()    | Rounds top corners with a default radius of 20     |
+| curveOnlyBottomCorners() | Rounds bottom corners with a default radius of 20  |
+
+### Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
+
+| Method Name                       | Description                                            |
+| --------------------------------- | ------------------------------------------------------ |
+| clampDimensionWithCurrentWidth()  | clamps the width after it has reached specific width   |
+| clampDimensionWithCurrentHeight() | clamps the height after it has reached specific height |
