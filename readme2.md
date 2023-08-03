@@ -174,6 +174,8 @@ The second most useful feature of `simple_sizer`
 
 # App Components
 
+The third most useful feature of `simple_sizer`
+
 ## BottomSheet
 
 ```dart
@@ -216,6 +218,8 @@ Simply calling them in the onPressed function will cause the dialogue boxes to a
 ---
 
 # Helper Methods
+
+The fourth most useful feature of `simple_sizer`
 
 Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
 customization of widgets containing `shape` parameter.
