@@ -1,3 +1,12 @@
+## 1.0.0
+
+- [`Breaking Changes`]
+
+  [1] The Text extensions have been `deprecated` and replaced by all new `TextCreator` class
+  for better control over ui rendering.
+
+- New extention added on `bool` and `String`
+
 ## 0.9.1
 
 - readme.md updated

@@ -10,6 +10,10 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 <a href="https://www.buymeacoffee.com/k.utkarsh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 </p>
 
+## Inspiration
+
+This package was heavily influenced by some of the top pub.dev packages, including [sizer](https://pub.dev/packages/sizer) and [velocity_x](https://pub.dev/packages/velocity_x). The goal of `simple_sizer` is to merge several valuable elements from other packages, enhance them further, and bring them all together under one roof for easy and rapid UI creation by importing only one package.
+
 ## Features
 
 You may use simple_sizer to give your sized boxes and containers a percentage of your device's width or height to make them responsive on different screens.
