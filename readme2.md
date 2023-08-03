@@ -1,6 +1,7 @@
 # simple_sizer
 
 `simple_sizer` is a collection of various of features offered by numerous packages on `pub.dev`.
+
 There are three main reasons for the existence of this package -
 
 [1] To help in rapid ui development.
@@ -35,8 +36,6 @@ This package was heavily influenced by some of the top pub.dev packages, includi
 
 ---
 
----
-
 # Usage
 
 ## Install it
@@ -53,4 +52,102 @@ Now in your `dart` file you can use:
 
 ```dart
 import 'package:simple_sizer/simple_sizer.dart';
+```
+
+---
+
+# Responsiveness
+
+When developing for mobile screens prefer to use `initDevSize` method since the screen is fixed.
+
+## Initialize initDevSize [Step 1]
+
+Add the `SizeConfig.initDevSize(context)` function in the first build widget.
+
+```dart
+Widget build(BuildContext context) {
+    //Add the initdevsize method only here and use it through out the app
+    SizeConfig.initDevSize(context);
+    //If your app just uses [num.ch()] and [num.cw()], do not initialise this function.
+    //For more info read the below [Note]
+    return MaterialApp(
+      title: 'Simple Sizer Example',
+      home: const HomePage(),
+    );
+  }
+```
+
+## Parameters [Step 2]
+
+| Extension  | Description                                             |
+| ---------- | ------------------------------------------------------- |
+| `{num}.h`  | Returns a calculated height based on the current device |
+| `{num}.w`  | Returns a calculated width based on the current device  |
+| `{num}.sp` | Returns scale independent pixels (sp) for font sizing   |
+
+## Usage [Step 3]
+
+```dart
+  SizedBox(
+    // Here we are giving 30 % of screen height
+    height: 30.h,
+    // Here we are giving 30 % of screen width
+    width: 31.w,
+    ),
+  );
+```
+
+or you can use
+
+```dart
+   //Return a SizedBox with height 30px
+   30.hbox;
+   //Return a SizedBox with width 30px
+   30.wbox;
+```
+
+```dart
+   Container(
+    // Here we are giving 20 % of screen height
+    height: 20.h,
+    // Here we are giving 40 % of screen width
+    width: 40.w,
+    child: your-child, // :)
+   );
+```
+
+---
+
+When building for flutter web prefer to use the steps given below,since the web windows are resizeable so we need to change layout or text sizes or height and width of widgets everytime window resizes.
+
+## Parameters [Step 1]
+
+| Extension     | Description                                                              |
+| ------------- | ------------------------------------------------------------------------ |
+| `{num}.ch()`  | Returns a calculated width based on the current context                  |
+| `{num}.cw()`  | Returns a calculated width based on the current context                  |
+| `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on current context |
+
+Here c stands for `current`
+
+## Usage [Step 2]
+
+```dart
+  SizedBox(
+    // Here we are giving 30 % of current screen height
+    height: 30.ch(context),
+    // Here we are giving 30 % of current screen width
+    width: 31.cw(context),
+    ),
+  );
+```
+
+```dart
+   Container(
+    // Here we are giving 20 % of current screen height
+    height: 20.ch(context),
+    // Here we are giving 40 % of current screen width
+    width: 40.cw(context),
+    child: your-child, // :)
+   );
 ```
