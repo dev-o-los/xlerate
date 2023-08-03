@@ -17,6 +17,8 @@ export 'src/exports/extensions/limitedbox_ext.dart';
 export 'src/exports/extensions/stba_ext.dart';
 export 'src/exports/extensions/text_ext.dart';
 export 'src/exports/extensions/boxdecor_ext.dart';
+export 'src/exports/extensions/bool_ext.dart';
+export 'src/exports/extensions/string_ext.dart';
 
 //From Folder helper_methods
 export 'src/exports/helper_methods/shape_helper.dart';
