@@ -22,13 +22,15 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 
 `simple_sizer` has many tricks up it's sleeve
 
-[1] Handle UI layouts using according to diffrent screen sizes.
+[1] Handle UI layouts using according to different screen sizes.
 
 [2] Uses Extensions for easy access of various widgets.
 
 [3] Useful pre-created methods and widgets for good-looking ui.
 
 [4] Reactive Widgets for responsive design.
+
+[5] Useful helper methods to minimize boiler code.
 
 ## Table of contents
 
