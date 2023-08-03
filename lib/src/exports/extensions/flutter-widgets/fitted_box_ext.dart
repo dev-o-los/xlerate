@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import '../enums/align_cntr_enum.dart';
+import '../../../../simple_sizer.dart';
 
 extension FittedBoxExt on Widget {
   /// The function `fitdbx` returns a `FittedBox` widget with specified alignment, clip behavior, fit,
@@ -21,11 +21,12 @@ extension FittedBoxExt on Widget {
   ///
   /// Returns:
   ///   a FittedBox widget.
-  FittedBox fitdbx(
-      {Al al = Al.c,
-      Clip clpbhvr = Clip.antiAlias,
-      BoxFit fit = BoxFit.contain,
-      Key? key}) {
+  FittedBox fitdbx({
+    Al al = Al.c,
+    Clip clpbhvr = Clip.antiAlias,
+    BoxFit fit = BoxFit.contain,
+    Key? key,
+  }) {
     return FittedBox(
       alignment: al.value,
       clipBehavior: clpbhvr,

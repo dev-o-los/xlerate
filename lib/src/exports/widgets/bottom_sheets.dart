@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/simple_sizer.dart';
+import 'package:simple_sizer/src/exports/extensions/flutter-widgets/align_cntr_ext.dart';
+import 'package:simple_sizer/src/exports/extensions/flutter-widgets/boxdecor_ext.dart';
+import 'package:simple_sizer/src/exports/extensions/flutter-widgets/padding_ext.dart';
+import 'package:simple_sizer/src/exports/extensions/flutter-widgets/sizedbox_ext.dart';
 
 /// The `simpleBottomSheet` function is a helper function in Dart that creates a modal bottom sheet with
 /// customizable options and widgets.
