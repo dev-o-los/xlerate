@@ -1,6 +1,6 @@
 name: simple_sizer
 description: One package that manages design, responsiveness and quicker development.
-version: 0.9.1
+version: 1.0.0
 homepage: https://github.com/dev-o-los/simple_sizer
 
 environment:
