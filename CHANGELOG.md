@@ -1,8 +1,13 @@
 ## 1.0.0
 
-- [`Breaking Changes`]
+- [`Breaking Change`]
 
-  [1] The Text extensions have been `deprecated` and replaced by all new `TextCreator` class
+  The Text extensions have been `deprecated` and replaced by all new `TextCreator` class
+  for better control over ui rendering.
+
+- [`Breaking Change`]
+
+  The BoxDecoration extensions have been `deprecated` and replaced by all new `Decorate` class
   for better control over ui rendering.
 
 - New extention added on `bool` and `String`

@@ -259,7 +259,7 @@ The third most useful feature of `simple_sizer` is east to use extensions
 
 ## DataType Extensions
 
-<!-- <img src="https://imgur.com/4169Uvh.png"> -->
+<img src="https://imgur.com/mCHo6yG.png">
 
 ---
 
@@ -290,9 +290,31 @@ Result
 
 ---
 
+# BoxDecoration
+
+The fifth most useful feature of `simple_sizer` is BoxDecoration by method chaning.
+
+```dart
+  Container(
+    height: 30.h,
+    width: 50.w,
+    //Here we are curving all the corner by default radius of 20 and then coloring it with red color
+    //and lastly creating it.
+    decoration: Decorate.instance.curveAllCorners().col(Colors.red).create(),
+  ),
+  11.hbox,
+  Container(
+    height: 30.h,
+    width: 50.w,
+    decoration: Decorate.instance.col(Colors.green).create(),
+  ),
+```
+
+---
+
 # App Components
 
-The fifth most useful feature of `simple_sizer` is app components
+The sixth most useful feature of `simple_sizer` is app components
 
 ## BottomSheet
 
@@ -337,7 +359,7 @@ Simply calling them in the onPressed function will cause the dialogue boxes to a
 
 # Helper Methods
 
-The sixth most useful feature of `simple_sizer` is helper methods
+The seventh most useful feature of `simple_sizer` is helper methods
 
 Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
 customization of widgets containing `shape` parameter.
