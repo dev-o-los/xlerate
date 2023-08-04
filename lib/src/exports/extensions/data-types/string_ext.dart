@@ -1,4 +1,4 @@
-import 'package:simple_sizer/src/exports/text_creator.dart';
+import 'package:simple_sizer/src/exports/creators/text_creator.dart';
 
 extension StringExt on String {
   bool isEquals(String val, {bool ignoreCase = false}) =>

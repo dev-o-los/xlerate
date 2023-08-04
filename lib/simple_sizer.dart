@@ -32,10 +32,10 @@ export 'src/exports/reactive_widgets/reactive_row_col.dart';
 export 'src/exports/reactive_widgets/reactive_home.dart';
 
 //From Folder widgets
-export 'src/exports/widgets/bottom_sheets.dart';
-export 'src/exports/widgets/dailog_boxs.dart';
+export 'src/exports/app components/bottom_sheets.dart';
+export 'src/exports/app components/dailog_boxs.dart';
 
 //From Folder exports
-export 'src/exports/size_config.dart';
-export 'src/exports/text_creator.dart';
-export 'src/exports/decoration_creator.dart';
+export 'src/exports/responsiveness/size_config.dart';
+export 'src/exports/creators/text_creator.dart';
+export 'src/exports/creators/decoration_creator.dart';
