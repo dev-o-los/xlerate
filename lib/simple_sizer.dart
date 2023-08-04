@@ -16,7 +16,6 @@ export 'src/exports/extensions/flutter-widgets/fitted_box_ext.dart';
 export 'src/exports/extensions/flutter-widgets/limitedbox_ext.dart';
 export 'src/exports/extensions/flutter-widgets/stba_ext.dart';
 export 'src/exports/extensions/flutter-widgets/text_ext.dart';
-export 'src/exports/extensions/flutter-widgets/boxdecor_ext.dart';
 
 //From Folder data-types
 export 'src/exports/extensions/data-types/bool_ext.dart';
@@ -38,5 +37,5 @@ export 'src/exports/widgets/dailog_boxs.dart';
 
 //From Folder exports
 export 'src/exports/size_config.dart';
-
 export 'src/exports/text_creator.dart';
+export 'src/exports/decoration_creator.dart';

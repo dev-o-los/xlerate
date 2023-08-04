@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/simple_sizer.dart';
-import 'package:simple_sizer/src/exports/extensions/flutter-widgets/align_cntr_ext.dart';
-import 'package:simple_sizer/src/exports/extensions/flutter-widgets/boxdecor_ext.dart';
-import 'package:simple_sizer/src/exports/extensions/flutter-widgets/padding_ext.dart';
-import 'package:simple_sizer/src/exports/extensions/flutter-widgets/sizedbox_ext.dart';
 
 /// The `simpleBottomSheet` function is a helper function in Dart that creates a modal bottom sheet with
 /// customizable options and widgets.
@@ -198,9 +194,10 @@ Future simpleBottomSheet(
               Container(
                 height: 7,
                 width: 45,
-                decoration: const BoxDecoration()
+                decoration: Decorate.instance
                     .col(scrollHandleCol ?? Colors.grey.shade600)
-                    .curveAllCornersByRad(rad: scrollHandleRad ?? 10),
+                    .curveAllCorners(rad: scrollHandleRad ?? 10)
+                    .create(),
               ).pOnly(t: 15),
 
             /// The below code is creating a row with three elements: an IconButton on the left side, a
