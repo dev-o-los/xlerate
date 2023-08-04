@@ -1,6 +1,6 @@
 # simple_sizer
 
-`simple_sizer` is a collection of various of features offered by numerous packages on `pub.dev`.
+`simple_sizer` is a compilation of features inspired by multiple packages on `pub.dev`.
 
 There are three main reasons for the existence of this package -
 
@@ -22,7 +22,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 
 `simple_sizer` has many tricks up it's sleeve
 
-[1] Handle UI layouts using according to different screen sizes.
+[1] Handle UI layouts based on screen size.
 
 [2] Uses Extensions for easy access of various widgets.
 
@@ -38,6 +38,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 - [Reactive Widgets](#reactive-widgets)
 - [Extensions](#extensions)
 - [Text](#text)
+- [Box Decoration](#boxdecoration)
 - [App Components](#app-components)
 - [Helper Methods](#helper-methods)
 
@@ -125,11 +126,11 @@ Widget build(BuildContext context) {
    );
 ```
 
-You can do much more with these parameters, this was just a little example.
+This is only a small illustration of what you may accomplish with these options.
 
 ---
 
-When building for flutter web prefer to use the steps given below,since the web windows are resizeable so we need to change layout or text sizes or height and width of widgets everytime window resizes.
+When creating for flutter web, follow the steps below. Because web windows are resizeable, we may need to modify the layout, font sizes, or height and width of widgets every time the window resizes.
 
 ## Parameters [Step 1]
 
@@ -247,7 +248,7 @@ Reactive Widgets are special members of `simple_sizer` pkg that help in UI Devel
 
 # Extensions
 
-The third most useful feature of `simple_sizer` is east to use extensions
+The third most useful feature of `simple_sizer` is extensions
 
 ## Context Extensions
 
@@ -255,11 +256,11 @@ The third most useful feature of `simple_sizer` is east to use extensions
 
 ## Widget Extensions
 
-<img src="https://imgur.com/4169Uvh.png">
+<img src="https://imgur.com/VmEHVbD.png">
 
 ## DataType Extensions
 
-<img src="https://imgur.com/mCHo6yG.png">
+<img src="https://imgur.com/gd1jHJf.png">
 
 ---
 
@@ -272,7 +273,9 @@ Writing text widget has now become more easy , see you can do this to create tex
 ```dart
   const Text('simple_sizer').txt.semibold.xxl.col(Colors.red).create();
 
-  //Must call create at the end of method chaning as only then it will render the Text Widget
+  //It is necessary to call create at the conclusion of the method chain since
+  //it is only then that the Text Widget will be shown.
+
 
   //or you can do this
 
@@ -292,7 +295,7 @@ Result
 
 # BoxDecoration
 
-The fifth most useful feature of `simple_sizer` is BoxDecoration by method chaning.
+The fifth most useful feature of `simple_sizer` is BoxDecoration by using `Decorate` class.
 
 ```dart
   Container(
