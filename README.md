@@ -313,6 +313,10 @@ The fifth most useful feature of `simple_sizer` is BoxDecoration by using `Decor
   ),
 ```
 
+Result
+
+<img src="https://imgur.com/muxvIFR.png">
+
 ---
 
 # App Components
