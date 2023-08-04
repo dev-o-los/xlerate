@@ -37,6 +37,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 - [Responsiveness](#responsiveness)
 - [Reactive Widgets](#reactive-widgets)
 - [Extensions](#extensions)
+- [Text](#text)
 - [App Components](#app-components)
 - [Helper Methods](#helper-methods)
 
@@ -124,7 +125,7 @@ Widget build(BuildContext context) {
    );
 ```
 
-You can do much more with these parameters this was just a little example.
+You can do much more with these parameters, this was just a little example.
 
 ---
 
@@ -134,7 +135,7 @@ When building for flutter web prefer to use the steps given below,since the web 
 
 | Extension     | Description                                                              |
 | ------------- | ------------------------------------------------------------------------ |
-| `{num}.ch()`  | Returns a calculated width based on the current context                  |
+| `{num}.ch()`  | Returns a calculated height based on the current context                 |
 | `{num}.cw()`  | Returns a calculated width based on the current context                  |
 | `{num}.csp()` | Returns scale independent pixels (sp) for font sizing on current context |
 
@@ -166,7 +167,7 @@ Here c stands for `current`
 
 # Reactive Widgets
 
-The second most useful feature of `simple_sizer`
+The second most useful feature of `simple_sizer` is reactive widgets
 
 Reactive Widgets are special members of `simple_sizer` pkg that help in UI Development
 
@@ -246,7 +247,7 @@ Reactive Widgets are special members of `simple_sizer` pkg that help in UI Devel
 
 # Extensions
 
-The third most useful feature of `simple_sizer`
+The third most useful feature of `simple_sizer` is east to use extensions
 
 ## Context Extensions
 
@@ -256,15 +257,42 @@ The third most useful feature of `simple_sizer`
 
 <img src="https://imgur.com/4169Uvh.png">
 
-## Text Extensions
+## DataType Extensions
 
-<img src="https://imgur.com/10oiwHU.png">
+<!-- <img src="https://imgur.com/4169Uvh.png"> -->
+
+---
+
+# Text
+
+The fourth most useful feature of `simple_sizer` is Text Creation.
+
+Writing text widget has now become more easy , see you can do this to create text widget in flutter.
+
+```dart
+  const Text('simple_sizer').txt.semibold.xxl.col(Colors.red).create();
+
+  //Must call create at the end of method chaning as only then it will render the Text Widget
+
+  //or you can do this
+
+  'simple_sizer'.txt.semibold.xxl.col(Colors.red).create()
+
+  //There are many other cool methods and getters in the `TextCreator` class, explore them as well.
+
+```
+
+Use `Text(data).txt...` when you know data is constant and use `'data'.txt...` when data is variable.
+
+Result
+
+<img src="https://imgur.com/uhjyfZw.png">
 
 ---
 
 # App Components
 
-The fourth most useful feature of `simple_sizer`
+The fifth most useful feature of `simple_sizer` is app components
 
 ## BottomSheet
 
@@ -309,7 +337,7 @@ Simply calling them in the onPressed function will cause the dialogue boxes to a
 
 # Helper Methods
 
-The fifth most useful feature of `simple_sizer`
+The sixth most useful feature of `simple_sizer` is helper methods
 
 Shape helpers are auto-implemented `RoundedRectangleBorder` methods that help in easy
 customization of widgets containing `shape` parameter.

@@ -13,7 +13,6 @@ class TextCreator {
 
   FontWeight? _fontWeight;
   Color? _color;
-
   Color? _backgroundColor;
   String? _fontFamily;
   double? _fontSize;
@@ -22,8 +21,11 @@ class TextCreator {
   TextOverflow? _overflow;
   int? _maxLines;
   TextAlign? _textAlign;
+  double? _textScaleFactor;
 
   TextCreator _setFontSize(double size) => this.._fontSize = size;
+  TextCreator _setTextScaleFactor(double scale) =>
+      this.._textScaleFactor = scale;
   TextCreator _setOverFlow(TextOverflow overflow) => this.._overflow = overflow;
 
   TextCreator get bold => this.._fontWeight = FontWeight.bold;
@@ -36,11 +38,11 @@ class TextCreator {
   TextCreator get fade => _setOverFlow(TextOverflow.fade);
   TextCreator get visible => _setOverFlow(TextOverflow.visible);
 
-  TextCreator get xs => _setFontSize(0.75);
-  TextCreator get sml => _setFontSize(0.875);
-  TextCreator get xl => _setFontSize(1.25);
-  TextCreator get xxl => _setFontSize(1.5);
-  TextCreator get xxxl => _setFontSize(1.875);
+  TextCreator get xs => _setTextScaleFactor(0.75);
+  TextCreator get sml => _setTextScaleFactor(0.875);
+  TextCreator get xl => _setTextScaleFactor(1.25);
+  TextCreator get xxl => _setTextScaleFactor(1.5);
+  TextCreator get xxxl => _setTextScaleFactor(1.875);
 
   TextCreator col(Color color) => this.._color = color;
   TextCreator bgcol(Color color) => this.._backgroundColor = color;
@@ -75,6 +77,7 @@ class TextCreator {
     return Text(
       data,
       maxLines: _maxLines,
+      textScaleFactor: _textScaleFactor,
       overflow: _overflow,
       textAlign: _textAlign,
       style: textstyle,
