@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../simple_sizer.dart';
+import '../../../simple_sizer.dart';
 
 class TextCreator {
   TextCreator({
