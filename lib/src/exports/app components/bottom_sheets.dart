@@ -163,7 +163,9 @@ Future simpleBottomSheet(
 }) async {
   return await showModalBottomSheet(
     context: context,
-    shape: verRoundedRectBrdr(t: true, rad: cornerRad ?? 25),
+    shape: RoundedRectangleBorder(
+      borderRadius: curveOnlyTopCorners(rad: cornerRad ?? 20),
+    ),
     backgroundColor: backgroundColor,
     barrierColor: barrierColor,
     clipBehavior: clipBehavior,
