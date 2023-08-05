@@ -1,9 +1,11 @@
 import 'package:flutter/widgets.dart';
 
+import 'create_mixin.dart';
+
 /// The `Decorate` class in Dart provides a convenient way to create and customize a `BoxDecoration`
 /// object with various properties such as border radius, background blend mode, border, color, shadows,
 /// gradient, shape, and image.
-class Decorate {
+class Decorate implements CreateMixin<BoxDecoration> {
   Decorate._();
 
   BorderRadiusGeometry? _borderRadius;
@@ -94,6 +96,7 @@ class Decorate {
   ///
   /// Returns:
   ///   a BoxDecoration object.
+  @override
   BoxDecoration create() => BoxDecoration(
         borderRadius: _borderRadius,
         backgroundBlendMode: _backgroundBlendMode,

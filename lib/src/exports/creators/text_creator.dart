@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../../simple_sizer.dart';
+import 'create_mixin.dart';
 
 /// The `TextCreator` class in Dart is a utility class that allows you to easily create `Text` widgets
 /// with customizable styles and properties.
-class TextCreator {
+class TextCreator implements CreateMixin<Text> {
   TextCreator({
     required this.data,
     this.style,
@@ -120,6 +121,7 @@ class TextCreator {
   ///
   /// Returns:
   ///   a Text widget.
+  @override
   Text create() {
     final textstyle = (style == null)
         ? TextStyle(
