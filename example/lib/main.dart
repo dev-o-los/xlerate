@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/simple_sizer.dart';
 
-import 'bs.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -19,10 +17,13 @@ class MyApp extends StatelessWidget {
       title: 'Simple Sizer Example',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepOrange,
+          brightness: Brightness.dark,
+        ),
         useMaterial3: true,
       ),
-      home: const Bs(),
+      home: const HomePage(),
     );
   }
 }

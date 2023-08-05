@@ -154,7 +154,11 @@ Future simpleBottomSheet(
   /// The `Offset? anchorPoint` parameter in the `simpleBottomSheet` function is an optional parameter
   /// that allows you to specify the anchor point for the bottom sheet.
   Offset? anchorPoint,
+
+  ///Sets the height of scroll handle.
   double? scrollHandleHeight,
+
+  ///Sets the width of scroll handle.
   double? scrollHandelWidth,
 }) async {
   return await showModalBottomSheet(
