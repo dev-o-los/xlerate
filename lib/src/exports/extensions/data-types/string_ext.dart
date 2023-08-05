@@ -1,4 +1,4 @@
-import 'package:simple_sizer/src/exports/creators/text_creator.dart';
+import '../../../../simple_sizer.dart';
 
 extension StringExt on String {
   /// The function checks if two strings are equal, with an option to ignore case sensitivity.

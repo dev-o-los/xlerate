@@ -1,9 +1,11 @@
 import 'package:flutter/widgets.dart';
 
+import '../../private/create_mixin.dart';
+
 /// The `Decorate` class in Dart provides a convenient way to create and customize a `BoxDecoration`
 /// object with various properties such as border radius, background blend mode, border, color, shadows,
 /// gradient, shape, and image.
-class Decorate {
+class Decorate implements CreateMixin<BoxDecoration> {
   Decorate._();
 
   BorderRadiusGeometry? _borderRadius;
@@ -33,6 +35,31 @@ class Decorate {
   /// corners of the curve. Defaults to 20
   Decorate curveOnlyTopCorners({double rad = 20}) =>
       this.._borderRadius = BorderRadius.vertical(top: Radius.circular(rad));
+
+  /// The function `curveOnly` decorates a widget with specific border radius values for each corner.
+  ///
+  /// Args:
+  ///   bl (double): The parameter "bl" represents the border radius for the bottom left corner of the
+  /// curve. Defaults to 0
+  ///   br (double): The parameter "br" stands for "bottom right" and it represents the radius of the
+  /// bottom right corner of the curve. Defaults to 0
+  ///   tl (double): The parameter "tl" stands for "top left" and it represents the radius of the top
+  /// left corner of the curve. Defaults to 0
+  ///   tr (double): The parameter "tr" stands for "topRight" and it represents the radius of the top
+  /// right corner of the curve. Defaults to 0
+  Decorate curveOnly({
+    double bl = 0,
+    double br = 0,
+    double tl = 0,
+    double tr = 0,
+  }) =>
+      this
+        .._borderRadius = BorderRadius.only(
+          bottomLeft: Radius.circular(bl),
+          bottomRight: Radius.circular(br),
+          topLeft: Radius.circular(tl),
+          topRight: Radius.circular(tr),
+        );
 
   /// The function decorates a widget with a border radius that only applies to the bottom corners.
   ///
@@ -94,6 +121,7 @@ class Decorate {
   ///
   /// Returns:
   ///   a BoxDecoration object.
+  @override
   BoxDecoration create() => BoxDecoration(
         borderRadius: _borderRadius,
         backgroundBlendMode: _backgroundBlendMode,

@@ -108,7 +108,9 @@ Future simpleDialogBox(
         key: key,
         shape: shape ??
             (enableBorder
-                ? allRoundedRectBrdr(brdrcol: borderColor ?? context.cs.outline)
+                ? RoundedRectangleBorder(
+                    side: BorderSide(color: borderColor ?? context.cs.outline),
+                  )
                 : null),
         actions: actions,
       );

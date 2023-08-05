@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ReactiveDestination {
   /// The `ReactiveDestination` class represents a destination in a navigation rail or navigation bar,

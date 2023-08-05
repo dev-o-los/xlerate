@@ -1,6 +1,6 @@
 /// The `ReactiveRowCol` class is a Flutter widget that dynamically arranges its children in either a
 /// row or column based on the screen width.
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ReactiveRowCol extends StatelessWidget {
   /// The code snippet is defining a constructor for the `ReactiveRowCol` class in Dart.
