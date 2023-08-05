@@ -6,6 +6,8 @@
 
 - New parameters added in `simpleBottomSheet()`
 
+- New methods added to `TextCreator`
+
 ## 1.0.0
 
 - [`Breaking Change`]
