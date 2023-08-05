@@ -1,3 +1,11 @@
+## 2.0.0
+
+- [`Breaking Change`]
+
+  Helper Methods for `Shape Border` has been removed.
+
+- New parameters added in `simpleBottomSheet()`
+
 ## 1.0.0
 
 - [`Breaking Change`]
