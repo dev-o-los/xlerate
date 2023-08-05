@@ -63,12 +63,6 @@ Future simpleBottomSheet(
   /// bottom sheet can be dragged by the user. If set to `false`, the bottom sheet cannot be dragged.
   bool enableDrag = true,
 
-  /// The `bool? showDragHandle` parameter in the `simpleBottomSheet` function is an optional boolean
-  /// value that determines whether to show a drag handle in the bottom sheet. If set to `true`, a drag
-  /// handle will be displayed at the top of the bottom sheet, allowing the user to drag the sheet up or
-  /// down. If set to `false` or not provided, the drag handle will not be displayed.
-  bool? showDragHandle,
-
   /// The `Color? scrollHandleCol` parameter in the `simpleBottomSheet` function is an optional
   /// parameter that allows you to specify the color of the scroll handle (the small handle used to
   /// scroll the bottom sheet).
@@ -160,8 +154,10 @@ Future simpleBottomSheet(
   /// The `Offset? anchorPoint` parameter in the `simpleBottomSheet` function is an optional parameter
   /// that allows you to specify the anchor point for the bottom sheet.
   Offset? anchorPoint,
-}) {
-  return showModalBottomSheet(
+  double? scrollHandleHeight,
+  double? scrollHandelWidth,
+}) async {
+  return await showModalBottomSheet(
     context: context,
     shape: verRoundedRectBrdr(t: true, rad: cornerRad ?? 25),
     backgroundColor: backgroundColor,
@@ -174,7 +170,7 @@ Future simpleBottomSheet(
     isDismissible: isDismissible,
     isScrollControlled: isScrollControlled,
     routeSettings: routeSettings,
-    showDragHandle: showDragHandle,
+    showDragHandle: false,
     transitionAnimationController: transitionAnimationController,
     useRootNavigator: useRootNavigator,
     useSafeArea: useSafeArea,
@@ -192,8 +188,8 @@ Future simpleBottomSheet(
             /// the top.
             if (!removescrollHandle)
               Container(
-                height: 7,
-                width: 45,
+                height: scrollHandleHeight ?? 7,
+                width: scrollHandelWidth ?? 45,
                 decoration: Decorate.instance
                     .col(scrollHandleCol ?? Colors.grey.shade600)
                     .curveAllCorners(rad: scrollHandleRad ?? 10)
@@ -242,5 +238,3 @@ Future simpleBottomSheet(
     },
   );
 }
-
-void floatingBottomSheet() {}
