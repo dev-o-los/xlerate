@@ -242,3 +242,5 @@ Future simpleBottomSheet(
     },
   );
 }
+
+void floatingBottomSheet() {}
