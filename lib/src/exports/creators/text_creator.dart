@@ -25,6 +25,8 @@ class TextCreator implements CreateMixin<Text> {
   int? _maxLines;
   TextAlign? _textAlign;
   double? _textScaleFactor;
+  TextDecoration? _textDecoration;
+  Locale? _locale;
 
   /// The function `_setFontSize` sets the font size to a given value.
   ///
@@ -81,6 +83,15 @@ class TextCreator implements CreateMixin<Text> {
   /// visible and not clipped, truncated, or faded out.
   TextCreator get visible => _setOverFlow(TextOverflow.visible);
 
+  /// sets the `_textAlign` property of the `TextCreator` object to `TextAlign.center`.
+  TextCreator get algncntr => this.._textAlign = TextAlign.center;
+
+  /// sets the `_textAlign` property of the `TextCreator` object to `TextAlign.end`.
+  TextCreator get algnend => this.._textAlign = TextAlign.end;
+
+  /// adds a underline to the text.
+  TextCreator get undrline => this.._textDecoration = TextDecoration.underline;
+
   /// sets the text scale factor to 0.75.
   TextCreator get xs => _setTextScaleFactor(0.75);
 
@@ -117,6 +128,13 @@ class TextCreator implements CreateMixin<Text> {
   /// sets the text alignment of the text
   TextCreator txtalgn(TxtAl al) => this.._textAlign = al.value;
 
+  /// The function `txtDecor` sets the text
+  TextCreator txtDecor(TextDecoration decoration) =>
+      this.._textDecoration = decoration;
+
+  /// sets the locale of the text
+  TextCreator locale(Locale locale) => this.._locale = locale;
+
   /// The function creates a Text widget with customizable text style and properties.
   ///
   /// Returns:
@@ -133,6 +151,7 @@ class TextCreator implements CreateMixin<Text> {
             fontStyle: _fontStyle,
             overflow: _overflow,
             shadows: _shadows,
+            decoration: _textDecoration,
           )
         : style!.copyWith(
             fontWeight: _fontWeight,
@@ -143,10 +162,12 @@ class TextCreator implements CreateMixin<Text> {
             fontStyle: _fontStyle,
             overflow: _overflow,
             shadows: _shadows,
+            decoration: _textDecoration,
           );
     return Text(
       data,
       maxLines: _maxLines,
+      locale: _locale,
       textScaleFactor: _textScaleFactor,
       overflow: _overflow,
       textAlign: _textAlign,
