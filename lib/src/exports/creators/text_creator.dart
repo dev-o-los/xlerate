@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../../../simple_sizer.dart';
 import '../../private/create_mixin.dart';
