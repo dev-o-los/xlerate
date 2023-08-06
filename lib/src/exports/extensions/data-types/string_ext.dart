@@ -21,4 +21,12 @@ extension StringExt on String {
   /// The line `TextCreator get txt => TextCreator(data: this);` is creating a getter method called
   /// `txt` for the `String` class.
   TextCreator get txt => TextCreator(data: this);
+
+  bool get isNum {
+    if (int.tryParse(this) != null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
