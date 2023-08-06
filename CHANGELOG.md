@@ -1,3 +1,8 @@
+## 2.1.0
+
+- New extension added for `Duration` on `int`.
+- New getters added in `String` extension.
+
 ## 2.0.0
 
 - [`Breaking Change`]
