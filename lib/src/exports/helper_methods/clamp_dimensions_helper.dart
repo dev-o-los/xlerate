@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/src/exports/responsiveness/size_config.dart';
+import 'package:simple_sizer/size_config_web.dart';
 
 /// The function clamps a dimension value between a minimum percentage and a maximum pixel value based
 /// on the current width of the context.
