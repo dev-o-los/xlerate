@@ -1,9 +1,5 @@
 library simple_sizer;
 
-//From Folder appcomponents
-export 'src/exports/app components/bottom_sheets.dart';
-export 'src/exports/app components/dailog_boxs.dart';
-
 //From Folder creators
 export 'src/exports/creators/text_creator.dart';
 export 'src/exports/creators/decoration_creator.dart';
@@ -33,11 +29,3 @@ export 'src/exports/extensions/primitive-types/int_ext.dart';
 //From Folder helper_methods
 export 'src/exports/helper_methods/clamp_width_height_helper.dart';
 export 'src/exports/helper_methods/border_rad_helper.dart';
-
-//From Folder reactive_widgets
-export 'src/exports/reactive_widgets/reactive_destination.dart';
-export 'src/exports/reactive_widgets/reactive_row_col.dart';
-export 'src/exports/reactive_widgets/reactive_home.dart';
-
-//From Folder responsiveness
-export 'src/exports/responsiveness/size_config.dart';

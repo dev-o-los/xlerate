@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/simple_sizer.dart';
+import '../../reactive_widgets.dart';
 
 class ReactiveHelper {
   static NavigationRailDestination rail(ReactiveDestination destination) {
