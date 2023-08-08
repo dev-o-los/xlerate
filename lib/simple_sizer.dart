@@ -27,5 +27,4 @@ export 'src/exports/extensions/primitive-types/string_ext.dart';
 export 'src/exports/extensions/primitive-types/int_ext.dart';
 
 //From Folder helper_methods
-export 'src/exports/helper_methods/clamp_width_height_helper.dart';
 export 'src/exports/helper_methods/border_rad_helper.dart';
