@@ -2,6 +2,8 @@
 
 - New extension added for `Duration` on `int`.
 - New getters added in `String` extension.
+- separated dart files into several `libraries` for better control over `imports`.
+  - [Advantage] Only import what you need in your projects files.
 
 ## 2.0.0
 
