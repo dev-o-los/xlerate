@@ -168,10 +168,10 @@ Here c stands for `current`
 
 ### Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
 
-| Method Name                       | Description                                            |
-| --------------------------------- | ------------------------------------------------------ |
-| clampDimensionWithCurrentWidth()  | clamps the width after it has reached specific width   |
-| clampDimensionWithCurrentHeight() | clamps the height after it has reached specific height |
+| Method Name          | Description                                            |
+| -------------------- | ------------------------------------------------------ |
+| clampWidthInRange()  | clamps the width after it has reached specific width   |
+| clampHeightInRange() | clamps the height after it has reached specific height |
 
 ---
 
@@ -269,7 +269,7 @@ The third most useful feature of `simple_sizer` is extensions
 
 ## DataType Extensions
 
-<img src="https://imgur.com/gd1jHJf.png">
+<img src="https://imgur.com/IzgurZU.png">
 
 ---
 
@@ -350,7 +350,6 @@ ElevatedButton(
       ListTile(
         tileColor: Colors.blueGrey,
         // or you can use shape helper methods
-        shape: allRoundedRectBrdr(),
         title: const Text('Title 2').semibold(),
         //giving padding all around the listTile
       ).p12(),

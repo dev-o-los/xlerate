@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/simple_sizer.dart';
+import 'package:simple_sizer/size_config.dart';
 
 void main() {
   runApp(const MyApp());

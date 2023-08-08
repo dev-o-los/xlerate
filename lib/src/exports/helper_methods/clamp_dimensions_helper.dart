@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/simple_sizer.dart';
+import 'package:simple_sizer/size_config_web.dart';
 
 /// The function clamps a dimension value between a minimum percentage and a maximum pixel value based
 /// on the current width of the context.
@@ -19,7 +19,7 @@ import 'package:simple_sizer/simple_sizer.dart';
 ///   //stops after it has reached a width of 500 px
 /// );
 /// ```
-double clampDimensionWithCurrentWidth(
+double clampWidthInRange(
         double minInpercent, double maxInpx, BuildContext context) =>
     (minInpercent.cw(context) >= maxInpx) ? maxInpx : minInpercent.cw(context);
 
@@ -41,6 +41,6 @@ double clampDimensionWithCurrentWidth(
 /// //stops after it has reached a height of 500 px
 /// );
 /// ```
-double clampDimensionWithCurrentHeight(
+double clampHeightInRange(
         double minInpercent, double maxInpx, BuildContext context) =>
     (minInpercent.ch(context) >= maxInpx) ? maxInpx : minInpercent.ch(context);

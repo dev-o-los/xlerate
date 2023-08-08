@@ -1,3 +1,16 @@
+## 2.1.0
+
+- New extension added for `Duration` on `int`.
+- New getters added in `String` extension.
+- separated dart files into several `libraries` for better control over `imports`.
+
+  - [Advantage] Only import what you need in your projects files.
+
+- [Changes]
+
+  - `clampDimensionWithCurrentWidth()` changed to `clampWidthInRange()`.
+  - `clampDimensionWithCurrentHeight()` changed to`clampHeightInRange()`.
+
 ## 2.0.0
 
 - [`Breaking Change`]

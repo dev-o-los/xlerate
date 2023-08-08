@@ -1,6 +1,7 @@
-///'simple_sizer' is the core dependency of this package and is usually imported for `extensions` `text-creators` and etc.
-///mainly used in android and ios apps [Mobile].
-library simple_sizer;
+///'simple_sizer_web' is the andother core dependency of this package and is usually imported when dealing with flutter web.
+///It includes `clampInRange` methods ,`reactive widgets`, and `size_config_web`.
+///mainly used in [Flutter Web].
+library simple_sizer_web;
 
 //From Folder creators
 export 'src/exports/creators/text_creator.dart';
@@ -30,3 +31,14 @@ export 'src/exports/extensions/primitive-types/int_ext.dart';
 
 //From Folder helper_methods
 export 'src/exports/helper_methods/border_rad_helper.dart';
+
+//Clamp dimensions
+export 'src/exports/helper_methods/clamp_dimensions_helper.dart';
+
+//Reactive Widgets
+export 'src/exports/reactive_widgets/reactive_destination.dart';
+export 'src/exports/reactive_widgets/reactive_row_col.dart';
+export 'src/exports/reactive_widgets/reactive_home.dart';
+
+//Size Config webs
+export 'src/exports/responsiveness/size_config_web.dart';
