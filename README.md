@@ -72,7 +72,13 @@ import 'package:simple_sizer/simple_sizer.dart';
 
 When developing for mobile screens prefer to use `initDevSize` method since the screen is fixed.
 
-## Initialize initDevSize [Step 1]
+## Import [Step 1]
+
+```dart
+import 'package:simple_sizer/size_config.dart';
+```
+
+## Initialize initDevSize [Step 2]
 
 Add the `SizeConfig.initDevSize(context)` function in the first build widget.
 
@@ -89,7 +95,7 @@ Widget build(BuildContext context) {
   }
 ```
 
-## Parameters [Step 2]
+## Parameters [Step 3]
 
 | Extension  | Description                                             |
 | ---------- | ------------------------------------------------------- |
@@ -97,7 +103,7 @@ Widget build(BuildContext context) {
 | `{num}.w`  | Returns a calculated width based on the current device  |
 | `{num}.sp` | Returns scale independent pixels (sp) for font sizing   |
 
-## Usage [Step 3]
+## Usage [Step 4]
 
 ```dart
   SizedBox(
@@ -132,7 +138,13 @@ This is only a small illustration of what you may accomplish with these options.
 
 When creating for flutter web, follow the steps below. Because web windows are resizeable, we may need to modify the layout, font sizes, or height and width of widgets every time the window resizes.
 
-## Parameters [Step 1]
+## Import [Step 1]
+
+```dart
+import 'package:simple_sizer/size_config_web.dart';
+```
+
+## Parameters [Step 2]
 
 | Extension     | Description                                                              |
 | ------------- | ------------------------------------------------------------------------ |
@@ -142,7 +154,7 @@ When creating for flutter web, follow the steps below. Because web windows are r
 
 Here c stands for `current`
 
-## Usage [Step 2]
+## Usage [Step 3]
 
 ```dart
   SizedBox(
