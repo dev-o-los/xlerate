@@ -30,3 +30,6 @@ export 'src/exports/extensions/primitive-types/int_ext.dart';
 
 //From Folder helper_methods
 export 'src/exports/helper_methods/border_rad_helper.dart';
+
+//Size Config webs
+export 'src/exports/responsiveness/size_config.dart';
