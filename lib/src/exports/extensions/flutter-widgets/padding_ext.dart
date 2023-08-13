@@ -120,4 +120,73 @@ extension PaddingExt on Widget {
         padding: EdgeInsets.only(left: l ?? p, right: r ?? p, top: t ?? p),
         child: this,
       );
+
+  /// The function `ph12` returns a `Padding` widget with horizontal padding of 12.0.
+  Padding ph12() => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+        child: this,
+      );
+
+  /// The function `ph16` returns a `Padding` widget with horizontal padding of 16.0.
+  Padding ph16() => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: this,
+      );
+
+  /// The function `ph20` returns a `Padding` widget with a horizontal padding of 20.
+  Padding ph20() => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: this,
+      );
+
+  /// The function adds horizontal padding of 24 pixels to a widget.
+  Padding ph24() => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+        child: this,
+      );
+
+  /// The function `ph` returns a `Padding` widget with horizontal padding of `p` and the child widget.
+  ///
+  /// Args:
+  ///   p (double): The parameter "p" is a double value that represents the amount of padding to be
+  /// applied horizontally.
+  Padding ph(double p) => Padding(
+        padding: EdgeInsets.symmetric(horizontal: p),
+        child: this,
+      );
+
+  /// The function `pv12` returns a `Padding` widget with a vertical padding of 12.0.
+  Padding pv12() => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 12.0),
+        child: this,
+      );
+
+  /// The function `pv16` returns a `Padding` widget with a vertical padding of 16.0.
+  Padding pv16() => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
+        child: this,
+      );
+
+  /// The function `pv20` returns a `Padding` widget with a vertical padding of 20.
+  Padding pv20() => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20.0),
+        child: this,
+      );
+
+  /// The function adds vertical padding of 24.0 units to a given widget.
+  Padding pv24() => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24.0),
+        child: this,
+      );
+
+  /// The function `pv` returns a `Padding` widget with vertical padding of `p` and the child widget as
+  /// its child.
+  ///
+  /// Args:
+  ///   p (double): The parameter "p" is a double value that represents the amount of padding to be
+  /// applied vertically.
+  Padding pv(double p) => Padding(
+        padding: EdgeInsets.symmetric(vertical: p),
+        child: this,
+      );
 }
