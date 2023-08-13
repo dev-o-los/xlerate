@@ -1,3 +1,11 @@
+## 2.2.0
+
+- New 'Padding' extensions have been introduced for quickly placing padding around
+  any widget's left-right and top-bottom edges -
+
+  [1] `ph12()` , `ph16()`...
+  [2] `pv12()` , `pv16()`...
+
 ## 2.1.0
 
 - New extension added for `Duration` on `int`.
