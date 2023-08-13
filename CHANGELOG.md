@@ -1,3 +1,15 @@
+## 2.3.0
+
+- Introducing navigation in `simple_sizer`.
+
+  - Use below extensions on `context` to easily navigate between screens
+
+  [1] `navTo()` [works as `Navigator.push()`]
+
+  [2] `navRplcmntTo()` [works as `Navigatoe.pushReplacement()`]
+
+  [3] `pop()` [works as `Navigator.pop()`]
+
 ## 2.2.0
 
 - New 'Padding' extensions have been introduced for quickly placing padding around
