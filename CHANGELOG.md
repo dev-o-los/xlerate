@@ -6,6 +6,9 @@
   [1] `ph12()` , `ph16()`...
   [2] `pv12()` , `pv16()`...
 
+- New extension method `pos()`[Positioned] added on Widget.
+  - Allows for convenient widget placement in a 'Stack' widget.
+
 ## 2.1.0
 
 - New extension added for `Duration` on `int`.
