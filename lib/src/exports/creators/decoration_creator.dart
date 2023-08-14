@@ -6,6 +6,7 @@ import '../../private/create_mixin.dart';
 /// object with various properties such as border radius, background blend mode, border, color, shadows,
 /// gradient, shape, and image.
 class Decorate implements CreateMixin<BoxDecoration> {
+  static Decorate? _instance;
   Decorate._();
 
   BorderRadiusGeometry? _borderRadius;
@@ -18,7 +19,7 @@ class Decorate implements CreateMixin<BoxDecoration> {
   BoxShape _shape = BoxShape.rectangle;
 
   /// This getter method allows access to a single instance of the `Decorate` class throughout the application.
-  static Decorate get instance => Decorate._();
+  static Decorate get instance => _instance ??= Decorate._();
 
   /// The function decorates all corners of a widget with a specified radius.
   ///
