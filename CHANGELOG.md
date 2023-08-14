@@ -10,6 +10,9 @@
 
   [3] `pop()` [works as `Navigator.pop()`]
 
+- New `Shaper` class added in the creators.
+  - Helps in shaping widgets which contains `shape` parameter.
+
 ## 2.2.0
 
 - New 'Padding' extensions have been introduced for quickly placing padding around
