@@ -10,10 +10,10 @@ enum ShapeChoice { roundedrectborder, stadiumborder }
 /// The `Shaper` class in Dart is a utility class that helps create different types of shape borders for
 /// widgets.
 class Shaper implements CreateMixin<ShapeBorder> {
-  /// The code snippet is implementing the Singleton design pattern for the `Shaper` class.
+  ///`Shaper._();` is a private constructor for the `Shaper` class. It is used to create an instance of
+  /// the `Shaper` class within the class itself. The underscore before the constructor name indicates
+  /// that it is a private constructor and can only be accessed within the class.
   Shaper._();
-
-  // static Shaper get instance => _instance ??= Shaper._();
 
   /// The line `ShapeChoice? _choice;` is declaring a nullable variable `_choice` of type `ShapeChoice`.
   static ShapeChoice? _choice;
