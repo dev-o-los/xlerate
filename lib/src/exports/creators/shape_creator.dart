@@ -206,8 +206,7 @@ class Shaper implements CreateMixin<ShapeBorder> {
   ///   The method is returning a ShapeBorder object.
   @override
   ShapeBorder create() {
-    /// The code snippet `if (_choice == null) { throw Exception('Select a type of Shape Border'); }` is
-    /// checking if the `_choice` variable is null. If it is null, it means that the user has not selected
+    /// If it is null, it means that the user has not selected
     /// a type of shape border. In this case, an exception is thrown with the message 'Select a type of
     /// Shape Border'. This is done to ensure that the user selects a valid shape border before creating
     /// it.
