@@ -2,6 +2,8 @@ import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../../private/navigation/simple_nav.dart';
+
 extension Buildctx on BuildContext {
   //*[Start MediaQuery]
 
@@ -204,4 +206,100 @@ extension Buildctx on BuildContext {
   Color get unselcol => _th.unselectedWidgetColor;
 
   //*[End ThemeData]
+
+  //*[Navigation Start]
+
+  /// The `navTo` function is used to navigate to a new page in a Flutter app using the SimpleNav
+  /// library.
+  ///
+  /// Args:
+  ///   page (Widget): The page parameter is of type Widget and represents the page that you want to
+  /// navigate to. It could be any widget that represents a screen or a page in your application.
+  ///   settings (RouteSettings): The `settings` parameter is of type `RouteSettings?`, which allows you
+  /// to provide additional settings for the route. These settings can include a name for the route,
+  /// arguments to pass to the route, or any other custom data that you want to associate with the
+  /// route. If you don't provide
+  ///   maintainState (bool): The `maintainState` parameter determines whether the state of the current
+  /// page should be preserved when navigating to the new page. If set to `true`, the state will be
+  /// preserved. If set to `false`, the state will be discarded. The default value is `true`. Defaults
+  /// to true
+  ///   fullscreenDialog (bool): The `fullscreenDialog` parameter is a boolean value that determines
+  /// whether the page should be displayed as a fullscreen dialog or not. If set to `true`, the page
+  /// will be displayed as a fullscreen dialog, otherwise it will be displayed as a normal page.
+  /// Defaults to false
+  ///   allowSnapshotting (bool): The `allowSnapshotting` parameter determines whether the current page
+  /// can be snapshot or not. If set to `true`, the current page can be snapshot, otherwise, it cannot
+  /// be snapshot. Defaults to true
+  void goTo(
+    Widget page, {
+    RouteSettings? settings,
+    bool maintainState = true,
+    bool fullscreenDialog = false,
+    bool allowSnapshotting = true,
+  }) =>
+      SimpleNav.navigateTo(
+        this,
+        page,
+        NavigationType.push,
+        allowSnapshotting: allowSnapshotting,
+        fullscreenDialog: fullscreenDialog,
+        settings: settings,
+        maintainState: maintainState,
+      );
+
+  /// The function `navRplcmntTo` is used to navigate to a new page in a Flutter app, replacing the
+  /// current page in the navigation stack.
+  ///
+  /// Args:
+  ///   page (Widget): The page to navigate to. It is of type Widget, which represents a UI element in
+  /// Flutter.
+  ///   settings (RouteSettings): The `settings` parameter is an optional parameter of type
+  /// `RouteSettings`. It allows you to provide additional settings for the route, such as the name of
+  /// the route and any arguments that need to be passed to the route.
+  ///   maintainState (bool): The `maintainState` parameter determines whether the state of the previous
+  /// route should be maintained when the new route is pushed. If set to `true`, the state of the
+  /// previous route will be preserved. If set to `false`, the state of the previous route will be
+  /// discarded. The default value. Defaults to true
+  ///   fullscreenDialog (bool): The `fullscreenDialog` parameter is a boolean value that determines
+  /// whether the new page should be displayed as a fullscreen dialog or not. If set to `true`, the new
+  /// page will be displayed as a fullscreen dialog, otherwise it will be displayed as a regular page.
+  /// Defaults to false
+  ///   allowSnapshotting (bool): The `allowSnapshotting` parameter determines whether the current page
+  /// can be captured as a snapshot before navigating to the new page. This snapshot can be used to
+  /// improve the transition animation when navigating back to the previous page. By default, it is set
+  /// to `true`, meaning that the snapshotting is allowed. Defaults to true
+
+  void rplcmntgoTo(
+    Widget page, {
+    RouteSettings? settings,
+    bool maintainState = true,
+    bool fullscreenDialog = false,
+    bool allowSnapshotting = true,
+  }) =>
+      SimpleNav.navigateTo(
+        this,
+        page,
+        NavigationType.pushReplacement,
+        allowSnapshotting: allowSnapshotting,
+        fullscreenDialog: fullscreenDialog,
+        maintainState: maintainState,
+        settings: settings,
+      );
+
+  /// The function "pop" is used to navigate back to the previous screen and pass a result to it.
+  ///
+  /// Args:
+  ///   result (dynamic): The "result" parameter is a dynamic type, which means it can hold any type of
+  /// value. It is used to pass a result back to the previous screen when popping the current screen
+  /// from the navigation stack.
+  void pop(dynamic result) => Navigator.pop(this, result);
+
+  /// The function `navNamed` is used to navigate to a specific route in a Dart application.
+  ///
+  /// Args:
+  ///   routeName (String): The route name is a string that represents the name of the route to navigate
+  /// to. It is used to identify the specific route in the application's route table.
+  void goToNamed(String routeName) => Navigator.pushNamed(this, routeName);
+
+  //*[Navigation End]
 }

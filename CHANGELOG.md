@@ -1,3 +1,20 @@
+## 2.3.0
+
+- Introducing navigation in `simple_sizer`.
+
+  - Use below extensions on `context` to easily navigate between screens
+
+  [1] `goTo()` [works as `Navigator.push()`]
+
+  [2] `rplcmntgoTo()` [works as `Navigatoe.pushReplacement()`]
+
+  [3] `pop()` [works as `Navigator.pop()`]
+
+  [4] `goToNamed` [works as `Navigator.pushNamed()`]
+
+- New `Shaper` class added in the creators.
+  - Helps in shaping widgets which contains `shape` parameter.
+
 ## 2.2.0
 
 - New 'Padding' extensions have been introduced for quickly placing padding around
