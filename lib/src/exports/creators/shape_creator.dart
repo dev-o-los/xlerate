@@ -99,6 +99,20 @@ class Shaper implements CreateMixin<ShapeBorder> {
   Shaper curveRgt(double rad) => this
     .._borderRadius = BorderRadius.horizontal(right: Radius.circular(rad));
 
+  Shaper curveOnly({
+    double? tl,
+    double? tr,
+    double? bl,
+    double? br,
+  }) =>
+      this
+        .._borderRadius = BorderRadius.only(
+          topLeft: Radius.circular(tl ?? 0.0),
+          topRight: Radius.circular(tr ?? 0.0),
+          bottomLeft: Radius.circular(bl ?? 0.0),
+          bottomRight: Radius.circular(br ?? 0.0),
+        );
+
   @override
   ShapeBorder create() {
     if (_choice == null) {
