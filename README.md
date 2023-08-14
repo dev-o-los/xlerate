@@ -274,7 +274,7 @@ The third most useful feature of `simple_sizer` is extensions
 
 ## Context Extensions
 
-<img src="https://imgur.com/w8mIWLr.png">
+<img src="https://imgur.com/X2bwwWx.png">
 
 ## Widget Extensions
 
@@ -371,7 +371,7 @@ ShapeBorder with `Shaper` class.
         child: const Text('simple_sizer').txt.xxxl.create().p20(),
       ),
     ],
-  ),
+  );
 ```
 
 Result
