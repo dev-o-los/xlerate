@@ -11,21 +11,19 @@ enum ShapeChoice { roundedrectborder, stadiumborder }
 /// widgets.
 class Shaper implements CreateMixin<ShapeBorder> {
   /// The code snippet is implementing the Singleton design pattern for the `Shaper` class.
-  static Shaper? _instance;
-
   Shaper._();
 
-  static Shaper get instance => _instance ??= Shaper._();
+  // static Shaper get instance => _instance ??= Shaper._();
 
   /// The line `ShapeChoice? _choice;` is declaring a nullable variable `_choice` of type `ShapeChoice`.
-  ShapeChoice? _choice;
+  static ShapeChoice? _choice;
 
   double _topLeft = 0.0;
   double _topRight = 0.0;
   double _bottomLeft = 0.0;
   double _bottomRight = 0.0;
   BorderRadius? _borderRadius;
-  Color _borderColor = const Color(0xFF000000);
+  Color _borderColor = const Color(0x00000000);
   double _borderWidth = 1.0;
 
   Shaper _setTopLeftRad(double rad) => this.._topLeft = rad;
@@ -40,10 +38,16 @@ class Shaper implements CreateMixin<ShapeBorder> {
       this.._borderRadius = BorderRadius.circular(rad);
 
   ///Use this to get the instance of `RoundedRectangleBorder()`
-  Shaper get roundedrectbrdr => this.._choice = ShapeChoice.roundedrectborder;
+  static Shaper get roundrectbrdr {
+    _choice = ShapeChoice.roundedrectborder;
+    return Shaper._();
+  }
 
   ///Use this to get the instance of `StadiumBorder()`
-  Shaper get stadiumbrdr => this.._choice = ShapeChoice.stadiumborder;
+  static Shaper get stadiumbrdr {
+    _choice = ShapeChoice.stadiumborder;
+    return Shaper._();
+  }
 
   /// This method sets the corner radius of all four corners of the border to the
   /// specified value (10 in this case). So, `curv10` is a shorthand way to set the corner radius of all
