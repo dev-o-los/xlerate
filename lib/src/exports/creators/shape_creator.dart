@@ -214,6 +214,13 @@ class Shaper implements CreateMixin<ShapeBorder> {
       throw Exception(shape_creator_error_msg);
     }
 
+    final isBorderRadiusInStadiumBorder =
+        _choice == ShapeChoice.stadiumborder && _getParamInfo();
+
+    if (isBorderRadiusInStadiumBorder) {
+      throw Exception(borderRadius_error_msg);
+    }
+
     /// The code snippet is checking if the `_choice` variable is equal to
     /// `ShapeChoice.roundedrectborder`. If it is, it creates and returns a `RoundedRectangleBorder`
     /// object with the specified border radius, border color, and border width.
@@ -252,4 +259,10 @@ class Shaper implements CreateMixin<ShapeBorder> {
       throw Exception(no_such_shape_error_msg);
     }
   }
+
+  bool _getParamInfo() => (_borderRadius != null ||
+      _topLeft != 0.0 ||
+      _topRight != 0.0 ||
+      _bottomLeft != 0.0 ||
+      _bottomRight != 0.0);
 }

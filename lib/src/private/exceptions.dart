@@ -12,3 +12,9 @@ Shaper.instance.curvBL10.curvBR15.create();
 ''';
 
 const no_such_shape_error_msg = 'No such Shape Border Found';
+
+const borderRadius_error_msg = '''Since you are using Stadium Border
+
+Consider not to use BorderRadius params,
+
+as Stadium border does not have any border radius parameter''';
