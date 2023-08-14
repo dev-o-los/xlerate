@@ -19,6 +19,7 @@ class Shaper implements CreateMixin<ShapeBorder> {
 
   /// The line `ShapeChoice? _choice;` is declaring a nullable variable `_choice` of type `ShapeChoice`.
   ShapeChoice? _choice;
+
   double _topLeft = 0.0;
   double _topRight = 0.0;
   double _bottomLeft = 0.0;
@@ -28,9 +29,13 @@ class Shaper implements CreateMixin<ShapeBorder> {
   double _borderWidth = 1.0;
 
   Shaper _setTopLeftRad(double rad) => this.._topLeft = rad;
+
   Shaper _setTopRightRad(double rad) => this.._topRight = rad;
+
   Shaper _setBottomLeftRad(double rad) => this.._bottomLeft = rad;
+
   Shaper _setBottomRightRad(double rad) => this.._bottomRight = rad;
+
   Shaper _setAllCornerRad(double rad) =>
       this.._borderRadius = BorderRadius.circular(rad);
 
@@ -245,7 +250,7 @@ class Shaper implements CreateMixin<ShapeBorder> {
     /// is neither `ShapeChoice.roundedrectborder` nor `ShapeChoice.stadiumborder`. This means that the
     /// user has selected an invalid shape border option.
     else {
-      throw Exception('No such Shape Border Found');
+      throw Exception(no_such_shape_error_msg);
     }
   }
 }
