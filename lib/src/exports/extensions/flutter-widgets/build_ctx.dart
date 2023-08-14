@@ -230,7 +230,7 @@ extension Buildctx on BuildContext {
   ///   allowSnapshotting (bool): The `allowSnapshotting` parameter determines whether the current page
   /// can be snapshot or not. If set to `true`, the current page can be snapshot, otherwise, it cannot
   /// be snapshot. Defaults to true
-  void navTo(
+  void goTo(
     Widget page, {
     RouteSettings? settings,
     bool maintainState = true,
@@ -269,7 +269,7 @@ extension Buildctx on BuildContext {
   /// improve the transition animation when navigating back to the previous page. By default, it is set
   /// to `true`, meaning that the snapshotting is allowed. Defaults to true
 
-  void navRplcmntTo(
+  void rplcmntgoTo(
     Widget page, {
     RouteSettings? settings,
     bool maintainState = true,
@@ -299,7 +299,7 @@ extension Buildctx on BuildContext {
   /// Args:
   ///   routeName (String): The route name is a string that represents the name of the route to navigate
   /// to. It is used to identify the specific route in the application's route table.
-  void navNamed(String routeName) => Navigator.pushNamed(this, routeName);
+  void goToNamed(String routeName) => Navigator.pushNamed(this, routeName);
 
   //*[Navigation End]
 }
