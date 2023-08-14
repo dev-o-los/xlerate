@@ -1,4 +1,3 @@
-import 'package:example/shaper_tester.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/size_config.dart';
 
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const ShaperTester(),
+      home: const HomePage(),
     );
   }
 }

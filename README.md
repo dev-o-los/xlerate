@@ -363,6 +363,7 @@ ShapeBorder with `Shaper` class.
       ),
       //btw here 20.hbox = SizedBox(height: 20);
       20.hbox,
+      //Here we are using Shaper class to create a StadiumBorder for the second card widget
       Card(
         //stadiumbrdr = StadiumBorder()
         shape: Shaper.stadiumbrdr.create(),
