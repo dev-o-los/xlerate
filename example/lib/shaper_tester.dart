@@ -10,7 +10,7 @@ class ShaperTester extends StatelessWidget {
       body: Center(
         child: Card(
           color: Colors.blue,
-          shape: Shaper.instance.stadiumbrdr.curvBL10.curvBR15.create(),
+          shape: Shaper.instance.roundedrectbrdr.curvBL10.curvBR15.create(),
           child: const Text('Hello world').p12(),
         ),
       ),
