@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:simple_sizer/src/private/exceptions.dart';
 import '../../private/create_mixin.dart';
 
