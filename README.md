@@ -37,6 +37,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 - [Responsiveness](#responsiveness)
 - [Reactive Widgets](#reactive-widgets)
 - [Extensions](#extensions)
+- [Creators](#creators)
 - [Text](#text)
 - [Box Decoration](#boxdecoration)
 - [App Components](#app-components)
@@ -273,7 +274,7 @@ The third most useful feature of `simple_sizer` is extensions
 
 ## Context Extensions
 
-<img src="https://imgur.com/w8mIWLr.png">
+<img src="https://imgur.com/X2bwwWx.png">
 
 ## Widget Extensions
 
@@ -285,9 +286,11 @@ The third most useful feature of `simple_sizer` is extensions
 
 ---
 
-# Text
+# Creators
 
-The fourth most useful feature of `simple_sizer` is Text Creation.
+The fourth most useful feature of `simple_sizer` is Creators.
+
+## Text
 
 Writing text widget has now become more easy , see you can do this to create text widget in flutter.
 
@@ -314,9 +317,9 @@ Result
 
 ---
 
-# BoxDecoration
+## BoxDecoration
 
-The fifth most useful feature of `simple_sizer` is BoxDecoration by using `Decorate` class.
+BoxDecoration by using `Decorate` class.
 
 ```dart
   Container(
@@ -340,9 +343,46 @@ Result
 
 ---
 
+## Shaper
+
+ShapeBorder with `Shaper` class.
+
+```dart
+  Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      //Here we are using Shaper class to create a RoundedRectangleBorder for the first card widget
+      Card(
+        //roundrectbrdr = RoundedRectangleBorder()
+        //curvTL20 = curve the top left corner by radius 20
+        //curvBR20 = curve the bottom right corner by radius 20
+        //lastly calling calling create() to render.😪
+        shape: Shaper.roundrectbrdr.curvTL20.curvBR20.create(),
+        //Crazzzzzzzzzzzyyyyyyyyyyyyy one liner Codddddddddddeeeeeee
+        child: const Text('simple_sizer').txt.xxxl.create().p20(),
+      ),
+      //btw here 20.hbox = SizedBox(height: 20);
+      20.hbox,
+      //Here we are using Shaper class to create a StadiumBorder for the second card widget
+      Card(
+        //stadiumbrdr = StadiumBorder()
+        shape: Shaper.stadiumbrdr.create(),
+        //See the Text docs to understand this.
+        child: const Text('simple_sizer').txt.xxxl.create().p20(),
+      ),
+    ],
+  );
+```
+
+Result
+
+<img src="https://imgur.com/KuzAqkF.png">
+
+---
+
 # App Components
 
-The sixth most useful feature of `simple_sizer` is app components
+The fifth most useful feature of `simple_sizer` is app components
 
 ## BottomSheet
 
@@ -386,7 +426,7 @@ Simply calling them in the onPressed function will cause the dialogue boxes to a
 
 # Helper Methods
 
-The seventh most useful feature of `simple_sizer` is helper methods
+The sixth most useful feature of `simple_sizer` is helper methods
 
 ### BorderRadius Helper Methods helps in curving the borders of a container
 
