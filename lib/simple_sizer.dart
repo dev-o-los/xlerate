@@ -23,6 +23,7 @@ export 'src/exports/extensions/flutter-widgets/fitted_box_ext.dart';
 export 'src/exports/extensions/flutter-widgets/limitedbox_ext.dart';
 export 'src/exports/extensions/flutter-widgets/stba_ext.dart';
 export 'src/exports/extensions/flutter-widgets/text_ext.dart';
+export 'src/exports/extensions/flutter-widgets/positioned_ext.dart';
 
 //From Folder data-types
 export 'src/exports/extensions/primitive-types/bool_ext.dart';
