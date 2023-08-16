@@ -1,3 +1,9 @@
+## 2.4.0
+
+- New `clampTextSizeInRange()` is added
+
+- New `BeveledRectangleBorder()` added in `Shaper` class.
+
 ## 2.3.1
 
 - [Bug] No able to access `pos()` extension fixed

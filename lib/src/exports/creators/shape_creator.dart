@@ -5,7 +5,7 @@ import '../../private/create_mixin.dart';
 /// The `enum ShapeChoice { roundedrectborder, stadiumborder }` is defining an enumeration called
 /// `ShapeChoice` with two possible values: `roundedrectborder` and `stadiumborder`. This enumeration is
 /// used to represent the different choices for the shape of a border.
-enum ShapeChoice { roundedrectborder, stadiumborder }
+enum ShapeChoice { roundedrectborder, stadiumborder, beveledreactborder }
 
 /// The `Shaper` class in Dart is a utility class that helps create different types of shape borders for
 /// widgets.
@@ -46,6 +46,12 @@ class Shaper implements CreateMixin<ShapeBorder> {
   ///Use this to get the instance of `StadiumBorder()`
   static Shaper get stadiumbrdr {
     _choice = ShapeChoice.stadiumborder;
+    return Shaper._();
+  }
+
+  ///Use this to get the instance of `BeveledRectangleBorder()`
+  static Shaper get bevldrectbrdr {
+    _choice = ShapeChoice.beveledreactborder;
     return Shaper._();
   }
 
@@ -230,17 +236,8 @@ class Shaper implements CreateMixin<ShapeBorder> {
     /// object with the specified border radius, border color, and border width.
     if (_choice == ShapeChoice.roundedrectborder) {
       return RoundedRectangleBorder(
-        borderRadius: _borderRadius ??
-            BorderRadius.only(
-              topLeft: Radius.circular(_topLeft),
-              topRight: Radius.circular(_topRight),
-              bottomLeft: Radius.circular(_bottomLeft),
-              bottomRight: Radius.circular(_bottomRight),
-            ),
-        side: BorderSide(
-          color: _borderColor,
-          width: _borderWidth,
-        ),
+        borderRadius: _setBorderRadiusForCorners(),
+        side: _setBorderSide(),
       );
     }
 
@@ -254,6 +251,11 @@ class Shaper implements CreateMixin<ShapeBorder> {
           width: _borderWidth,
         ),
       );
+    } else if (_choice == ShapeChoice.beveledreactborder) {
+      return BeveledRectangleBorder(
+        borderRadius: _setBorderRadiusForCorners(),
+        side: _setBorderSide(),
+      );
     }
 
     /// The `else` block with the `throw Exception` statement is executed when the value of `_choice`
@@ -263,6 +265,20 @@ class Shaper implements CreateMixin<ShapeBorder> {
       throw Exception(no_such_shape_error_msg);
     }
   }
+
+  BorderSide _setBorderSide() => BorderSide(
+        color: _borderColor,
+        width: _borderWidth,
+      );
+
+  BorderRadius _setBorderRadiusForCorners() =>
+      _borderRadius ??
+      BorderRadius.only(
+        topLeft: Radius.circular(_topLeft),
+        topRight: Radius.circular(_topRight),
+        bottomLeft: Radius.circular(_bottomLeft),
+        bottomRight: Radius.circular(_bottomRight),
+      );
 
   bool _getParamInfo() => (_borderRadius != null ||
       _topLeft != 0.0 ||
