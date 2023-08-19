@@ -44,3 +44,26 @@ double clampWidthInRange(
 double clampHeightInRange(
         double minInpercent, double maxInpx, BuildContext context) =>
     (minInpercent.ch(context) >= maxInpx) ? maxInpx : minInpercent.ch(context);
+
+/// The function `clampTextSizeInRange` returns the minimum value between `minInpercent.csp(context)`
+/// and `maxInpx`.
+///
+/// Args:
+///   minInpercent (double): The minimum text size in percentage of the parent container's size.
+///   maxInpx (double): The maximum text size in pixels.
+///   context (BuildContext): The `BuildContext` object represents the current build context of the
+/// widget tree. It provides information about the current state of the application, such as the current
+/// theme, media query data, and localization settings.
+///
+/// ```dart
+/// Text(
+///     'simple_sizer',
+///     height: clampTextSizeInRange(5, 30, context),
+/// //Gives a scale independent pixels of 5% of scale independent pixels and
+/// //stops after it has reached a scale independent pixels of 30 px
+/// );
+double clampTextSizeInRange(
+        double minInpercent, double maxInpx, BuildContext context) =>
+    (minInpercent.csp(context) >= maxInpx)
+        ? maxInpx
+        : minInpercent.csp(context);

@@ -1,6 +1,16 @@
+## 2.4.0
+
+- New `clampTextSizeInRange()` is added
+
+- New `BeveledRectangleBorder()` added in `Shaper` class.
+
+- [Removed]
+  - The `theYesNoDialogBox()` and `theYesNoCupertinoDialogBox()` has been deprecated
+    since from `Flutter 3.13` , dialogboxes are now adaptive.
+
 ## 2.3.1
 
-- [Bug] No able to access `pos()` extension fixed
+- [Bug] Not able to access `pos()` extension fixed
 
 ## 2.3.0
 
