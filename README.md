@@ -38,8 +38,9 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 - [Reactive Widgets](#reactive-widgets)
 - [Extensions](#extensions)
 - [Creators](#creators)
-- [Text](#text)
-- [Box Decoration](#boxdecoration)
+  - [Text](#text)
+  - [Box Decoration](#boxdecoration)
+  - [Shaper](#shaper)
 - [App Components](#app-components)
 - [Helper Methods](#helper-methods)
 
@@ -181,10 +182,11 @@ Here c stands for `current`
 
 ### Have you ever found yourself in a situation where you wish to scale a widget's height or width by a specific percentage of the screen's width and height, then stop when it reaches a specified pixel value? If so, these approaches are for you.
 
-| Method Name          | Description                                            |
-| -------------------- | ------------------------------------------------------ |
-| clampWidthInRange()  | clamps the width after it has reached specific width   |
-| clampHeightInRange() | clamps the height after it has reached specific height |
+| Method Name            | Description                                             |
+| ---------------------- | ------------------------------------------------------- |
+| clampWidthInRange()    | clamps the width after it has reached specific width    |
+| clampHeightInRange()   | clamps the height after it has reached specific height  |
+| clampTextSizeInRange() | clamps the text size after it has reached specific size |
 
 ---
 
@@ -407,20 +409,40 @@ ElevatedButton(
       ).p12(),
     ]),
     child: const Text('Press'),
-).cntr(),
+);
 ```
 
 ## Dialog Box
 
-`simple_sizer` provides three types of dialog boxes -
-
 [1] `simpleDialogBox()`
 
-[2] `yesNoDialogBox()`
-
-[3] `yesNoCupertinoDialogBox()`
-
 Simply calling them in the onPressed function will cause the dialogue boxes to appear.
+
+```dart
+ElevatedButton(
+  onPressed: () => simpleDialogBox(
+    context,
+    title: const Text('Simple Dialog'),
+    content: Column(mainAxisSize: MainAxisSize.min, children: [
+      const Text('Content').txt.semibold.create().p16(),
+      const Text('Content')
+          .txt
+          .semibold
+          .col(Colors.green)
+          .create()
+          .p16(),
+      const Text('Content')
+          .txt
+          .bold
+          .xxl
+          .bgcol(Colors.redAccent)
+          .create()
+          .p16(),
+    ]),
+  ),
+  child: const Text('SimpleDialogBox'),
+),
+```
 
 ---
 
