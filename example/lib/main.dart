@@ -1,3 +1,4 @@
+import 'package:example/reactive_home_example.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/size_config.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const ReactiveHomeExample(),
     );
   }
 }
