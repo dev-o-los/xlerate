@@ -5,6 +5,7 @@ import '../../private/create_mixin.dart';
 
 /// The `TextCreator` class in Dart is a utility class that allows you to easily create `Text` widgets
 /// with customizable styles and properties.
+@protected
 class TextCreator implements CreateMixin<Text> {
   TextCreator({
     required this.data,
