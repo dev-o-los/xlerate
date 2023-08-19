@@ -10,7 +10,7 @@
 
 ## 2.3.1
 
-- [Bug] No able to access `pos()` extension fixed
+- [Bug] Not able to access `pos()` extension fixed
 
 ## 2.3.0
 
