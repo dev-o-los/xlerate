@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/simple_sizer.dart';
+import 'package:simple_sizer/src/private/index_mixin.dart';
 
 import '../../../reactive_widgets.dart';
 import '../../private/views/reactive_bigscreen_view.dart';
 import '../../private/views/reactive_mobile_view.dart';
 
-class ReactiveHome extends StatelessWidget {
+class ReactiveHome extends StatelessWidget with IndexMixin {
   /// The `ReactiveHome` class is a widget that displays either a `ReactiveTabletView` or a
   /// `ReactiveMobileView` based on the screen width.
   /// Meaning it helps you make reactive layouts multiple screens , like tablets , mobiles , desktop , web
@@ -321,6 +322,7 @@ class ReactiveHome extends StatelessWidget {
     /// `false`.
     return (context.csw > mobileWhenWidthIs)
         ? ReactiveBigScreenView(
+            index: currentindex,
             backgroundColor: backgroundColorForNavRail ?? backgroundColor,
             elevation: elevationForNavRail ?? elevation,
             indicatorColor: indicatorColorForNavRail ?? indicatorColor,
@@ -361,6 +363,7 @@ class ReactiveHome extends StatelessWidget {
                 : labelTypeForNavRail,
           )
         : ReactiveMobileView(
+            index: currentindex,
             backgroundColor: backgroundColorForNavBar ?? backgroundColor,
             elevation: elevationForNavBar ?? elevation,
             indicatorColor: indicatorColorForNavBar ?? indicatorColor,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_sizer/src/exports/reactive_widgets/reactive_destination.dart';
+import 'package:simple_sizer/src/private/index_mixin.dart';
 import 'package:simple_sizer/src/private/reactive_helper.dart';
 
 class ReactiveBigScreenView extends StatefulWidget {
@@ -23,7 +24,10 @@ class ReactiveBigScreenView extends StatefulWidget {
     this.unselectedIconTheme,
     this.unselectedLabelTextStyle,
     this.useIndicator,
+    this.index,
   });
+
+  final int? index;
 
   final List<Widget> pages;
   final List<ReactiveDestination> reactiveDestinations;
@@ -56,14 +60,16 @@ class ReactiveBigScreenView extends StatefulWidget {
   State<ReactiveBigScreenView> createState() => _ReactiveBigScreenViewState();
 }
 
-class _ReactiveBigScreenViewState extends State<ReactiveBigScreenView> {
-  int _currentindex = 0;
-
-  void _changePage(int index) {
-    setState(() {
-      _currentindex = index;
-    });
+class _ReactiveBigScreenViewState extends State<ReactiveBigScreenView>
+    with IndexMixin {
+  @override
+  void initState() {
+    setIndex(widget.index ?? 0);
+    super.initState();
   }
+
+  @override
+  void changePage(int index) => setState(() => setIndex(index));
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +80,7 @@ class _ReactiveBigScreenViewState extends State<ReactiveBigScreenView> {
             destinations: widget.reactiveDestinations
                 .map((e) => ReactiveHelper.rail(e))
                 .toList(),
-            selectedIndex: _currentindex,
+            selectedIndex: currentindex,
             backgroundColor: widget.backgroundColor,
             elevation: widget.elevation,
             indicatorColor: widget.indicatorColor,
@@ -92,9 +98,9 @@ class _ReactiveBigScreenViewState extends State<ReactiveBigScreenView> {
             unselectedLabelTextStyle: widget.unselectedLabelTextStyle,
             useIndicator: widget.useIndicator,
             key: widget.key,
-            onDestinationSelected: (value) => _changePage(value),
+            onDestinationSelected: (value) => changePage(value),
           ),
-          Expanded(child: widget.pages[_currentindex]),
+          Expanded(child: widget.pages[currentindex]),
         ],
       ),
     );
