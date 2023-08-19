@@ -1,3 +1,7 @@
+## 2.4.1
+
+- Bug Fixes
+
 ## 2.4.0
 
 - New `clampTextSizeInRange()` is added
