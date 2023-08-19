@@ -280,11 +280,11 @@ The third most useful feature of `simple_sizer` is extensions
 
 ## Widget Extensions
 
-<img src="https://imgur.com/VmEHVbD.png">
+<img src="https://imgur.com/GsGrqez.png">
 
 ## DataType Extensions
 
-<img src="https://imgur.com/IzgurZU.png">
+<img src="https://imgur.com/Mm7ztjK.png">
 
 ---
 
