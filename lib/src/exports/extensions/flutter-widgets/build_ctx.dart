@@ -205,6 +205,10 @@ extension Buildctx on BuildContext {
   /// class in Dart. It is used to get the unselectedWidgetColor using the `Themedata` class.
   Color get unselcol => _th.unselectedWidgetColor;
 
+  /// The `txtTh` is an extension method defined on the `BuildContext`
+  /// class in Dart. It is used to get the textTheme using the `Themedata` class.
+  TextTheme get txtTh => _th.textTheme;
+
   //*[End ThemeData]
 
   //*[Navigation Start]
@@ -292,7 +296,7 @@ extension Buildctx on BuildContext {
   ///   result (dynamic): The "result" parameter is a dynamic type, which means it can hold any type of
   /// value. It is used to pass a result back to the previous screen when popping the current screen
   /// from the navigation stack.
-  void pop(dynamic result) => Navigator.pop(this, result);
+  void pop({dynamic result}) => Navigator.pop(this, result);
 
   /// The function `navNamed` is used to navigate to a specific route in a Dart application.
   ///

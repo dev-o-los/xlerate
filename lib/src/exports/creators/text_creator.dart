@@ -109,7 +109,7 @@ class TextCreator implements CreateMixin<Text> {
   TextCreator get xxxl => _setTextScaleFactor(1.875);
 
   /// sets the color of the text
-  TextCreator col(Color color) => this.._color = color;
+  TextCreator col({Color? color}) => this.._color = color;
 
   /// sets the backgroud color of the text
   TextCreator bgcol(Color color) => this.._backgroundColor = color;

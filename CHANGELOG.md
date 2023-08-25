@@ -1,3 +1,7 @@
+## 2.4.2
+
+- Fixed `context.pop()` issue.
+
 ## 2.4.1
 
 - Bug Fixes
