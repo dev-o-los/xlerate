@@ -3,7 +3,7 @@
 - Fixed `context.pop()` issue.
 - Bottom Sheet width erro fixed.
 - `.col()` in `TextCreator` is now nullable.
-- One new extensions over `BuildContext`.
+- One new extension over `BuildContext`.
 
 ## 2.4.1
 
