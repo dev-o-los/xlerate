@@ -29,7 +29,7 @@ class Decorate implements CreateMixin<BoxDecoration> {
   /// Args:
   ///   rad (double): The `rad` parameter is a double value that represents the radius of the border
   /// corners. It is used to create a `BorderRadius` object with circular corners. Defaults to 20
-  Decorate curveAllCorners({double rad = 20}) =>
+  Decorate curveCorners({double rad = 20}) =>
       this.._borderRadius = BorderRadius.circular(rad);
 
   /// The function decorates a widget with a border radius that only applies to the top corners.
@@ -88,12 +88,11 @@ class Decorate implements CreateMixin<BoxDecoration> {
   /// to specify a list of box shadows that will be applied to the decorated widget.
   Decorate shadows(List<BoxShadow>? boxShadow) => this.._boxShadow = boxShadow;
 
-  /// The function `outlineTheBorder` sets the border color of an object.
+  /// The function `brdrCol` sets the border color of an object.
   ///
   /// Args:
   ///   color (Color): The color parameter is the color that will be used for the border.
-  Decorate outlineTheBorder(Color color) =>
-      this.._border = Border.all(color: color);
+  Decorate brdrCol(Color color) => this.._border = Border.all(color: color);
 
   /// The function "col" takes a Color object as a parameter and assigns it to the private variable
   /// "_color".

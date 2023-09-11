@@ -1,3 +1,12 @@
+## 2.5.0
+
+- Added more params to `simpleDialogBox`.
+
+- [Changes]
+
+  - `outlineTheBorder` changed to `brdrCol`.
+  - `curveAllCorners` changed to `curveCorners`.
+
 ## 2.4.2
 
 - Fixed `context.pop()` issue.
