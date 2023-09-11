@@ -172,7 +172,7 @@ Future simpleBottomSheet(
                 width: scrollHandelWidth ?? 45,
                 decoration: Decorate.instance
                     .col(scrollHandleCol ?? Colors.grey.shade600)
-                    .curveAllCorners(rad: scrollHandleRad ?? 10)
+                    .curveCorners(rad: scrollHandleRad ?? 10)
                     .create(),
               ).pOnly(t: 15),
             ...widgets,

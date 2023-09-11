@@ -84,6 +84,33 @@ Future simpleDialogBox(
   /// the dialog box. Each widget in the list represents an action button or element.
   List<Widget>? actions,
 
+  /// The `bool barrierDismissible = false` parameter is used to determine whether the dialog box can be
+  /// dismissed by tapping outside of it. By default, it is set to `false`, which means that tapping
+  /// outside the dialog box will not dismiss it. If you set it to `true`, the dialog box can be
+  /// dismissed by tapping outside of it.
+  bool barrierDismissible = false,
+
+  /// The `bool useSafeArea = false` parameter is used to determine whether the dialog box should be
+  /// displayed within the safe area of the screen. The safe area is the portion of the screen that is
+  /// guaranteed to be visible and not obstructed by notches, status bars, or other system UI elements.
+  bool useSafeArea = false,
+
+  /// The `Color? barrierColor` parameter is used to specify the color of the barrier that appears
+  /// behind the dialog box. The barrier is a translucent overlay that prevents interaction with the
+  /// underlying screen while the dialog box is displayed. By providing a custom `Color` value to the
+  /// `barrierColor` parameter, you can customize the color of the barrier. If no value is provided for
+  /// the `barrierColor` parameter, the default barrier color will be used.
+  Color? barrierColor,
+
+  /// The `String? barrierLabel` parameter is used to provide a label for the barrier that appears
+  /// behind the dialog box. The barrier is a translucent overlay that prevents interaction with the
+  /// underlying screen while the dialog box is displayed.
+  String? barrierLabel,
+
+  /// The `RouteSettings? routeSettings` parameter in the `simpleDialogBox` function is used to provide
+  /// additional settings for the route that is used to display the dialog box.
+  RouteSettings? routeSettings,
+
   /// The `Key? key` parameter is used to provide a unique identifier for the dialog box. It is an
   /// optional parameter that accepts a `Key` object. The `Key` class is used to uniquely identify
   /// widgets in Flutter. By providing a custom `Key` object to the `key` parameter, you can
@@ -92,6 +119,11 @@ Future simpleDialogBox(
   Key? key,
 }) async {
   await showDialog(
+    barrierDismissible: barrierDismissible,
+    barrierColor: barrierColor,
+    barrierLabel: barrierLabel,
+    routeSettings: routeSettings,
+    useSafeArea: useSafeArea,
     context: context,
     builder: (context) {
       return AlertDialog(
