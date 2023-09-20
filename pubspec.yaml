@@ -1,7 +1,7 @@
 name: xlerate
 description: One package that manages design, responsiveness and quicker development.
 version: 2.5.1
-homepage: https://github.com/dev-o-los/simple_sizer
+homepage: https://github.com/dev-o-los/xlerate
 
 environment:
   sdk: ">=3.0.5 <4.0.0"
