@@ -1,3 +1,7 @@
+## 2.5.2
+
+- readme changes
+
 ## 2.5.1
 
 - [Breaking Change]
