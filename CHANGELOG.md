@@ -1,4 +1,4 @@
-## 3.0.0
+## 2.5.1
 
 - [Breaking Change]
 
