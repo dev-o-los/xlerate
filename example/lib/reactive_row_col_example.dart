@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/reactive_widgets.dart';
-import 'package:simple_sizer/size_config.dart';
+import 'package:xlerate/reactive_widgets.dart';
+import 'package:xlerate/size_config.dart';
 
 class ReactiveRowColExample extends StatelessWidget {
   const ReactiveRowColExample({Key? key}) : super(key: key);
