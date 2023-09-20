@@ -1,3 +1,9 @@
+## 3.0.0
+
+- [Breaking Change]
+
+  - `simpleDialogBox` and `simpleBottomSheet` has been depreacted.
+
 ## 2.5.0
 
 - Added more params to `simpleDialogBox`.

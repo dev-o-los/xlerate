@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import '../../../simple_sizer.dart';
+import '../../../xlerate.dart';
 import '../../private/create_mixin.dart';
 
 /// The `TextCreator` class in Dart is a utility class that allows you to easily create `Text` widgets

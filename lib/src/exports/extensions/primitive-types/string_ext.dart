@@ -1,4 +1,4 @@
-import '../../../../simple_sizer.dart';
+import '../../../../xlerate.dart';
 
 extension StringExt on String {
   /// The function checks if two strings are equal, with an option to ignore case sensitivity.

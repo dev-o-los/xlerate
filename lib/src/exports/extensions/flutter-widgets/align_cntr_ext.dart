@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import '../../../../simple_sizer.dart';
+import '../../../../xlerate.dart';
 
 extension AlignCntrExt on Widget {
   /// The function `algn` returns an `Align` widget with specified alignment, height factor, width
