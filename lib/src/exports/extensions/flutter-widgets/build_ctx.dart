@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../private/navigation/simple_nav.dart';
+import '../../../private/simple_nav.dart';
 
 extension Buildctx on BuildContext {
   //*[Start MediaQuery]
@@ -50,11 +50,6 @@ extension Buildctx on BuildContext {
   /// class in Dart. It is used to get the accessibleNavigation of the current device screen
   /// using the `MediaQuery` class.
   bool get an => _mq.accessibleNavigation;
-
-  /// The `tsf` is an extension method defined on the `BuildContext`
-  /// class in Dart. It is used to get the textScaleFactor of the current device screen
-  /// using the `MediaQuery` class.
-  double get tsf => _mq.textScaleFactor;
 
   /// The `pdg` is an extension method defined on the `BuildContext`
   /// class in Dart. It is used to get the padding of the current device screen
@@ -306,4 +301,29 @@ extension Buildctx on BuildContext {
   void goToNamed(String routeName) => Navigator.pushNamed(this, routeName);
 
   //*[Navigation End]
+
+  /// The `overlay` function inserts an overlay widget into the overlay stack of the current context,
+  /// either above or below specified overlay entries.
+  ///
+  /// Args:
+  ///   overlayWidget (Widget): The overlayWidget parameter is the widget that you want to display as an
+  /// overlay on top of other widgets in the app.
+  ///   above (OverlayEntry): The "above" parameter is an optional parameter of type OverlayEntry. It
+  /// specifies an overlay entry that should be positioned above the current overlay entry being
+  /// inserted. If provided, the overlay entry passed as the "above" parameter will be inserted above
+  /// the current overlay entry in the overlay stack.
+  ///   below (OverlayEntry): The "below" parameter is an optional parameter of type OverlayEntry. It
+  /// specifies an overlay entry that should be positioned below the newly created overlay entry. If
+  /// provided, the new overlay entry will be inserted below the specified overlay entry in the overlay
+  /// stack.
+  void overlay(
+    Widget overlayWidget, {
+    OverlayEntry? above,
+    OverlayEntry? below,
+  }) {
+    OverlayEntry overlayEntry =
+        OverlayEntry(builder: (context) => overlayWidget);
+
+    Overlay.of(this).insert(overlayEntry, above: above, below: below);
+  }
 }
