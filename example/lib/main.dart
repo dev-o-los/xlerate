@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const MyText(text: 'Simple Sizer Example'),
+        title: const MyText(text: 'Xlerate'),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

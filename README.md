@@ -91,7 +91,7 @@ Widget build(BuildContext context) {
     //If your app just uses [num.ch()] and [num.cw()], do not initialise this function.
     //For more info read the below [Note]
     return MaterialApp(
-      title: 'Simple Sizer Example',
+      title: 'Xlerate',
       home: const HomePage(),
     );
   }
@@ -276,15 +276,15 @@ The third most useful feature of `xlerate` is extensions
 
 ## Context Extensions
 
-<img src="https://imgur.com/X2bwwWx.png">
+<img src="https://imgur.com/JueS5VB.png">
 
 ## Widget Extensions
 
-<img src="https://imgur.com/GsGrqez.png">
+<img src="https://imgur.com/RKazBPh.png">
 
 ## DataType Extensions
 
-<img src="https://imgur.com/Mm7ztjK.png">
+<img src="https://imgur.com/OXJBKdS.png">
 
 ---
 
@@ -315,7 +315,7 @@ Use `Text(data).txt...` when you know data is constant and use `'data'.txt...` w
 
 Result
 
-<img src="https://imgur.com/uhjyfZw.png">
+<img src="https://imgur.com/ZAHHSKG.png">
 
 ---
 
@@ -361,7 +361,7 @@ ShapeBorder with `Shaper` class.
         //lastly calling calling create() to render.😪
         shape: Shaper.roundrectbrdr.curvTL20.curvBR20.create(),
         //Crazzzzzzzzzzzyyyyyyyyyyyyy one liner Codddddddddddeeeeeee
-        child: const Text('xlerate').txt.xxxl.create().p20(),
+        child: const Text('xlerate').txt.xxxl.create().pLTRB(40, 10, 40, 10),
       ),
       //btw here 20.hbox = SizedBox(height: 20);
       20.hbox,
@@ -370,7 +370,7 @@ ShapeBorder with `Shaper` class.
         //stadiumbrdr = StadiumBorder()
         shape: Shaper.stadiumbrdr.create(),
         //See the Text docs to understand this.
-        child: const Text('xlerate').txt.xxxl.create().p20(),
+        child: const Text('xlerate').txt.xxxl.create().pLTRB(40, 10, 40, 10),
       ),
     ],
   );
@@ -378,7 +378,7 @@ ShapeBorder with `Shaper` class.
 
 Result
 
-<img src="https://imgur.com/KuzAqkF.png">
+<img src="https://imgur.com/ESxVk78.png">
 
 ---
 

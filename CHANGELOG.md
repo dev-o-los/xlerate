@@ -1,3 +1,8 @@
+## 2.6.0
+
+- New `Overlay` extension added over context.
+- `tsf` extension over context has been deprecated.
+
 ## 2.5.2
 
 - readme changes
