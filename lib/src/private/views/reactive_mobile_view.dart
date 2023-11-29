@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/src/exports/reactive_widgets/reactive_destination.dart';
-import 'package:simple_sizer/src/private/index_mixin.dart';
+import 'package:xlerate/src/exports/reactive_widgets/reactive_destination.dart';
+import 'package:xlerate/src/private/mixins/index_mixin.dart';
 
 import '../reactive_helper.dart';
 

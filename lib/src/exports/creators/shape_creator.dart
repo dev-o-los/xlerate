@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:simple_sizer/src/private/exceptions.dart';
-import '../../private/create_mixin.dart';
+import 'package:xlerate/src/private/exceptions.dart';
+import '../../private/mixins/create_mixin.dart';
 
 /// The `enum ShapeChoice { roundedrectborder, stadiumborder }` is defining an enumeration called
 /// `ShapeChoice` with two possible values: `roundedrectborder` and `stadiumborder`. This enumeration is

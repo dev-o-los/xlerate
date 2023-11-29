@@ -1,6 +1,6 @@
-# simple_sizer
+# xlerate
 
-`simple_sizer` is a compilation of features inspired by multiple packages on `pub.dev`.
+`xlerate` is a compilation of features inspired by multiple packages on `pub.dev`.
 
 There are three main reasons for the existence of this package -
 
@@ -20,7 +20,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 
 ## Features (What it can do)
 
-`simple_sizer` has many tricks up it's sleeve
+`xlerate` has many tricks up it's sleeve
 
 [1] Handle UI layouts based on screen size.
 
@@ -46,7 +46,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 
 ## Inspiration
 
-This package was heavily influenced by some of the top pub.dev packages, including [sizer](https://pub.dev/packages/sizer) and [velocity_x](https://pub.dev/packages/velocity_x). The goal of `simple_sizer` is to merge several valuable elements from other packages, enhance them further, and bring them all together under one roof for easy and rapid UI creation by importing only one package.
+This package was heavily influenced by some of the top pub.dev packages, including [sizer](https://pub.dev/packages/sizer) and [velocity_x](https://pub.dev/packages/velocity_x). The goal of `xlerate` is to merge several valuable elements from other packages, enhance them further, and bring them all together under one roof for easy and rapid UI creation by importing only one package.
 
 ---
 
@@ -54,10 +54,10 @@ This package was heavily influenced by some of the top pub.dev packages, includi
 
 ## Install it
 
-You can install simple_sizer using the below command:
+You can install xlerate using the below command:
 
 ```css
- $ flutter pub add simple_sizer
+ $ flutter pub add xlerate
 ```
 
 ## Import it
@@ -65,7 +65,7 @@ You can install simple_sizer using the below command:
 Now in your `dart` file you can use:
 
 ```dart
-import 'package:simple_sizer/simple_sizer.dart';
+import 'package:xlerate/xlerate.dart';
 ```
 
 ---
@@ -77,7 +77,7 @@ When developing for mobile screens prefer to use `initDevSize` method since the 
 ## Import [Step 1]
 
 ```dart
-import 'package:simple_sizer/size_config.dart';
+import 'package:xlerate/size_config.dart';
 ```
 
 ## Initialize initDevSize [Step 2]
@@ -91,7 +91,7 @@ Widget build(BuildContext context) {
     //If your app just uses [num.ch()] and [num.cw()], do not initialise this function.
     //For more info read the below [Note]
     return MaterialApp(
-      title: 'Simple Sizer Example',
+      title: 'Xlerate',
       home: const HomePage(),
     );
   }
@@ -143,7 +143,7 @@ When creating for flutter web, follow the steps below. Because web windows are r
 ## Import [Step 1]
 
 ```dart
-import 'package:simple_sizer/size_config_web.dart';
+import 'package:xlerate/size_config_web.dart';
 ```
 
 ## Parameters [Step 2]
@@ -192,15 +192,15 @@ Here c stands for `current`
 
 # Reactive Widgets
 
-The second most useful feature of `simple_sizer` is reactive widgets
+The second most useful feature of `xlerate` is reactive widgets
 
-Reactive Widgets are special members of `simple_sizer` pkg that help in UI Development
+Reactive Widgets are special members of `xlerate` pkg that help in UI Development
 
 ## ReactiveRowCol
 
-[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_row_col_example.dart)
+[Full Example Here](https://github.com/dev-o-los/xlerate/blob/main/example/lib/reactive_row_col_example.dart)
 
-[Click Here For Result](https://github.com/dev-o-los/simple_sizer/assets/112308397/8f6d2ddf-6681-4324-b307-c144078e7e32)
+[Click Here For Result](https://github.com/dev-o-los/xlerate/assets/112308397/8f6d2ddf-6681-4324-b307-c144078e7e32)
 
 ```dart
    ReactiveRowCol(
@@ -242,9 +242,9 @@ Reactive Widgets are special members of `simple_sizer` pkg that help in UI Devel
 
 ## ReactiveHome
 
-[Full Example Here](https://github.com/dev-o-los/simple_sizer/blob/main/example/lib/reactive_home_example.dart)
+[Full Example Here](https://github.com/dev-o-los/xlerate/blob/main/example/lib/reactive_home_example.dart)
 
-[Click Here For Result](https://github.com/dev-o-los/simple_sizer/assets/112308397/09d144c2-6c74-4209-9b98-be60b96ebce7)
+[Click Here For Result](https://github.com/dev-o-los/xlerate/assets/112308397/09d144c2-6c74-4209-9b98-be60b96ebce7)
 
 ```dart
   ReactiveHome(
@@ -272,32 +272,32 @@ Reactive Widgets are special members of `simple_sizer` pkg that help in UI Devel
 
 # Extensions
 
-The third most useful feature of `simple_sizer` is extensions
+The third most useful feature of `xlerate` is extensions
 
 ## Context Extensions
 
-<img src="https://imgur.com/X2bwwWx.png">
+<img src="https://imgur.com/JueS5VB.png">
 
 ## Widget Extensions
 
-<img src="https://imgur.com/GsGrqez.png">
+<img src="https://imgur.com/RKazBPh.png">
 
 ## DataType Extensions
 
-<img src="https://imgur.com/Mm7ztjK.png">
+<img src="https://imgur.com/OXJBKdS.png">
 
 ---
 
 # Creators
 
-The fourth most useful feature of `simple_sizer` is Creators.
+The fourth most useful feature of `xlerate` is Creators.
 
 ## Text
 
 Writing text widget has now become more easy , see you can do this to create text widget in flutter.
 
 ```dart
-  const Text('simple_sizer').txt.semibold.xxl.col(Colors.red).create();
+  const Text('xlerate').txt.semibold.xxl.col(Colors.red).create();
 
   //It is necessary to call create at the conclusion of the method chain since
   //it is only then that the Text Widget will be shown.
@@ -305,7 +305,7 @@ Writing text widget has now become more easy , see you can do this to create tex
 
   //or you can do this
 
-  'simple_sizer'.txt.semibold.xxl.col(Colors.red).create()
+  'xlerate'.txt.semibold.xxl.col(Colors.red).create()
 
   //There are many other cool methods and getters in the `TextCreator` class, explore them as well.
 
@@ -315,7 +315,7 @@ Use `Text(data).txt...` when you know data is constant and use `'data'.txt...` w
 
 Result
 
-<img src="https://imgur.com/uhjyfZw.png">
+<img src="https://imgur.com/ZAHHSKG.png">
 
 ---
 
@@ -361,7 +361,7 @@ ShapeBorder with `Shaper` class.
         //lastly calling calling create() to render.😪
         shape: Shaper.roundrectbrdr.curvTL20.curvBR20.create(),
         //Crazzzzzzzzzzzyyyyyyyyyyyyy one liner Codddddddddddeeeeeee
-        child: const Text('simple_sizer').txt.xxxl.create().p20(),
+        child: const Text('xlerate').txt.xxxl.create().pLTRB(40, 10, 40, 10),
       ),
       //btw here 20.hbox = SizedBox(height: 20);
       20.hbox,
@@ -370,7 +370,7 @@ ShapeBorder with `Shaper` class.
         //stadiumbrdr = StadiumBorder()
         shape: Shaper.stadiumbrdr.create(),
         //See the Text docs to understand this.
-        child: const Text('simple_sizer').txt.xxxl.create().p20(),
+        child: const Text('xlerate').txt.xxxl.create().pLTRB(40, 10, 40, 10),
       ),
     ],
   );
@@ -378,77 +378,13 @@ ShapeBorder with `Shaper` class.
 
 Result
 
-<img src="https://imgur.com/KuzAqkF.png">
-
----
-
-# App Components
-
-The fifth most useful feature of `simple_sizer` is app components
-
-## BottomSheet
-
-```dart
-ElevatedButton(
-  //call simplebottomsheet to trigger the bottom sheet
-    onPressed: () => simpleBottomSheet(context, widgets: [
-      Container(
-        //decorate the listTile using extensions
-        decoration: const BoxDecoration()
-            .col(Colors.blueGrey)
-            .curveAllCornersByRad(rad: 25),
-        child: ListTile(
-          title: const Text('Title 1').semibold(),
-        ),
-      ).p12(),
-      ListTile(
-        tileColor: Colors.blueGrey,
-        // or you can use shape helper methods
-        title: const Text('Title 2').semibold(),
-        //giving padding all around the listTile
-      ).p12(),
-    ]),
-    child: const Text('Press'),
-);
-```
-
-## Dialog Box
-
-[1] `simpleDialogBox()`
-
-Simply calling them in the onPressed function will cause the dialogue boxes to appear.
-
-```dart
-ElevatedButton(
-  onPressed: () => simpleDialogBox(
-    context,
-    title: const Text('Simple Dialog'),
-    content: Column(mainAxisSize: MainAxisSize.min, children: [
-      const Text('Content').txt.semibold.create().p16(),
-      const Text('Content')
-          .txt
-          .semibold
-          .col(Colors.green)
-          .create()
-          .p16(),
-      const Text('Content')
-          .txt
-          .bold
-          .xxl
-          .bgcol(Colors.redAccent)
-          .create()
-          .p16(),
-    ]),
-  ),
-  child: const Text('SimpleDialogBox'),
-),
-```
+<img src="https://imgur.com/ESxVk78.png">
 
 ---
 
 # Helper Methods
 
-The sixth most useful feature of `simple_sizer` is helper methods
+The sixth most useful feature of `xlerate` is helper methods
 
 ### BorderRadius Helper Methods helps in curving the borders of a container
 

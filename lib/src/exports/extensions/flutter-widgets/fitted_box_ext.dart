@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import '../../../../simple_sizer.dart';
+import '../../../../xlerate.dart';
 
 extension FittedBoxExt on Widget {
   /// The function `fitdbx` returns a `FittedBox` widget with specified alignment, clip behavior, fit,

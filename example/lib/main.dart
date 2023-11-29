@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/size_config.dart';
+import 'package:xlerate/size_config.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const MyText(text: 'Simple Sizer Example'),
+        title: const MyText(text: 'Xlerate'),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

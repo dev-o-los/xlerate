@@ -1,3 +1,18 @@
+## 2.6.0
+
+- New `Overlay` extension added over context.
+- `tsf` extension over context has been deprecated.
+
+## 2.5.2
+
+- readme changes
+
+## 2.5.1
+
+- [Breaking Change]
+
+  - `simpleDialogBox` and `simpleBottomSheet` has been depreacted.
+
 ## 2.5.0
 
 - Added more params to `simpleDialogBox`.

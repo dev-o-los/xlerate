@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sizer/simple_sizer.dart';
-import 'package:simple_sizer/src/private/index_mixin.dart';
+import 'package:xlerate/xlerate.dart';
+import 'package:xlerate/src/private/mixins/index_mixin.dart';
 
 import '../../../reactive_widgets.dart';
 import '../../private/views/reactive_bigscreen_view.dart';
