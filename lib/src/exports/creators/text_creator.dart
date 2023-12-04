@@ -169,7 +169,7 @@ class TextCreator implements CreateMixin<Text> {
       data,
       maxLines: _maxLines,
       locale: _locale,
-      textScaleFactor: _textScaleFactor,
+      textScaler: TextScaler.linear(_textScaleFactor ?? 1.0),
       overflow: _overflow,
       textAlign: _textAlign,
       style: textstyle,
