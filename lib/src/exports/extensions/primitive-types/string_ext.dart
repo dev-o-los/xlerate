@@ -1,3 +1,5 @@
+import 'package:flutter/widgets.dart';
+
 import '../../../../xlerate.dart';
 
 extension StringExt on String {
@@ -29,4 +31,10 @@ extension StringExt on String {
       return false;
     }
   }
+
+  /// The line `void get pr => debugPrint(this);` is creating a getter method called `pr` for the
+  /// `String` class. When this getter is called on a string object, it will print the string using the
+  /// `debugPrint` function from the `flutter/widgets.dart` package. This is a convenient way to quickly
+  /// print debug information during development.
+  void get pr => debugPrint(this);
 }

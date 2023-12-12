@@ -6,6 +6,7 @@ library xlerate;
 export 'src/exports/creators/text_creator.dart';
 export 'src/exports/creators/decoration_creator.dart';
 export 'src/exports/creators/shape_creator.dart';
+export 'src/exports/creators/box_creator.dart';
 
 //From Folder enums
 export 'src/exports/enums/text_align_enum.dart';

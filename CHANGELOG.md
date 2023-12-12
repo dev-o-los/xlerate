@@ -1,3 +1,8 @@
+## 2.7.0
+
+- New `dialogBx` amd `botmSht` extensions added over context.
+- New `pr` getter extension added over String to easily log text to console.
+
 ## 2.6.0
 
 - New `Overlay` extension added over context.

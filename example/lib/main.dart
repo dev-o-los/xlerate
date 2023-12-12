@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xlerate/size_config.dart';
+import 'package:xlerate/xlerate.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,6 +72,11 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
+            Box.hw(100, 200)
+                .col(Colors.redAccent)
+                .brdrCol(Colors.green)
+                .curveCorners()
+                .create(),
             ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
               itemCount: 8,
