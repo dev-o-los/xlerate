@@ -113,7 +113,7 @@ class Box implements DecorateMixin<Box> {
   DecorateMixin col(Color color) => this.._vars.color = color;
 
   @override
-  Box curveCorners({double rad = 20}) =>
+  DecorateMixin curveCorners({double rad = 20}) =>
       this.._vars.borderRadius = BorderRadius.circular(rad);
 
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 mixin DecorateMixin<T> {
-  T curveCorners({double rad = 20});
+  DecorateMixin curveCorners({double rad = 20});
   DecorateMixin curveOnlyTopCorners({double rad = 20});
   DecorateMixin curveOnly(
       {double bl = 0, double br = 0, double tl = 0, double tr = 0});
