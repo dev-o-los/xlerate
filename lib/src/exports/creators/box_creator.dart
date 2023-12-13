@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:xlerate/src/private/mixins/decoration_mixin.dart';
 import 'package:xlerate/src/private/mixins/create_mixin.dart';
@@ -153,6 +154,26 @@ class Box implements CreateMixin<Container>, DecorationMixin<Box> {
             minHeight: _minheight ?? 0.0,
             minWidth: _minwidth ?? 0.0,
           ),
+      key: _key,
+      child: _child,
+    );
+  }
+
+  Ink createInk() {
+    return Ink(
+      decoration: BoxDecoration(
+        backgroundBlendMode: _backgroundBlendMode,
+        border: _border,
+        borderRadius: _borderRadius,
+        boxShadow: _boxShadow,
+        color: _color,
+        gradient: _gradient,
+        image: _image,
+        shape: _shape,
+      ),
+      height: _height,
+      width: _width,
+      padding: _padding,
       key: _key,
       child: _child,
     );
