@@ -74,6 +74,7 @@ class HomePage extends StatelessWidget {
             ),
             Box.hw(100, 200)
                 .col(Colors.redAccent)
+                .curveOnlyTopCorners()
                 .brdrCol(Colors.green)
                 .curveCorners()
                 .create(),

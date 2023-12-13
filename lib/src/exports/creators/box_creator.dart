@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
-import 'package:xlerate/src/private/mixins/decor_mixin.dart';
+import 'package:xlerate/src/private/mixins/decoration_mixin.dart';
+import 'package:xlerate/src/private/mixins/create_mixin.dart';
 import 'package:xlerate/xlerate.dart';
 
 @protected
-class Box implements DecorateMixin<Box> {
+class Box implements CreateMixin<Container>, DecorationMixin<Box> {
   Box._();
 
   static double? _height;
   static double? _width;
-  final _vars = Vars();
 
   AlignmentGeometry? _alignment;
   AlignmentGeometry? _transformalignment;
@@ -24,6 +24,63 @@ class Box implements DecorateMixin<Box> {
   Matrix4? _transform;
   Widget? _child;
   Key? _key;
+
+  BorderRadiusGeometry? _borderRadius;
+  BlendMode? _backgroundBlendMode;
+  BoxBorder? _border;
+  Color? _color;
+  List<BoxShadow>? _boxShadow;
+  Gradient? _gradient;
+  DecorationImage? _image;
+  BoxShape _shape = BoxShape.rectangle;
+
+  @override
+  Box curveCorners({double rad = 20}) =>
+      this.._borderRadius = BorderRadius.circular(rad);
+
+  @override
+  Box curveOnlyTopCorners({double rad = 20}) =>
+      this.._borderRadius = BorderRadius.vertical(top: Radius.circular(rad));
+
+  @override
+  Box curveOnly({
+    double bl = 0,
+    double br = 0,
+    double tl = 0,
+    double tr = 0,
+  }) =>
+      this
+        .._borderRadius = BorderRadius.only(
+          bottomLeft: Radius.circular(bl),
+          bottomRight: Radius.circular(br),
+          topLeft: Radius.circular(tl),
+          topRight: Radius.circular(tr),
+        );
+
+  @override
+  Box curveOnlyBottomCorners({double rad = 20}) =>
+      this.._borderRadius = BorderRadius.vertical(bottom: Radius.circular(rad));
+
+  @override
+  Box bgBlndMode(BlendMode blndmod) => this.._backgroundBlendMode = blndmod;
+
+  @override
+  Box shadows(List<BoxShadow>? boxShadow) => this.._boxShadow = boxShadow;
+
+  @override
+  Box brdrCol(Color color) => this.._border = Border.all(color: color);
+
+  @override
+  Box col(Color color) => this.._color = color;
+
+  @override
+  Box grdnt(Gradient gradient) => this.._gradient = gradient;
+
+  @override
+  Box shape(BoxShape shape) => this.._shape = shape;
+
+  @override
+  Box img(DecorationImage image) => this.._image = image;
 
   static Box hw(double h, double w) {
     _width = w;
@@ -71,14 +128,14 @@ class Box implements DecorateMixin<Box> {
   Container create() {
     return Container(
       decoration: BoxDecoration(
-        backgroundBlendMode: _vars.backgroundBlendMode,
-        border: _vars.border,
-        borderRadius: _vars.borderRadius,
-        boxShadow: _vars.boxShadow,
-        color: _vars.color,
-        gradient: _vars.gradient,
-        image: _vars.image,
-        shape: _vars.shape,
+        backgroundBlendMode: _backgroundBlendMode,
+        border: _border,
+        borderRadius: _borderRadius,
+        boxShadow: _boxShadow,
+        color: _color,
+        gradient: _gradient,
+        image: _image,
+        shape: _shape,
       ),
       height: _height,
       width: _width,
@@ -100,55 +157,4 @@ class Box implements DecorateMixin<Box> {
       child: _child,
     );
   }
-
-  @override
-  DecorateMixin bgBlndMode(BlendMode blndmod) =>
-      this.._vars.backgroundBlendMode = blndmod;
-
-  @override
-  DecorateMixin brdrCol(Color color) =>
-      this.._vars.border = Border.all(color: color);
-
-  @override
-  DecorateMixin col(Color color) => this.._vars.color = color;
-
-  @override
-  DecorateMixin curveCorners({double rad = 20}) =>
-      this.._vars.borderRadius = BorderRadius.circular(rad);
-
-  @override
-  DecorateMixin curveOnly({
-    double bl = 0,
-    double br = 0,
-    double tl = 0,
-    double tr = 0,
-  }) =>
-      this
-        .._vars.borderRadius = BorderRadius.only(
-          bottomLeft: Radius.circular(bl),
-          bottomRight: Radius.circular(br),
-          topLeft: Radius.circular(tl),
-          topRight: Radius.circular(tr),
-        );
-
-  @override
-  DecorateMixin curveOnlyBottomCorners({double rad = 20}) => this
-    .._vars.borderRadius = BorderRadius.vertical(bottom: Radius.circular(rad));
-
-  @override
-  DecorateMixin curveOnlyTopCorners({double rad = 20}) => this
-    .._vars.borderRadius = BorderRadius.vertical(top: Radius.circular(rad));
-
-  @override
-  DecorateMixin grdnt(Gradient gradient) => this.._vars.gradient = gradient;
-
-  @override
-  DecorateMixin img(DecorationImage image) => this.._vars.image = image;
-
-  @override
-  DecorateMixin shadows(List<BoxShadow>? boxShadow) =>
-      this.._vars.boxShadow = boxShadow;
-
-  @override
-  DecorateMixin shape(BoxShape shape) => this.._vars.shape = shape;
 }
