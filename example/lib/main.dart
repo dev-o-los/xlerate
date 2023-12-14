@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xlerate/size_config.dart';
+import 'package:xlerate/xlerate.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,37 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const BoxExample(),
+    );
+  }
+}
+
+class BoxExample extends StatelessWidget {
+  const BoxExample({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          20.h.hbox,
+          Container(
+            height: 100,
+            width: 100,
+            color: Colors.amber,
+            decoration: const BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
+              ),
+            ),
+          ),
+          10.hbox,
+          Box().h(100).w(100).col(Colors.redAccent).curveCorners().create(),
+          //                                          default rad = 20
+        ],
+      ).cntr(),
     );
   }
 }

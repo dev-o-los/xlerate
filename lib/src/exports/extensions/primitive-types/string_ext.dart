@@ -1,3 +1,5 @@
+import 'package:flutter/widgets.dart';
+
 import '../../../../xlerate.dart';
 
 extension StringExt on String {
@@ -29,4 +31,13 @@ extension StringExt on String {
       return false;
     }
   }
+
+  /// Prints a message to the console, which you can access using the "flutter"
+  /// tool's "logs" command ("flutter logs").
+  ///
+  /// See also:
+  ///
+  ///   * [DebugPrintCallback], for function parameters and usage details.
+  ///   * [debugPrintThrottled], the default implementation.
+  void get pr => debugPrint(this);
 }
