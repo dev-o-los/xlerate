@@ -312,6 +312,9 @@ But it isn't the only reason you should use the 'Box'; let me show you why it is
 
 ```dart
 
+// Both produce the same result.
+// But Box makes it easy to customize the widget.
+
 Container(
     height: 100,
     width: 100,
@@ -323,12 +326,13 @@ Container(
       ),
     ),
   ),
-  10.hbox,
+
+  //More fluent and chained method approach.
   Box().h(100).w(100).col(Colors.redAccent).curveCorners().create(),
 
 ```
 
-<img src="https://imgur.com/YlDm9N3">
+<img src="https://imgur.com/YlDm9N3.png">
 
 ---
 
