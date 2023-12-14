@@ -32,9 +32,12 @@ extension StringExt on String {
     }
   }
 
-  /// The line `void get pr => debugPrint(this);` is creating a getter method called `pr` for the
-  /// `String` class. When this getter is called on a string object, it will print the string using the
-  /// `debugPrint` function from the `flutter/widgets.dart` package. This is a convenient way to quickly
-  /// print debug information during development.
+  /// Prints a message to the console, which you can access using the "flutter"
+  /// tool's "logs" command ("flutter logs").
+  ///
+  /// See also:
+  ///
+  ///   * [DebugPrintCallback], for function parameters and usage details.
+  ///   * [debugPrintThrottled], the default implementation.
   void get pr => debugPrint(this);
 }

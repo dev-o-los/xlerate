@@ -2,6 +2,8 @@
 
 - New `dialogBx` amd `botmSht` extensions added over context.
 - New `pr` getter extension added over String to easily log text to console.
+- New `Box` creator class added to the xlerate pkg.
+  - Helps you develop a 'Container' Widget that is easily customisable through method chaining.
 
 ## 2.6.0
 
