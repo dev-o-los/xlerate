@@ -38,6 +38,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 - [Reactive Widgets](#reactive-widgets)
 - [Extensions](#extensions)
 - [Creators](#creators)
+  - [Container]
   - [Text](#text)
   - [Box Decoration](#boxdecoration)
   - [Shaper](#shaper)
@@ -291,6 +292,45 @@ The third most useful feature of `xlerate` is extensions
 # Creators
 
 The fourth most useful feature of `xlerate` is Creators.
+
+## Container
+
+`Box` is the all new creator for `Conatainer`.
+
+I'm pretty sure that you must have ran into this bug
+
+```dart
+
+color == null || decoration == null
+"Cannot provide both a color and a decoration\nTo provide both, use \"decoration: BoxDecoration(color: color)\"."
+
+```
+
+It's an extremely frustrating bug, but if you utilise the `Box` creator, you'll never have to deal with it again.
+
+But it isn't the only reason you should use the 'Box'; let me show you why it is superior than the container.
+
+```dart
+
+Container(
+    height: 100,
+    width: 100,
+    color: Colors.amber,
+    decoration: const BoxDecoration(
+      color: Colors.red,
+      borderRadius: BorderRadius.all(
+        Radius.circular(20),
+      ),
+    ),
+  ),
+  10.hbox,
+  Box().h(100).w(100).col(Colors.redAccent).curveCorners().create(),
+
+```
+
+<img src="https://imgur.com/YlDm9N3">
+
+---
 
 ## Text
 
