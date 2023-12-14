@@ -38,7 +38,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 - [Reactive Widgets](#reactive-widgets)
 - [Extensions](#extensions)
 - [Creators](#creators)
-  - [Container]
+  - [Container](#container)
   - [Text](#text)
   - [Box Decoration](#boxdecoration)
   - [Shaper](#shaper)
