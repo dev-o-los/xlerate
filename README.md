@@ -38,7 +38,7 @@ Supports Android, iOS, Web, Mac, Linux and Windows.
 - [Reactive Widgets](#reactive-widgets)
 - [Extensions](#extensions)
 - [Creators](#creators)
-  - [Container](#container)
+  - [Container](#container-box)
   - [Text](#text)
   - [Box Decoration](#boxdecoration)
   - [Shaper](#shaper)
@@ -327,8 +327,8 @@ Container(
     ),
   ),
 
-  //More fluent and chained method approach.
-  Box().h(100).w(100).col(Colors.redAccent).curveCorners().create(),
+//More fluent and chained method approach.
+Box().h(100).w(100).col(Colors.redAccent).curveCorners().create(),
 
 ```
 
