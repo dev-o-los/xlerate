@@ -295,7 +295,7 @@ The fourth most useful feature of `xlerate` is Creators.
 
 ## Container [Box]
 
-`Box` is the all new creator for `Conatainer`.
+`Box` is the all new creator for `Container`.
 
 I'm pretty sure that you must have ran into this bug
 
