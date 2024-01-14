@@ -27,9 +27,9 @@ export 'src/exports/extensions/flutter-widgets/text_ext.dart';
 export 'src/exports/extensions/flutter-widgets/positioned_ext.dart';
 
 //From Folder data-types
-export 'src/exports/extensions/primitive-types/bool_ext.dart';
-export 'src/exports/extensions/primitive-types/string_ext.dart';
-export 'src/exports/extensions/primitive-types/int_ext.dart';
+export 'src/exports/extensions/data-types/bool_ext.dart';
+export 'src/exports/extensions/data-types/string_ext.dart';
+export 'src/exports/extensions/data-types/int_ext.dart';
 
 //From Folder helper_methods
 export 'src/exports/helper_methods/border_rad_helper.dart';
