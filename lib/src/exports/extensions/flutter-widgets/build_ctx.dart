@@ -330,10 +330,8 @@ extension Buildctx on BuildContext {
   /// Args:
   ///   box (Widget): The `box` parameter is a required `Widget` that represents the content of the
   /// dialog box. It can be any widget that you want to display inside the dialog box.
-  Future<void> dialogBx({required Widget box}) => showDialog(
-        context: this,
-        builder: (context) => box,
-      );
+  Future<void> dialogBx({required Widget Function(BuildContext) box}) =>
+      showDialog(context: this, builder: box);
 
   /// The function `botmSht` is a Dart function that displays a modal bottom sheet with the provided
   /// widget.
@@ -341,6 +339,6 @@ extension Buildctx on BuildContext {
   /// Args:
   ///   btmSht (Widget): The `btmSht` parameter is a required `Widget` that represents the content of
   /// the bottom sheet. It will be displayed inside the `showModalBottomSheet` function.
-  Future<void> botmSht({required Widget btmSht}) =>
-      showModalBottomSheet(context: this, builder: (context) => btmSht);
+  Future<void> botmSht({required Widget Function(BuildContext) btmSht}) =>
+      showModalBottomSheet(context: this, builder: btmSht);
 }
