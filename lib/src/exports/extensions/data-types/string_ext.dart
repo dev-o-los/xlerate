@@ -1,5 +1,3 @@
-import 'package:flutter/widgets.dart';
-
 import '../../../../xlerate.dart';
 
 extension StringExt on String {
@@ -24,20 +22,9 @@ extension StringExt on String {
   /// `txt` for the `String` class.
   TextCreator get txt => TextCreator(data: this);
 
-  bool get isNum {
-    if (int.tryParse(this) != null) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  bool get isNum => int.tryParse(this) != null;
+}
 
-  /// Prints a message to the console, which you can access using the "flutter"
-  /// tool's "logs" command ("flutter logs").
-  ///
-  /// See also:
-  ///
-  ///   * [DebugPrintCallback], for function parameters and usage details.
-  ///   * [debugPrintThrottled], the default implementation.
-  void get pr => debugPrint(this);
+extension NullStringExt on String? {
+  bool get isNull => this == null;
 }

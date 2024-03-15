@@ -1,3 +1,11 @@
+## 2.8.0
+
+- New `formatDate` extension added over DateTime class
+- Added some extensions for String class
+- [Deprecated]
+  - `pr` getter extension has been deprecated.
+- Improved pub points
+
 ## 2.7.0
 
 - New `dialogBx` amd `botmSht` extensions added over context.
