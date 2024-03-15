@@ -341,4 +341,7 @@ extension Buildctx on BuildContext {
   /// the bottom sheet. It will be displayed inside the `showModalBottomSheet` function.
   Future<void> botmSht({required Widget Function(BuildContext) btmSht}) =>
       showModalBottomSheet(context: this, builder: btmSht);
+
+  void snckBr({required SnackBar snckBr}) =>
+      ScaffoldMessenger.of(this).showSnackBar(snckBr);
 }
