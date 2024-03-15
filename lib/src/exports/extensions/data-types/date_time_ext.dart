@@ -7,14 +7,14 @@ extension DateTimeExt on DateTime {
     final mth = _getMonthName(int.parse(date[1]));
     final dy = date[2];
 
-    if (dy.isEquals('1')) {
-      return '1st $mth\'$yr';
-    } else if (dy.isEquals('2')) {
-      return '2nd $mth\'$yr';
-    } else if (dy.isEquals('3')) {
-      return '3rd $mth\'$yr';
+    if (dy.isEquals('01')) {
+      return '1st $mth $yr';
+    } else if (dy.isEquals('02')) {
+      return '2nd $mth $yr';
+    } else if (dy.isEquals('03')) {
+      return '3rd $mth $yr';
     } else {
-      return '${dy}th $mth , $yr';
+      return '${dy}th $mth $yr';
     }
   }
 }
