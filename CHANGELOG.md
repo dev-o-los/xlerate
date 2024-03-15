@@ -2,6 +2,7 @@
 
 - New `formatDate` extension added over DateTime class
 - Added some extensions for String class
+- Added extension methods for ConnectionState in Flutter widgets.
 - [Deprecated]
   - `pr` getter extension has been deprecated.
 - Improved pub points
