@@ -11,6 +11,7 @@
     ScaffoldMessenger.
 - [Changes]
   - Improved pub points
+  - Added and `col` parameter to the `szdbox` extension to easily visualize the `SizedBox` widget
   - Refactor dialog box and bottom sheet functions to accept a function that
     returns a widget.
 
