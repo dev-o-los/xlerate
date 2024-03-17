@@ -325,23 +325,32 @@ extension Buildctx on BuildContext {
     Overlay.of(this).insert(overlayEntry, above: above, below: below);
   }
 
-  /// The function `dialogBx` displays a dialog box with the provided widget.
+  /// The `dialogBx` function in Dart displays a dialog box using the provided widget builder function.
   ///
   /// Args:
-  ///   box (Widget): The `box` parameter is a required `Widget` that represents the content of the
-  /// dialog box. It can be any widget that you want to display inside the dialog box.
+  ///   box (Widget Function(BuildContext)): The `box` parameter is a required function that takes a
+  /// `BuildContext` as an argument and returns a `Widget`. This function is used as the builder for the
+  /// `showDialog` method.
   Future<void> dialogBx({required Widget Function(BuildContext) box}) =>
       showDialog(context: this, builder: box);
 
-  /// The function `botmSht` is a Dart function that displays a modal bottom sheet with the provided
-  /// widget.
+  /// The `botmSht` function in Dart displays a modal bottom sheet using the provided widget builder
+  /// function.
   ///
   /// Args:
-  ///   btmSht (Widget): The `btmSht` parameter is a required `Widget` that represents the content of
-  /// the bottom sheet. It will be displayed inside the `showModalBottomSheet` function.
+  ///   btmSht (Widget Function(BuildContext)): The `btmSht` parameter is a required function that takes
+  /// a `BuildContext` as an argument and returns a `Widget`. This function is used as the builder for
+  /// the `showModalBottomSheet` method, which will display a bottom sheet in the current context with
+  /// the content returned by this
   Future<void> botmSht({required Widget Function(BuildContext) btmSht}) =>
       showModalBottomSheet(context: this, builder: btmSht);
 
+  /// The function `snckBr` displays a `SnackBar` using the `ScaffoldMessenger` in Dart.
+  ///
+  /// Args:
+  ///   snckBr (SnackBar): The `snckBr` parameter is of type `SnackBar` and it is required for the
+  /// `snckBr` function. This function is responsible for showing a SnackBar message using the
+  /// `ScaffoldMessenger` of the current context.
   void snckBr({required SnackBar snckBr}) =>
       ScaffoldMessenger.of(this).showSnackBar(snckBr);
 }

@@ -22,9 +22,14 @@ extension StringExt on String {
   /// `txt` for the `String` class.
   TextCreator get txt => TextCreator(data: this);
 
+  /// This getter method checks if the string can be parsed
+  /// into an integer. If the parsing is successful and the result is not
+  /// `null`, then the getter method returns `true`, indicating that the string represents a valid
+  /// integer. Otherwise, it returns `false`.
   bool get isNum => int.tryParse(this) != null;
 }
 
 extension NullStringExt on String? {
+  /// This getter method checks if the string value it is called on is `null`.
   bool get isNull => this == null;
 }
