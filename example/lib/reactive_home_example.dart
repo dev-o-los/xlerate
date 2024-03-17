@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xlerate/reactive_widgets.dart';
+import 'package:xlerate/xlerate_web.dart';
 
 class ReactiveHomeExample extends StatelessWidget {
   const ReactiveHomeExample({Key? key}) : super(key: key);

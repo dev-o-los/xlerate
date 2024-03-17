@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../flutter_widget_ext.dart';
 
 extension SizedBoxExt on num {
   /// `hbox` is creating a `SizedBox` widget with a specific

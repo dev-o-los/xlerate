@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+part of '../flutter_widget_ext.dart';
 
 extension ExpandedExt on Widget {
   /// The function `expd` returns an `Expanded` widget with a specified flex value and child widget.

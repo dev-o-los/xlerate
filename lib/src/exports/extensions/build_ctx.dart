@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../private/simple_nav.dart';
+import '../../private/simple_nav.dart';
 
 extension Buildctx on BuildContext {
   //*[Start MediaQuery]
