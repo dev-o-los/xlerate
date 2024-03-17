@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension SizeConfigWebExt on num {
-  Size _mq(BuildContext context) => MediaQuery.of(context).size;
+  Size _mq(BuildContext context) => MediaQuery.sizeOf(context);
 
   ///ch stands for current height
   ///The only difference `num.ch()` and `num.h` is that [num.ch()] rebuilds

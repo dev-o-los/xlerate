@@ -15,7 +15,8 @@
   - Refactor dialog box and bottom sheet functions to accept a function that
     returns a widget.
   - `curveOnlyTopCorners` changed to `curveTop`.
-  - `curveOnlyBottomCorners` chnaged to `curveBttm`.
+  - `curveOnlyBottomCorners` changed to `curveBttm`.
+  - `MediaQuery.of(context).size` changed with `MediaQuery.sizeOf(context)`.
 
 ## 2.7.0
 
