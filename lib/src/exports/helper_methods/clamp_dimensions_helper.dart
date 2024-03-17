@@ -57,7 +57,7 @@ double clampHeightInRange(
 ///
 /// ```dart
 /// Text(
-///     'simple_sizer',
+///     'xlerate',
 ///     height: clampTextSizeInRange(5, 30, context),
 /// //Gives a scale independent pixels of 5% of scale independent pixels and
 /// //stops after it has reached a scale independent pixels of 30 px

@@ -1,4 +1,4 @@
-///'simple_sizer' is the core dependency of this package and is usually imported for `extensions` `text-creators` and etc.
+///'xlerate' is the core dependency of this package and is usually imported for `extensions` `text-creators` and etc.
 ///mainly used in android and ios apps [Mobile].
 library xlerate;
 

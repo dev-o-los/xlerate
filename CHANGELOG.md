@@ -69,7 +69,7 @@
 
 ## 2.3.0
 
-- Introducing navigation in `simple_sizer`.
+- Introducing navigation in `xlerate`.
 
   - Use below extensions on `context` to easily navigate between screens
 

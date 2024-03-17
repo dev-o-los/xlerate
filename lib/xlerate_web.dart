@@ -1,4 +1,4 @@
-///'simple_sizer_web' is the andother core dependency of this package and is usually imported when dealing with flutter web.
+///'xlerate_web' is the andother core dependency of this package and is usually imported when dealing with flutter web.
 ///It includes `clampInRange` methods ,`reactive widgets`, and `size_config_web`.
 ///mainly used in [Flutter Web].
 library xlerate_web;
