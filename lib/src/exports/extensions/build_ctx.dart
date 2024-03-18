@@ -331,8 +331,29 @@ extension Buildctx on BuildContext {
   ///   box (Widget Function(BuildContext)): The `box` parameter is a required function that takes a
   /// `BuildContext` as an argument and returns a `Widget`. This function is used as the builder for the
   /// `showDialog` method.
-  Future<void> dialogBx({required Widget Function(BuildContext) box}) =>
-      showDialog(context: this, builder: box);
+  Future<void> dialogBx({
+    required Widget Function(BuildContext) box,
+    bool barrierDismissible = true,
+    Color? barrierColor,
+    String? barrierLabel,
+    bool useSafeArea = true,
+    bool useRootNavigator = true,
+    RouteSettings? routeSettings,
+    Offset? anchorPoint,
+    TraversalEdgeBehavior? traversalEdgeBehavior,
+  }) async =>
+      await showDialog(
+        anchorPoint: anchorPoint,
+        barrierColor: barrierColor,
+        barrierDismissible: barrierDismissible,
+        barrierLabel: barrierLabel,
+        routeSettings: routeSettings,
+        traversalEdgeBehavior: traversalEdgeBehavior,
+        useRootNavigator: useRootNavigator,
+        useSafeArea: useSafeArea,
+        context: this,
+        builder: box,
+      );
 
   /// The `botmSht` function in Dart displays a modal bottom sheet using the provided widget builder
   /// function.
@@ -342,8 +363,45 @@ extension Buildctx on BuildContext {
   /// a `BuildContext` as an argument and returns a `Widget`. This function is used as the builder for
   /// the `showModalBottomSheet` method, which will display a bottom sheet in the current context with
   /// the content returned by this
-  Future<void> botmSht({required Widget Function(BuildContext) btmSht}) =>
-      showModalBottomSheet(context: this, builder: btmSht);
+  Future<void> botmSht({
+    required Widget Function(BuildContext) btmSht,
+    Color? backgroundColor,
+    String? barrierLabel,
+    double? elevation,
+    ShapeBorder? shape,
+    Clip? clipBehavior,
+    BoxConstraints? constraints,
+    Color? barrierColor,
+    bool isScrollControlled = false,
+    bool useRootNavigator = false,
+    bool isDismissible = true,
+    bool enableDrag = true,
+    bool? showDragHandle,
+    bool useSafeArea = false,
+    RouteSettings? routeSettings,
+    AnimationController? transitionAnimationController,
+    Offset? anchorPoint,
+  }) async =>
+      await showModalBottomSheet(
+        anchorPoint: anchorPoint,
+        backgroundColor: backgroundColor,
+        barrierColor: barrierColor,
+        barrierLabel: barrierLabel,
+        clipBehavior: clipBehavior,
+        constraints: constraints,
+        elevation: elevation,
+        enableDrag: enableDrag,
+        isDismissible: isDismissible,
+        isScrollControlled: isScrollControlled,
+        routeSettings: routeSettings,
+        shape: shape,
+        showDragHandle: showDragHandle,
+        transitionAnimationController: transitionAnimationController,
+        useRootNavigator: useRootNavigator,
+        useSafeArea: useRootNavigator,
+        context: this,
+        builder: btmSht,
+      );
 
   /// The function `snckBr` displays a `SnackBar` using the `ScaffoldMessenger` in Dart.
   ///
