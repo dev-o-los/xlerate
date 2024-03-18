@@ -45,14 +45,24 @@ class MyWidget2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text(
-          'This is Widget2',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
+        child: Column(
+          children: [
+            200.hbox,
+            const Text(
+              'This is Widget2',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            DateTime.now()
+                .formatDate(clipMthLength: 3)
+                .txt
+                .create()
+                .onTap(() {}),
+          ],
         ),
       ),
     );

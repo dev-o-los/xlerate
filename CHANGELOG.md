@@ -6,12 +6,15 @@
   - Added the `formatDate` extension added over DateTime class.
   - Added some new extensions for String and int class.
   - Added extension methods for ConnectionState in Flutter widgets.
-  - Added `curveOnly` helper methods that lets you easily curve the specfic corners of a widget.
+  - Added `curveOnly` helper methods that lets you easily curve the specfic
+    corners of a widget.
   - Added a extension method over context to show a SnackBar message in
     ScaffoldMessenger.
+  - Added new `onTap` and `onTapInkWell` extension method over `context`.
 - [Changes]
   - Improved pub points.
-  - Added and `col` parameter to the `szdbox` extension to easily visualize the `SizedBox` widget.
+  - Added and `col` parameter to the `szdbox` extension to easily visualize the
+    `SizedBox` widget.
   - Refactor dialog box and bottom sheet functions to accept a function that
     returns a widget.
   - `curveOnlyTopCorners` changed to `curveTop`.

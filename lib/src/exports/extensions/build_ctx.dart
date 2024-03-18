@@ -332,7 +332,7 @@ extension Buildctx on BuildContext {
   /// `BuildContext` as an argument and returns a `Widget`. This function is used as the builder for the
   /// `showDialog` method.
   Future<void> dialogBx({
-    required Widget Function(BuildContext) box,
+    required Widget box,
     bool barrierDismissible = true,
     Color? barrierColor,
     String? barrierLabel,
@@ -352,7 +352,7 @@ extension Buildctx on BuildContext {
         useRootNavigator: useRootNavigator,
         useSafeArea: useSafeArea,
         context: this,
-        builder: box,
+        builder: (_) => box,
       );
 
   /// The `botmSht` function in Dart displays a modal bottom sheet using the provided widget builder
@@ -364,7 +364,7 @@ extension Buildctx on BuildContext {
   /// the `showModalBottomSheet` method, which will display a bottom sheet in the current context with
   /// the content returned by this
   Future<void> botmSht({
-    required Widget Function(BuildContext) btmSht,
+    required Widget btmSht,
     Color? backgroundColor,
     String? barrierLabel,
     double? elevation,
@@ -400,7 +400,7 @@ extension Buildctx on BuildContext {
         useRootNavigator: useRootNavigator,
         useSafeArea: useRootNavigator,
         context: this,
-        builder: btmSht,
+        builder: (_) => btmSht,
       );
 
   /// The function `snckBr` displays a `SnackBar` using the `ScaffoldMessenger` in Dart.

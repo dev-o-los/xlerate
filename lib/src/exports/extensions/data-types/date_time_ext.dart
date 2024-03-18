@@ -9,10 +9,13 @@ extension DateTimeExt on DateTime {
   ///   The `formatDate` function is returning a formatted date string in the format "DDth Month YY"
   /// where DD is the day, Month is the month name, and YY is the last two digits of the year. If the
   /// day is 1, 2, or 3, it appends "st", "nd", or "rd" respectively to the day number.
-  String formatDate() {
+  String formatDate({int? clipMthLength, bool showCompleteYr = false}) {
     final date = toIso8601String().split('T').first.split('-');
-    final yr = date[0].substring(2);
-    final mth = XlerateUtils.getMonthName(int.parse(date[1]));
+    final yr = date[0].substring(showCompleteYr ? 0 : 2);
+    final mth = XlerateUtils.getMonthName(
+      int.parse(date[1]),
+      clipMthLength: clipMthLength,
+    );
     final dy = date[2];
 
     if (dy.isEquals('01')) {

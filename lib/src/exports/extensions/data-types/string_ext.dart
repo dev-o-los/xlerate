@@ -29,7 +29,7 @@ extension StringExt on String {
   bool get isNum => int.tryParse(this) != null;
 }
 
-extension NullStringExt on String? {
+extension NullStringExt on Object? {
   /// This getter method checks if the string value it is called on is `null`.
   bool get isNull => this == null;
 }

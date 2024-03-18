@@ -1,5 +1,5 @@
 class XlerateUtils {
-  static String getMonthName(int index) {
+  static String getMonthName(int index, {int? clipMthLength}) {
     final list = [
       'January',
       'February',
@@ -14,7 +14,7 @@ class XlerateUtils {
       'November',
       'December'
     ];
-    return list[index - 1];
+    return list[index - 1].substring(0, clipMthLength);
   }
 
   static String getDayName(int index) {

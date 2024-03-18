@@ -14,3 +14,4 @@ part 'flutter-widgets/positioned_ext.dart';
 part 'flutter-widgets/sizedbox_ext.dart';
 part 'flutter-widgets/stba_ext.dart';
 part 'flutter-widgets/text_ext.dart';
+part 'flutter-widgets/ontap_ext.dart';
