@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+part of '../flutter_widget_ext.dart';
 
 extension PaddingExt on Widget {
   /// The function `pOnly` returns a `Padding` widget with specified padding values for left, right,

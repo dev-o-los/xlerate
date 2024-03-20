@@ -18,17 +18,17 @@ class SizeConfig {
   static void initDevSize(BuildContext context) {
     /// md stands for mediaquery
     ///
-    final md = MediaQuery.of(context);
+    final size = MediaQuery.sizeOf(context);
 
     ///initializing the `height` and `width` from the context data.
     ///
     ///getting percent `height`
     ///
-    _height = (md.size.height / 100);
+    _height = (size.height / 100);
 
     ///getting percent `width`
     ///
-    _width = (md.size.width / 100);
+    _width = (size.width / 100);
   }
 }
 

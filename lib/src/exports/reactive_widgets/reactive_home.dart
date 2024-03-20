@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:xlerate/xlerate.dart';
 import 'package:xlerate/src/private/mixins/index_mixin.dart';
 
-import '../../../reactive_widgets.dart';
 import '../../private/views/reactive_bigscreen_view.dart';
 import '../../private/views/reactive_mobile_view.dart';
+import 'reactive_destination.dart';
 
 class ReactiveHome extends StatelessWidget with IndexMixin {
   /// The `ReactiveHome` class is a widget that displays either a `ReactiveTabletView` or a

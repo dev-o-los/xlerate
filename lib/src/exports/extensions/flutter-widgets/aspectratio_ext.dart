@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+part of '../flutter_widget_ext.dart';
 
 extension AspectRatioExt on Widget {
   /// The function `asptRto` returns an `AspectRatio` widget with a specified aspect ratio and child

@@ -1,5 +1,3 @@
-import 'package:flutter/widgets.dart';
-
 import '../../../../xlerate.dart';
 
 extension StringExt on String {
@@ -24,20 +22,14 @@ extension StringExt on String {
   /// `txt` for the `String` class.
   TextCreator get txt => TextCreator(data: this);
 
-  bool get isNum {
-    if (int.tryParse(this) != null) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  /// This getter method checks if the string can be parsed
+  /// into an integer. If the parsing is successful and the result is not
+  /// `null`, then the getter method returns `true`, indicating that the string represents a valid
+  /// integer. Otherwise, it returns `false`.
+  bool get isNum => int.tryParse(this) != null;
+}
 
-  /// Prints a message to the console, which you can access using the "flutter"
-  /// tool's "logs" command ("flutter logs").
-  ///
-  /// See also:
-  ///
-  ///   * [DebugPrintCallback], for function parameters and usage details.
-  ///   * [debugPrintThrottled], the default implementation.
-  void get pr => debugPrint(this);
+extension NullStringExt on Object? {
+  /// This getter method checks if the string value it is called on is `null`.
+  bool get isNull => this == null;
 }

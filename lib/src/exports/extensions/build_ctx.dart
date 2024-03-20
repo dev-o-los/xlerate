@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../private/simple_nav.dart';
+import '../../private/simple_nav.dart';
 
 extension Buildctx on BuildContext {
   //*[Start MediaQuery]
@@ -325,22 +325,90 @@ extension Buildctx on BuildContext {
     Overlay.of(this).insert(overlayEntry, above: above, below: below);
   }
 
-  /// The function `dialogBx` displays a dialog box with the provided widget.
+  /// The `dialogBx` function in Dart displays a dialog box using the provided widget builder function.
   ///
   /// Args:
-  ///   box (Widget): The `box` parameter is a required `Widget` that represents the content of the
-  /// dialog box. It can be any widget that you want to display inside the dialog box.
-  Future<void> dialogBx({required Widget box}) => showDialog(
+  ///   box (Widget Function(BuildContext)): The `box` parameter is a required function that takes a
+  /// `BuildContext` as an argument and returns a `Widget`. This function is used as the builder for the
+  /// `showDialog` method.
+  Future<void> dialogBx({
+    required Widget box,
+    bool barrierDismissible = true,
+    Color? barrierColor,
+    String? barrierLabel,
+    bool useSafeArea = true,
+    bool useRootNavigator = true,
+    RouteSettings? routeSettings,
+    Offset? anchorPoint,
+    TraversalEdgeBehavior? traversalEdgeBehavior,
+  }) async =>
+      await showDialog(
+        anchorPoint: anchorPoint,
+        barrierColor: barrierColor,
+        barrierDismissible: barrierDismissible,
+        barrierLabel: barrierLabel,
+        routeSettings: routeSettings,
+        traversalEdgeBehavior: traversalEdgeBehavior,
+        useRootNavigator: useRootNavigator,
+        useSafeArea: useSafeArea,
         context: this,
-        builder: (context) => box,
+        builder: (_) => box,
       );
 
-  /// The function `botmSht` is a Dart function that displays a modal bottom sheet with the provided
-  /// widget.
+  /// The `botmSht` function in Dart displays a modal bottom sheet using the provided widget builder
+  /// function.
   ///
   /// Args:
-  ///   btmSht (Widget): The `btmSht` parameter is a required `Widget` that represents the content of
-  /// the bottom sheet. It will be displayed inside the `showModalBottomSheet` function.
-  Future<void> botmSht({required Widget btmSht}) =>
-      showModalBottomSheet(context: this, builder: (context) => btmSht);
+  ///   btmSht (Widget Function(BuildContext)): The `btmSht` parameter is a required function that takes
+  /// a `BuildContext` as an argument and returns a `Widget`. This function is used as the builder for
+  /// the `showModalBottomSheet` method, which will display a bottom sheet in the current context with
+  /// the content returned by this
+  Future<void> botmSht({
+    required Widget btmSht,
+    Color? backgroundColor,
+    String? barrierLabel,
+    double? elevation,
+    ShapeBorder? shape,
+    Clip? clipBehavior,
+    BoxConstraints? constraints,
+    Color? barrierColor,
+    bool isScrollControlled = false,
+    bool useRootNavigator = false,
+    bool isDismissible = true,
+    bool enableDrag = true,
+    bool? showDragHandle,
+    bool useSafeArea = false,
+    RouteSettings? routeSettings,
+    AnimationController? transitionAnimationController,
+    Offset? anchorPoint,
+  }) async =>
+      await showModalBottomSheet(
+        anchorPoint: anchorPoint,
+        backgroundColor: backgroundColor,
+        barrierColor: barrierColor,
+        barrierLabel: barrierLabel,
+        clipBehavior: clipBehavior,
+        constraints: constraints,
+        elevation: elevation,
+        enableDrag: enableDrag,
+        isDismissible: isDismissible,
+        isScrollControlled: isScrollControlled,
+        routeSettings: routeSettings,
+        shape: shape,
+        showDragHandle: showDragHandle,
+        transitionAnimationController: transitionAnimationController,
+        useRootNavigator: useRootNavigator,
+        useSafeArea: useRootNavigator,
+        context: this,
+        builder: (_) => btmSht,
+      );
+
+  /// The function `snckBr` displays a `SnackBar` using the `ScaffoldMessenger` in Dart.
+  ///
+  /// Args:
+  ///   snckBr (SnackBar): The `snckBr` parameter is of type `SnackBar` and it is required for the
+  /// `snckBr` function. This function is responsible for showing a SnackBar message using the
+  /// `ScaffoldMessenger` of the current context.
+  void snckBr({required SnackBar snckBr}) =>
+      ScaffoldMessenger.of(this).showSnackBar(snckBr);
 }

@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+part of '../flutter_widget_ext.dart';
 
 extension LimitedBoxExt on Widget {
   /// The function `limtdbx` returns a `LimitedBox` widget with specified maximum height and width, and

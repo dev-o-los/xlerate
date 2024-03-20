@@ -1,3 +1,39 @@
+## 2.8.0
+
+- [Deprecated]
+  - `pr` getter extension has been deprecated.
+- [New]
+  - Added the `formatDate` extension added over DateTime class.
+  - Added some new extensions for String and int class.
+  - Added extension methods for ConnectionState in Flutter widgets.
+  - Added `curveOnly` helper methods that lets you easily curve the specfic
+    corners of a widget.
+  - Added a extension method over context to show a SnackBar message in
+    ScaffoldMessenger.
+  - Added new `onTap` and `onTapInkWell` extension method over `context`.
+  - Added new ReactiveBtn Widget which has bounceInOut effect.
+  - Added the `when` parameter and `whenFunctions` to the `TextCreator` class for better controlling over `Text`.
+    Following functions were added to the `TextCreator` class
+    - boldWhen
+    - semiboldWhen
+    - itlcWhen
+    - clipWhen
+    - ellipsisWhen
+    - fadeWhen
+    - visibleWhen
+    - algncntrWhen
+    - algnendWhen
+    - undrlineWhen
+- [Changes]
+  - Improved pub points.
+  - Added and `col` parameter to the `szdbox` extension to easily visualize the
+    `SizedBox` widget.
+  - Refactor dialog box and bottom sheet functions to accept a function that
+    returns a widget.
+  - `curveOnlyTopCorners` changed to `curveTop`.
+  - `curveOnlyBottomCorners` changed to `curveBttm`.
+  - `MediaQuery.of(context).size` changed with `MediaQuery.sizeOf(context)`.
+
 ## 2.7.0
 
 - New `dialogBx` amd `botmSht` extensions added over context.
@@ -56,7 +92,7 @@
 
 ## 2.3.0
 
-- Introducing navigation in `simple_sizer`.
+- Introducing navigation in `xlerate`.
 
   - Use below extensions on `context` to easily navigate between screens
 

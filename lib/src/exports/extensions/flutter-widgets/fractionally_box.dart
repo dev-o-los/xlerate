@@ -1,6 +1,4 @@
-import 'package:flutter/widgets.dart';
-
-import '../../../../xlerate.dart';
+part of '../flutter_widget_ext.dart';
 
 extension FracSzdBox on Widget {
   /// The `fracSzdBox` function returns a `FractionallySizedBox` widget with optional height and width

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../reactive_widgets.dart';
+import '../exports/reactive_widgets/reactive_destination.dart';
 
 class ReactiveHelper {
   static NavigationRailDestination rail(ReactiveDestination destination) {

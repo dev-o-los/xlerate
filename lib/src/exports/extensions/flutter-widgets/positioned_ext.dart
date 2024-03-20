@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../flutter_widget_ext.dart';
 
 extension PositionedExt on Widget {
   /// The `pos` function returns a `Positioned` widget with specified positioning properties and a child

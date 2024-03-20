@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../flutter_widget_ext.dart';
 
 extension SliverToBoxAdaptarExt on Widget {
   /// The function `slivadapt` returns a `SliverToBoxAdapter` widget with the given key and child.

@@ -295,7 +295,7 @@ The fourth most useful feature of `xlerate` is Creators.
 
 ## Container [Box]
 
-`Box` is the all new creator for `Conatainer`.
+`Box` is the all new creator for `Container`.
 
 I'm pretty sure that you must have ran into this bug
 
@@ -432,8 +432,8 @@ The sixth most useful feature of `xlerate` is helper methods
 
 ### BorderRadius Helper Methods helps in curving the borders of a container
 
-| Method Name              | Description                                        |
-| ------------------------ | -------------------------------------------------- |
-| curveCorners()           | Rounds all the corners with a default radius of 20 |
-| curveOnlyTopCorners()    | Rounds top corners with a default radius of 20     |
-| curveOnlyBottomCorners() | Rounds bottom corners with a default radius of 20  |
+| Method Name    | Description                                        |
+| -------------- | -------------------------------------------------- |
+| curveCorners() | Rounds all the corners with a default radius of 20 |
+| curveTop()     | Rounds top corners with a default radius of 20     |
+| curveBttm()    | Rounds bottom corners with a default radius of 20  |
