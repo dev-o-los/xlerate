@@ -11,6 +11,7 @@
   - Added a extension method over context to show a SnackBar message in
     ScaffoldMessenger.
   - Added new `onTap` and `onTapInkWell` extension method over `context`.
+  - Added new ReactiveBtn Widget which has bounceInOut effect.
 - [Changes]
   - Improved pub points.
   - Added and `col` parameter to the `szdbox` extension to easily visualize the
