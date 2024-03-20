@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:xlerate/xlerate.dart';
 import 'package:xlerate/xlerate_web.dart';
 
 class ReactiveHomeExample extends StatelessWidget {
@@ -46,36 +45,14 @@ class MyWidget2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Column(
-          children: [
-            200.hbox,
-            const Text(
-              'This is Widget2',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            12.hbox,
-            ReactiveBtn(
-              onPressed: () {
-                print('jje');
-              },
-              child: Container(
-                decoration: Decorate.instance
-                    .col(Colors.red.shade100)
-                    .curveCorners()
-                    .create(),
-                child: const Text('Bouncy Btn Text')
-                    .txt
-                    .col(Colors.black)
-                    .create()
-                    .p16(),
-              ),
-            ),
-          ],
+        child: Text(
+          'This is Widget2',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
