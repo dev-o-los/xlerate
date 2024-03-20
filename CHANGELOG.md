@@ -12,6 +12,18 @@
     ScaffoldMessenger.
   - Added new `onTap` and `onTapInkWell` extension method over `context`.
   - Added new ReactiveBtn Widget which has bounceInOut effect.
+  - Added the `when` parameter and `whenFunctions` to the `TextCreator` class for better controlling over `Text`.
+    Following functions were added to the `TextCreator` class
+    - boldWhen
+    - semiboldWhen
+    - itlcWhen
+    - clipWhen
+    - ellipsisWhen
+    - fadeWhen
+    - visibleWhen
+    - algncntrWhen
+    - algnendWhen
+    - undrlineWhen
 - [Changes]
   - Improved pub points.
   - Added and `col` parameter to the `szdbox` extension to easily visualize the
